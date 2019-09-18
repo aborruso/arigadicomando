@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Goldydocs"
+title = "La guida di Miller"
 
 enableRobotsTXT = true
 
@@ -10,11 +10,11 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
-defaultContentLanguage = "en"
+contentDir = "content/it"
+defaultContentLanguage = "it"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
-enableMissingTranslationPlaceholders = true
+# enableMissingTranslationPlaceholders = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
@@ -51,20 +51,28 @@ id = "UA-00000000-0"
 
 # Language configuration
 
+
+
 [languages]
-[languages.en]
-title = "Goldydocs"
+[languages.it]
+title = "La guida di Miller"
 description = "A Docsy example site"
-languageName ="English"
+languageName ="Italiano"
 # Weight used for sorting.
 weight = 1
-[languages.no]
-title = "Goldydocs"
-description = "Docsy er operativsystem for skyen"
-languageName ="Norsk"
-contentDir = "content/no"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
+#[languages.en]
+#title = "La guida di Miller"
+#description = "A Docsy example site"
+#languageName ="English"
+## Weight used for sorting.
+#weight = 1
+#[languages.no]
+#title = "Goldydocs"
+#description = "Docsy er operativsystem for skyen"
+#languageName ="Norsk"
+#contentDir = "content/no"
+#time_format_default = "02.01.2006"
+#time_format_blog = "02.01.2006"
 
 
 # Everything below this are Site Params
