@@ -1,5 +1,5 @@
 ---
-title: Community
+title: Partecipa
 menu:
   main:
     weight: 40
