@@ -55,7 +55,7 @@ anchor = "smart"
 
 [languages]
 [languages.it]
-title = "A riga di comando"
+title = "a riga di comando"
 description = "Il mio quaderno di appunto sull'uso della shell per lavorare con i dati"
 languageName ="Italiano"
 # Weight used for sorting.
