@@ -1,0 +1,38 @@
+site_name: arigadicomando
+site_url: https://example.com/
+
+
+repo_url: https://github.com/aborruso/arigadicomando
+repo_name: arigadicomando
+edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  palette:
+    scheme: preference
+  language: it
+  features:
+    - navigation.top
+
+plugins:
+- search
+- mkdocstrings
+
+markdown_extensions:
+- mkdocs-click
+- pymdownx.highlight
+- pymdownx.superfences
+- pymdownx.tabbed
+- pymdownx.critic:
+      mode: view
+- pymdownx.betterem:
+      smart_enable: all
+- pymdownx.caret
+- pymdownx.mark
+- pymdownx.tilde
+- pymdownx.smartsymbols
+- admonition
+- pymdownx.details
+- pymdownx.tasklist:
+      clickable_checkbox: true
+- meta
