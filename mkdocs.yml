@@ -12,6 +12,9 @@ theme:
   palette:
     scheme: preference
   language: it
+  favicon: images/favicon.png
+  icon:
+    logo: fontawesome/solid/terminal
   features:
     - navigation.top
     - navigation.tabs

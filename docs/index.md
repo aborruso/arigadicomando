@@ -1,9 +1,3 @@
-# Immaginando un indice
+# Lorem ipsum
 
-- la shella
-- testostrutturato
-- monografie
-    - miller
-    - visidata
-- dati
-  - esplorazione
+Sit
