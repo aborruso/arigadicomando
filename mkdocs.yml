@@ -32,6 +32,7 @@ extra_css:
 nav:
   - Home: index.md
   - Dati:
+    - Introduzione: dati/index.md
     - Esplora: dati/esplora.md
     - Converti: dati/converti.md
     - Trasforma: dati/trasforma.md
@@ -39,8 +40,13 @@ nav:
     - Miller:
       - Introduzione: miller/index.md
       - Formati: miller/formati.md
-    - VisiData: visidata/index.md
+      - Verbi: miller/verbi.md
+      - DSL: miller/dsl.md
+    - VisiData:
+      - Guida: visidata/index.md
+      - 10 modi di usarlo: visidata/dieci_modi_di_usare_visidata.md
   - Partecipa: partecipa.md
+  - Grazie: grazie.md
 
 plugins:
 - search
