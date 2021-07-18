@@ -36,7 +36,9 @@ nav:
     - Converti: dati/converti.md
     - Trasforma: dati/trasforma.md
   - Monografie:
-    - Miller: miller/index.md
+    - Miller:
+      - Introduzione: miller/index.md
+      - Formati: miller/formati.md
     - VisiData: visidata/index.md
   - Partecipa: partecipa.md
 
