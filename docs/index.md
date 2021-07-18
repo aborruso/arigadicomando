@@ -1,6 +1,6 @@
 # a riga di comando
 
-La **riga di comando** ha reso facile e comode tante delle cose che faccio con il PC. Allora ho voluto dedicargli uno spazio, sia per farne conoscere i pregi a chi ancora li ignora o sfrutta poco, sia per **mettere a fattor comune** **alcuni dei miei appunti**.
+La :fontawesome-solid-terminal: **riga di comando** ha reso facile e comode tante delle cose che faccio con il PC. Allora ho voluto dedicargli uno spazio, sia per farne conoscere i pregi a chi ancora li ignora o sfrutta poco, sia per **mettere a fattor comune** **alcuni dei miei appunti**.
 
 È un argomento molto ampio, che qui verrà esploso sopratutto su due filoni principali:
 
