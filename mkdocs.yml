@@ -8,31 +8,62 @@ edit_uri: edit/master/docs/
 
 theme:
   name: material
+  highlightjs: true
   palette:
     scheme: preference
   language: it
   features:
     - navigation.top
+    - navigation.tabs
+    - navigation.sections
+
+# foglio di stile personalizzato
+extra_css:
+  - stylesheets/style.css
+
+# menu
+nav:
+  - Home: index.md
+  - Dati:
+    - Esplora: dati/esplora.md
+    - Converti: dati/converti.md
+    - Trasforma: dati/trasforma.md
+  - Monografie:
+    - Miller: miller/index.md
+    - VisiData: visidata/index.md
+  - About: about.md
 
 plugins:
 - search
 - mkdocstrings
 
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+
 markdown_extensions:
+- admonition
+- attr_list
+- footnotes
+- meta
 - mkdocs-click
-- pymdownx.highlight
-- pymdownx.superfences
-- pymdownx.tabbed
-- pymdownx.critic:
-      mode: view
 - pymdownx.betterem:
       smart_enable: all
 - pymdownx.caret
-- pymdownx.mark
-- pymdownx.tilde
-- pymdownx.smartsymbols
-- admonition
+- pymdownx.critic:
+      mode: view
 - pymdownx.details
+- pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+- pymdownx.highlight
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tabbed
 - pymdownx.tasklist:
+      custom_checkbox: true
       clickable_checkbox: true
-- meta
+- pymdownx.tilde
+- toc:
+      permalink: true
