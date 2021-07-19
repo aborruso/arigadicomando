@@ -1,6 +1,6 @@
 # Formati
 
-Miller legge e scrivi diversi formati di testo strutturato.
+Miller legge e scrive diversi formati di testo strutturato.
 
 ## Formato nativo
 
