@@ -1,6 +1,6 @@
 # Come usarla
 
-La **riga di comando** - in inglese la **CLI**, la *Command Line Intereface* - è un'interfaccia di dialogo **testuale** tra utente e *computer* ed un programma, che interpreta i comandi inseriti da tastiera e li esegue.
+La **riga di comando** - in inglese la **CLI**, la *Command Line Intereface* - è un'interfaccia di dialogo **testuale** tra utente e *computer*, ed anche un programma, che interpreta i comandi inseriti da tastiera e li esegue.
 
 ![](./images/cli_00.png)
 
