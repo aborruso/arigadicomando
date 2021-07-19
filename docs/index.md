@@ -6,3 +6,5 @@ La :fontawesome-solid-terminal: **riga di comando** ha reso facile e comode tant
 
 - i suoi strumenti per **leggere**, **trasformare** e **analizzare** **file di testo strutturati**;
 - le **cose che mi piacciono**, che mi sembrano "geniali", irrinunciabili, buffe, "**mai più senza**", ecc..
+
+È dedicato sopratutto al suo utilizzo nel mondo :fontawesome-brands-linux: Linux e quindi per tutti (da Mac in modo nativo e su Windows tramite Windows SubSystem for Linux e in tanti altri modi).
