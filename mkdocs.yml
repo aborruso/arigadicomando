@@ -54,9 +54,6 @@ nav:
 
 extra:
   social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/aborruso
-      name: account twitter
     - icon: fontawesome/solid/rss
       link: https://arigadicomando.it/feed_rss_created.xml
       name: Feed RSS
