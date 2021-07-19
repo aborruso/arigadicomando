@@ -54,9 +54,6 @@ nav:
 
 extra:
   social:
-    - icon: fontawesome/solid/home
-      link: https://arigadicomando.it/
-      name: Home Page
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/aborruso
       name: account twitter
