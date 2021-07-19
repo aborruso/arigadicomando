@@ -23,6 +23,7 @@ theme:
     - navigation.sections
   font:
     text: Montserrat
+  custom_dir: overrides
 
 # foglio di stile personalizzato
 extra_css:
