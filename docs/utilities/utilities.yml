@@ -1,0 +1,6 @@
+- nome: chardet
+  URL: https://github.com/chardet/chardet
+  cosaFa: Rileva l'*encoding* dei caratteri
+- nome: tldr
+  URL: https://github.com/tldr-pages/tldr
+  cosaFa: Una mini guida con i comandi essenziali per utilizzare le utility più diffuse
