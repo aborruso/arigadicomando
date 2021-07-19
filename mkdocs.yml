@@ -1,5 +1,6 @@
 site_name: a riga di comando
 site_url: https://arigadicomando.it/
+site_description: Quanto è comoda la riga di comando con i dati
 
 
 repo_url: https://github.com/aborruso/arigadicomando
@@ -54,6 +55,7 @@ nav:
 plugins:
 - search
 - mkdocstrings
+- rss
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
