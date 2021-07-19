@@ -16,8 +16,6 @@ Esistono altri tipi di sub comandi, che invece replicano alcune delle caratteris
 
 I **sub comandi** di Miller si chiamano [**verbi**](./verbi.md),
 
-Il comando di base `cat`, che stampa a schermo il contenuto di un file. <br>
-
 
 - [formati](./formati.md);
 - [verbi](./verbi.md);

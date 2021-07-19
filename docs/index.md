@@ -4,5 +4,5 @@ La :fontawesome-solid-terminal: **riga di comando** ha reso facile e comode tant
 
 È un argomento molto ampio, che qui verrà esploso sopratutto su due filoni principali:
 
-- i suoi strumenti per leggere, trasformare e analizzare file di testo strutturati;
-- le cose che mi piacciono, che mi sembrano "geniali", irrinunciabili, buffe, "mai più senza", ecc..
+- i suoi strumenti per **leggere**, **trasformare** e **analizzare** **file di testo strutturati**;
+- le **cose che mi piacciono**, che mi sembrano "geniali", irrinunciabili, buffe, "**mai più senza**", ecc..

@@ -85,3 +85,4 @@ markdown_extensions:
 - pymdownx.tilde
 - toc:
       permalink: true
+      toc_depth: 3
