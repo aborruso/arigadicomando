@@ -33,6 +33,7 @@ extra_css:
 # menu
 nav:
   - Home: index.md
+  - La CLI: cli.md
   - Dati:
     - Introduzione: dati/index.md
     - Esplora: dati/esplora.md
