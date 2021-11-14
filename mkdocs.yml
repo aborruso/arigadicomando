@@ -60,7 +60,8 @@ extra:
       name: Feed RSS
 
 plugins:
-- search
+- search:
+      lang: it
 - mkdocstrings
 - rss
 
