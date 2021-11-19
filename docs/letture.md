@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Letture consigliate
 
 Queste tre letture per me sono state fondamentali. Quella da cui sono partito alcuni anni fa è la prima versione del volume di Jeroen Janssens (che ringrazio molto).
