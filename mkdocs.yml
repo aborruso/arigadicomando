@@ -47,9 +47,7 @@ nav:
       - Verbi: miller/verbi.md
       - DSL: miller/dsl.md
       - Ricette: miller/ricette.md
-    - VisiData:
-      - Guida: visidata/index.md
-      - 10 modi di usarlo: visidata/dieci_modi_di_usare_visidata.md
+    - VisiData: visidata/index.md
   - Partecipa: partecipa.md
   - Grazie: grazie.md
 
