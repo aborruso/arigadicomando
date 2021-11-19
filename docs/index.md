@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 # a riga di comando
 
 La :fontawesome-solid-terminal: **riga di comando** (la `CLI`) ha reso facile e comode tante delle cose che faccio con il PC. Allora ho voluto dedicargli uno spazio, sia per farne conoscere i pregi a chi ancora li ignora o sfrutta poco, sia per **mettere a fattor comune** **alcuni dei miei appunti**.

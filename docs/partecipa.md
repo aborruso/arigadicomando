@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Partecipa
 
 Se ti piace :fontawesome-solid-terminal: **a riga di comando** e vuoi dare una mano, puoi farlo in queste modalità:
