@@ -20,6 +20,7 @@ theme:
     logo: fontawesome/solid/terminal
   features:
     - navigation.top
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
   font:
