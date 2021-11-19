@@ -14,6 +14,7 @@ theme:
   highlightjs: true
   palette:
     scheme: preference
+    primary: purple
   language: it
   favicon: images/favicon.png
   icon:
