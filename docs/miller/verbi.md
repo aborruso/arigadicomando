@@ -33,7 +33,7 @@ L'elenco completo dei verbi di Miller è nella [guida ufficiale](https://miller.
 
 ### cat
 
-Utile sopratutto per conversiono di formato (vedi [formati](./formati.md)) e per concatenare file con lo stesso schema.
+Utile sopratutto per conversione di formato (vedi [formati](./formati.md)) e per concatenare file con lo stesso schema.
 
 ```
 Usage: mlr cat [options]
