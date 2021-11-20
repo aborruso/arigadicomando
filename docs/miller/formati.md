@@ -97,7 +97,7 @@ A seguire un esempio di conversione da `CSV` a `Markdown`.
 mlr --icsv --omd cat base.csv >output.md
 ```
 
-Con `--icsv` si imposta come formato di `i`nput il `csv`, mendre con `--omd` il formato di `o`utput in `md`(`Markdown`).<br>Se si volesse come output un file `JSON` basterebbe modificare il comando di sopra in:
+Con `--icsv` si imposta come formato di `i`nput il `csv`, mentre con `--omd` il formato di `o`utput in `md`(`Markdown`).<br>Se si volesse come output un file `JSON` basterebbe modificare il comando di sopra in:
 
 ```
 mlr --icsv --ojson cat base.csv >output.json
