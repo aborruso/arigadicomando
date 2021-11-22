@@ -13,8 +13,18 @@ theme:
   name: material
   highlightjs: true
   palette:
-    scheme: preference
-    primary: blue
+    - scheme: preference
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  
   language: it
   favicon: images/favicon.png
   icon:
