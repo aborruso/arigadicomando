@@ -16,4 +16,4 @@ Queste letture per me sono state fondamentali. Quella da cui sono partito alcuni
 
 ## Siti
 
-- Bashing data, https://www.datafix.com.au/BASHing/index.html
+- Bashing data, <https://www.datafix.com.au/BASHing/index.html>
