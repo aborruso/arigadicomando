@@ -14,3 +14,11 @@
 - scrape
 - jq
 - yq
+- frictionless
+- xsv
+- csvkit
+- csvtk
+- chardetect
+- iconv
+- gdal/ogr
+- mapshaper
