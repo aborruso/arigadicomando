@@ -1,0 +1,6 @@
+- sqlean
+  name: sqlean
+  description: Una raccolta di preziose librerie per SQLite, non disponibili nel pacchetto standard
+  URL: https://github.com/nalgeon/sqlean
+  tag: sql,sqlite,database
+  arigadicomando: false
