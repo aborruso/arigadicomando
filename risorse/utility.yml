@@ -1,6 +1,16 @@
 - sqlean
   name: sqlean
-  description: Una raccolta di preziose librerie per SQLite, non disponibili nel pacchetto standard
+  description: Una raccolta di librerie per SQLite, non disponibili nel pacchetto standard
   URL: https://github.com/nalgeon/sqlean
   tag: sql,sqlite,database
   arigadicomando: false
+- miller
+  name: Miller
+  description: Una utility per manipolare file di testo strutturato
+  URL: https://github.com/johnkerl/miller
+  tag: CSV,JSON
+  arigadicomando: true
+- visidata
+- scrape
+- jq
+- yq
