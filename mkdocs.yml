@@ -31,7 +31,7 @@ theme:
     logo: fontawesome/solid/terminal
   features:
     - navigation.top
-    - navigation.instant
+#    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.tracking
