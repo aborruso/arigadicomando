@@ -17,3 +17,4 @@ Queste letture per me sono state fondamentali. Quella da cui sono partito alcuni
 ## Siti
 
 - Bashing data, <https://www.datafix.com.au/BASHing/index.html>
+- The Programming Historian, <https://programminghistorian.org/en/>
