@@ -41,7 +41,7 @@ L'elenco completo dei verbi di Miller è nella [guida ufficiale](https://miller.
 
 Utile sopratutto per conversione di formato (vedi [formati](./formati.md)) e per concatenare in "verticale" file con lo stesso schema (:cooking: [ricetta](ricette.md#concatenare-in-verticale-piu-file)).
 
-!!! info "mlr cat --help"
+!!! aiuto "mlr cat --help"
 
     ```
     Usage: mlr cat [options]
@@ -56,7 +56,7 @@ Utile sopratutto per conversione di formato (vedi [formati](./formati.md)) e per
 
 Il comando di base stampa a schermo il contenuto di un file:
 
-!!! example "mlr --csv cat base_category.csv"
+!!! comando "mlr --csv cat base_category.csv"
 
     ```
     nome,dataNascita,altezza,peso,comuneNascita
@@ -69,7 +69,7 @@ Il comando di base stampa a schermo il contenuto di un file:
 
 Con l'opzione `-n` si aggiunge un campo con un progressivo numerico intero che parte da `1`:
 
-!!! example "mlr --csv -n cat base.csv"
+!!! comando "mlr --csv -n cat base.csv"
 
     ```
     n,nome,dataNascita,altezza,peso,comuneNascita
@@ -82,7 +82,7 @@ Con l'opzione `-n` si aggiunge un campo con un progressivo numerico intero che p
 
 Se all'opzione `-n` si aggiunge `-g` seguito da dal nome di uno o più campi, il "contatore" sarà applicato per gruppo e partirà da `1` distintamente per ogni gruppo. Qui sotto ad esempio il raggruppamento è fatto per `comuneNascita`:
 
-!!! example "mlr --csv cat -n -g comuneNascita base_category.csv"
+!!! comando "mlr --csv cat -n -g comuneNascita base_category.csv"
 
     ```
     n,nome,dataNascita,altezza,peso,comuneNascita
@@ -97,20 +97,22 @@ Se all'opzione `-n` si aggiunge `-g` seguito da dal nome di uno o più campi, il
 
 Trasforma lo schema da `wide` a `long` e viceversa. Vedi [approfondimento](../dati/trasforma.md).
 
-```
-Wide-to-long options:
-  -i {input field names}   -o {key-field name,value-field name}
-  -r {input field regexes} -o {key-field name,value-field name}
-  These pivot/reshape the input data such that the input fields are removed
-  and separate records are emitted for each key/value pair.
-  Note: this works with tail -f and produces output records for each input
-  record seen.
-Long-to-wide options:
-  -s {key-field name,value-field name}
-  These pivot/reshape the input data to undo the wide-to-long operation.
-  Note: this does not work with tail -f; it produces output records only after
-  all input records have been read.
-```
+!!! aiuto "mlr cat --help"
+
+    ```
+    Wide-to-long options:
+    -i {input field names}   -o {key-field name,value-field name}
+    -r {input field regexes} -o {key-field name,value-field name}
+    These pivot/reshape the input data such that the input fields are removed
+    and separate records are emitted for each key/value pair.
+    Note: this works with tail -f and produces output records for each input
+    record seen.
+    Long-to-wide options:
+    -s {key-field name,value-field name}
+    These pivot/reshape the input data to undo the wide-to-long operation.
+    Note: this does not work with tail -f; it produces output records only after
+    all input records have been read.
+    ```
 
 Ad esempio da `wide`
 
@@ -133,7 +135,7 @@ a `long`
 
 ### unsparsify
 
-!!! info "mlr unsparsify --help"
+!!! aiuto "mlr unsparsify --help"
 
     ```
     Usage: mlr unsparsify [options]
