@@ -18,3 +18,7 @@ Queste testi per me sono stati fondamentali. Quello da cui sono partito alcuni a
 
 - Bashing data, <https://www.datafix.com.au/BASHing/index.html>
 - The Programming Historian, <https://programminghistorian.org/en/>
+
+## Spunti
+
+- Five reasons why researchers should learn to love the command line, <https://www.nature.com/articles/d41586-021-00263-0>
