@@ -64,17 +64,17 @@ nav:
   - Letture: letture.md
   - Grazie: grazie.md
 
-extra:
-  social:
-    - icon: fontawesome/solid/rss
-      link: https://arigadicomando.it/feed_rss_created.xml
-      name: Feed RSS
+#extra:
+#  social:
+#    - icon: fontawesome/solid/rss
+#      link: https://arigadicomando.it/feed_rss_created.xml
+#      name: Feed RSS
 
 plugins:
 - search:
       lang: it
 - mkdocstrings
-- rss
+#- rss
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
@@ -108,7 +108,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid
-- pymdownx.tabbed
+- pymdownx.tabbed:
+      alternate_style: true
 - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
