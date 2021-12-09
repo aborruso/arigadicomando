@@ -1,6 +1,6 @@
 # Miller
 
-Il suo eccezionale autore - :pray: [John Kerl](https://twitter.com/__jo_ker__) - definisce [**Miller**](https://github.com/johnkerl/miller/) come `awk`, `sed`, `cut`, `join` e `sort` per dati indicizzati con nome, come `CSV`, `TSV` e `JSON`.
+Il suo eccezionale autore - :pray: [John Kerl](https://twitter.com/__jo_ker__) - definisce [**Miller**](https://github.com/johnkerl/miller/) come `awk`, `sed`, `cut`, `join` e `sort` per file di testo strutturati come `CSV`, `TSV` e `JSON`.
 
 Ha una ottima **documentazione ufficiale** in inglese, consultabile [qui](https://miller.readthedocs.io/en/latest/index.html).
 
