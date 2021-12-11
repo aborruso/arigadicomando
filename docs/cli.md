@@ -1,7 +1,7 @@
 ---
 hide:
   - navigation
-  - toc
+#  - toc
 ---
 
 # La CLI
@@ -71,4 +71,4 @@ La parallelizzazione dei processi, si realizza in modo ricco ed efficiente nella
 
 I comandi della *shell* possono essere archiviati in file di testo chiamati *script*, che possono essere salvati, condivisi e sottoposti a *versioning*, migliorandone la riproducibilità.<br>
 Possono anche essere automatizzati. Utilizzando il comando `cron`, gli utenti possono pianificare l'esecuzione degli *script*.<br>
-Ad esempio, afferma Perozzi, alcuni siti Web suggeriscono agli utenti che intendono fare *scraping*/download dei loro contenuti, di farlo in orari "notturni" - ad esempio tra le 21:00 e le 5:00. "Puoi far eseguire [lo script] solo negli orari suggeriti". Un esempio è quello del "NCBI National Center for Biotechnology Information", in cui nelle [linee guida](https://www.ncbi.nlm.nih.gov/home/about/policies/) si legge "Run retrieval scripts on weekends or between 9 pm and 5 am Eastern Time weekdays for any series of more than 100 requests."
+Ad esempio, afferma Perozzi, alcuni siti Web suggeriscono agli utenti che intendono fare *scraping*/download dei loro contenuti, di farlo in orari "notturni" - ad esempio tra le 21:00 e le 5:00. "Puoi far eseguire [lo script] solo negli orari suggeriti". Un esempio è quello del "NCBI National Center for Biotechnology Information", in cui nelle [linee guida](https://www.ncbi.nlm.nih.gov/home/about/policies/) si legge "*Run retrieval scripts on weekends or between 9 pm and 5 am Eastern Time weekdays for any series of more than 100 requests.*"
