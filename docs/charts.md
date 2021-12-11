@@ -99,4 +99,8 @@
 
 ## tabella
 
+```
+{{ read_csv('data/basic_bar_chart.csv') }}
+```
+
 {{ read_csv('data/basic_bar_chart.csv') }}
