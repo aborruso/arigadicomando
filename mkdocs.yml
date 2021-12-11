@@ -75,8 +75,6 @@ plugins:
       lang: it
 - mkdocstrings
 - charts
-- table-reader:
-      data_path: "docs"
 #- rss
 
 extra_javascript:
