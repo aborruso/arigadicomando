@@ -35,6 +35,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.tracking
+    - navigation.indexes
   font:
     text: Montserrat
   custom_dir: overrides
@@ -55,7 +56,7 @@ nav:
   - Monografie:
     - Introduzione: monografie.md
     - Miller:
-      - Introduzione: miller/index.md
+      - miller/index.md
       - Formati: miller/formati.md
       - Verbi: miller/verbi.md
       - DSL: miller/dsl.md
