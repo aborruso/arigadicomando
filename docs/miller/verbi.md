@@ -107,7 +107,7 @@ Se all'opzione `-n` si aggiunge `-g` seguito da dal nome di uno o più campi, il
 
 Trasforma lo schema da `wide` a `long` e viceversa. Vedi [approfondimento](../dati/trasforma.md).
 
-!!! aiuto "mlr cat --help"
+!!! aiuto "mlr reshape --help"
 
     ```
     Wide-to-long options:
