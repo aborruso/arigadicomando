@@ -16,6 +16,16 @@ I verbi sono i sub comandi di Miller.
     | sara | 2000-02-22 | 166 | 70.4 | Roma |
     | giulia | 1997-08-13 | 169 | 68.3 | Milano |
 
+
+``` title="base_category.csv"
+nome,dataNascita,altezza,peso,comuneNascita
+andy,1973-05-08,176,86.5,Roma
+chiara,1993-12-13,162,58.3,Milano
+guido,2001-01-22,196,90.4,Roma
+sara,2000-02-22,166,70.4,Roma
+giulia,1997-08-13,169,68.3,Milano
+```
+
 ## Guida in linea per un verbo
 
 Per aprire la guida in linea di un verbo, basta lanciare `mlr nomeVerbo --help`. Ad esempio per il verbo `cat`, il comando `mlr cat --help` restituirà:
