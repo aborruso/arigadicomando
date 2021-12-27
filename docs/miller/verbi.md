@@ -211,7 +211,7 @@ Se all'opzione `-n` si aggiunge `-g` seguito da dal nome di uno o più campi, il
     Options:
     ```
 
-Se ad esempio si ha un file `CSV`, con un numero di campi nell'intestazione (4) diverso da quello del corpo (5), come questo
+Se ad esempio si ha un file `CSV`, con un numero di campi nell'intestazione (`4`) diverso da quello del corpo (`5`), come questo
 
 ``` title="check.csv"
 nome,dataNascita,altezza,comuneNascita
