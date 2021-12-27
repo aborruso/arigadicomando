@@ -1,6 +1,12 @@
 # Verbi
 
-I verbi sono i sub comandi di Miller.
+I verbi sono i sub comandi di Miller. Queste le categorie:
+
+- quelli analaoghi ai nomi dello Unix-toolkit: [cat](#cat), [cut](#cut), [grep](#grep), [head](#head), [join](#join), [sort](#sort), [tac](#tac), [tail](#tail), [top](#top), [uniq](#uniq).
+- quelli con funziolità simili a quelli di `awk`: [filter](#filter), [put](#put), [sec2gmt](#sec2gmt), [sec2gmtdate](#sec2gmtdate), [step](#step), [tee](#tee).
+- quelli statistici: [bar](#bar), [bootstrap](#bootstrap), [decimate](#decimate), [histogram](#histogram), [least-frequent](#least-frequent), [most-frequent](#most-frequent), [sample](#sample), [shuffle](#shuffle), [stats1](#stats1), [stats2](#stats2).
+- quelli orientati all'eterogeneità dei record, sebbene tutti i verbi di Miller sono in grado di gestire record eterogenei: [group-by](#group-by), [group-like](#group-like), [having-fields](#having-fields).
+- e altri ancora: [check](#check), [count-distinct](#count-distinct), [label](#label), [merge-fields](#merge-fields), [nest](#nest), [nothing](#nothing), [regularize](#regularize), [rename](#rename), [reorder](#reorder), [reshape](#reshape), [seqgen](#seqgen).
 
 ## File di esempio
 
@@ -46,6 +52,67 @@ A seguire, per ogni verbo, sarà inserito l'*help* ufficiale di ogni comando.
 ## Lista dei verbi
 
 L'elenco completo dei verbi di Miller è nella [guida ufficiale](https://miller.readthedocs.io/en/latest/reference-verbs.html).
+
+### altkv
+
+Mappa una lista di valori, come coppie alternate chiave/valore.
+
+!!! aiuto "mlr altkv --help"
+
+    ```
+    Usage: mlr altkv [options]
+    Given fields with values of the form a,b,c,d,e,f emits a=b,c=d,e=f pairs.
+    ```
+
+Ad esempio
+
+!!! comando "echo "a,b,c,d" | mlr --ocsv altkv"
+
+    ```json
+    {"a":"b","c":"d"}
+    ```
+
+
+### bar
+
+Per creare dei grafici a barre (bruttini 🙃), rimpiazzando dei valori numeri con una serie di asterichi. Per allinearli meglio si possono usare le opzioni di output `--opprint` o `--oxtab`.
+
+!!! aiuto "mlr bar --help"
+
+    ```
+    Replaces a numeric field with a number of asterisks, allowing for cheesy
+    bar plots. These align best with --opprint or --oxtab output format.
+    Options:
+    -f   {a,b,c}      Field names to convert to bars.
+    --lo {lo}         Lower-limit value for min-width bar: default '0.000000'.
+    --hi {hi}         Upper-limit value for max-width bar: default '100.000000'.
+    -w   {n}          Bar-field width: default '40'.
+    --auto            Automatically computes limits, ignoring --lo and --hi.
+                    Holds all records in memory before producing any output.
+    -c   {character}  Fill character: default '*'.
+    -x   {character}  Out-of-bounds character: default '#'.
+    -b   {character}  Blank character: default '.'.
+    Nominally the fill, out-of-bounds, and blank characters will be strings of length 1.
+    However you can make them all longer if you so desire.
+    ```
+
+A partire ad esempio da questo file di input:
+
+``` title="bar.csv"
+Area,percUtenti
+Nord,25
+Centro,32
+Sud e isole,43
+```
+
+!!! comando "mlrgo --c2p bar -f percUtenti ./bar.csv"
+
+    ```
+    Area        percUtenti
+    Nord        **********..............................
+    Centro      ************............................
+    Sud e isole *****************.......................
+    ```
 
 ### cat
 
@@ -161,4 +228,45 @@ a `long`
     Example: if the input is two records, one being 'a=1,b=2' and the other
     being 'b=3,c=4', then the output is the two records 'a=1,b=2,c=' and
     'a=,b=3,c=4'.
+    ```
+
+Alcuni formati, come il `JSON`, non devono avere lo stesso numero di campi per record. Un esempio il file a seguire:
+
+```json title="input.json"
+[
+  {
+    "nome": "sara",
+    "dataNascita": "2000-02-22",
+    "altezza": 166,
+    "peso": 70.4,
+    "comuneNascita": "Roma"
+  },
+  {
+    "nome": "giulia",
+    "comuneNascita": "Milano"
+  }
+]
+```
+
+Con `unsparsify`, viene di default prodotto un output in cui tutti i record hanno gli stessi campi; laddove erano assenti viene assegnato un valore nullo<!-- .slide: data-fullscreen -->
+
+!!! comando "mlr --json unsparsify input.json"
+
+    ```json
+    [
+      {
+        "nome": "sara",
+        "dataNascita": "2000-02-22",
+        "altezza": 166,
+        "peso": 70.4,
+        "comuneNascita": "Roma"
+      },
+      {
+        "nome": "giulia",
+        "dataNascita": "",
+        "altezza": "",
+        "peso": "",
+        "comuneNascita": "Milano"
+      }
+    ]
     ```
