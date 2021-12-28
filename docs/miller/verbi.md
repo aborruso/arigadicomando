@@ -248,7 +248,7 @@ si avrà l'output sottostante
     leave off -k as well as -v.
     ```
 
-Riuove in particolare uno o più spazi bianchi a inizio e fine cella e due o più spazi all'interndo della cella. Ad esempio nel file sottostante ci sono due spazi tra `Busto` e `Arsizio`, uno spazio a fine cella dopo `andy` e uno a inizio cella i corrispondenza di `chiara`. Questi sono ridondanti, e nella grandissima parte dei casi sono sempre da rimuovere.
+Riuove in particolare uno o più spazi bianchi a inizio e fine cella e due o più spazi all'interndo della cella. Ad esempio nel file sottostante ci sono due spazi tra `Busto` e `Arsizio`, uno spazio a fine cella dopo `andy` e uno a inizio cella i corrispondenza di `chiara`. Questi sono ridondanti, e nella grandissima parte dei casi sono da rimuovere.
 
 ```json title="clean-whitespace.json"
 {"nome":"andy ","dataNascita":"1973-05-08","comuneNascita":"Roma"}
@@ -271,6 +271,8 @@ Due comode opzioni:
 
 ### count-distinct
 
+Restituisce il numero di record che hanno valori distinti, per uno o più campi specificati.
+
 !!! aiuto "mlr count-distinct --help"
 
     ```
@@ -287,6 +289,40 @@ Due comode opzioni:
                   and b field values. With -f a,b and with -u, computes counts
                   for distinct a field values and counts for distinct b field
                   values separately.
+    ```
+
+File di esempio:
+
+``` title="count-distinct.csv"
+nome,dataNascita,altezza,peso,comuneNascita,sesso
+andy,1973-05-08,176,86.5,Roma,maschio
+chiara,1993-12-13,162,58.3,Milano,femmina
+guido,2001-01-22,196,90.4,Roma,maschio
+sara,2000-02-22,166,70.4,Roma,femmina
+giulia,1997-08-13,169,68.3,Milano,femmina
+```
+
+Ad esempio il conteggio per combinazioni distinte di comune di nascita e sesso:
+
+!!! comando "mlr --csv count-distinct -f comuneNascita,sesso -o conteggio ./base_category.csv"
+
+    ```
+    comuneNascita,sesso,conteggio
+    Roma,maschio,2
+    Milano,femmina,2
+    Roma,femmina,1
+    ```
+
+Aggiungendo il parametro `-u`, si ottengono i valori distinti non per combinazioni distinti dei campi indicati, ma per ogni singolo campo.
+
+!!! comando "mlr --csv count-distinct -f comuneNascita,sesso -o conteggio -u ./base_category.csv"
+
+    ```
+    field,value,count
+    comuneNascita,Roma,3
+    comuneNascita,Milano,2
+    sesso,maschio,2
+    sesso,femmina,3
     ```
 
 ### count
