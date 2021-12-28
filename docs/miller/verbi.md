@@ -106,7 +106,7 @@ Centro,32
 Sud e isole,43
 ```
 
-!!! comando "mlrgo --c2p bar -f percUtenti ./bar.csv"
+!!! comando "mlr --c2p bar -f percUtenti ./bar.csv"
 
     ```
     Area        percUtenti
@@ -230,6 +230,8 @@ si avrà l'output sottostante
 
 ### clean-whitespace
 
+È un prezioso comando, per "pulire" i dati: rimuove gli spazi ridondanti.
+
 !!! aiuto "mlr clean-whitespace --help"
 
     ```
@@ -245,6 +247,27 @@ si avrà l'output sottostante
     It is an error to specify -k as well as -v -- to clean keys and values,
     leave off -k as well as -v.
     ```
+
+Riuove in particolare uno o più spazi bianchi a inizio e fine cella e due o più spazi all'interndo della cella. Ad esempio nel file sottostante ci sono due spazi tra `Busto` e `Arsizio`, uno spazio a fine cella dopo `andy` e uno a inizio cella i corrispondenza di `chiara`. Questi sono ridondanti, e nella grandissima parte dei casi sono sempre da rimuovere.
+
+```json title="clean-whitespace"
+{"nome":"andy ","dataNascita":"1973-05-08","comuneNascita":"Roma"}
+{"nome":" chiara","dataNascita":"1993-12-13","comuneNascita":"Busto  Arsizio"}
+```
+
+Per pulire il file:
+
+!!! comando "mlr --json clean-whitespace input.json"
+
+    ```json
+    {"nome":"andy","dataNascita":"1973-05-08","comuneNascita":"Roma"}
+    {"nome":"chiara","dataNascita":"1993-12-13","comuneNascita":"Busto Arsizio"}
+    ```
+
+Due comode opzioni:
+
+- `-k` fa la pulizia soltanto nei nomi dei campi, nelle chiavi;
+- `-v` fa la pulizia soltanto nei valori.
 
 ### count-distinct
 
