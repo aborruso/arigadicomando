@@ -250,7 +250,7 @@ si avrà l'output sottostante
 
 Riuove in particolare uno o più spazi bianchi a inizio e fine cella e due o più spazi all'interndo della cella. Ad esempio nel file sottostante ci sono due spazi tra `Busto` e `Arsizio`, uno spazio a fine cella dopo `andy` e uno a inizio cella i corrispondenza di `chiara`. Questi sono ridondanti, e nella grandissima parte dei casi sono sempre da rimuovere.
 
-```json title="clean-whitespace"
+```json title="clean-whitespace.json"
 {"nome":"andy ","dataNascita":"1973-05-08","comuneNascita":"Roma"}
 {"nome":" chiara","dataNascita":"1993-12-13","comuneNascita":"Busto  Arsizio"}
 ```
