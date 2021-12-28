@@ -269,6 +269,48 @@ Due comode opzioni:
 - `-k` fa la pulizia soltanto nei nomi dei campi, nelle chiavi;
 - `-v` fa la pulizia soltanto nei valori.
 
+### count
+
+Restituisce il numero di record. Miller tiene conto del formato, quindi per un CSV composto da 6 righe, 1 di intestazione più 5 di dati, restituirà 5.
+
+!!! aiuto "mlr count --help"
+
+    ```
+    Prints number of records, optionally grouped by distinct values for specified field names.
+    Options:
+    -g {a,b,c} Optional group-by-field names for counts, e.g. a,b,c
+    -n {n} Show only the number of distinct values. Not interesting without -g.
+    -o {name} Field name for output-count. Default "count".
+    ```
+
+File di esempio:
+
+``` title="base_category.csv"
+nome,dataNascita,altezza,peso,comuneNascita
+andy,1973-05-08,176,86.5,Roma
+chiara,1993-12-13,162,58.3,Milano
+guido,2001-01-22,196,90.4,Roma
+sara,2000-02-22,166,70.4,Roma
+giulia,1997-08-13,169,68.3,Milano
+```
+
+Comando di esempio:
+
+!!! comando "mlr --csv count ./base_category.csv"
+
+    ```
+    count
+    5
+    ```
+
+Se si desidera soltanto l'output numerico, senza riga di intestazione, si può fare in tantissimi modi. Uno è quello di cambiare il formato di output in [NIDX](formati.md#nidx-index-numbered):
+
+!!! comando "mlr --c2n count ./base_category.csv"
+
+    ```
+    5
+    ```
+
 ### count-distinct
 
 Restituisce il numero di record che hanno valori distinti, per uno o più campi specificati.
@@ -325,19 +367,11 @@ Aggiungendo il parametro `-u`, si ottengono i valori distinti non per combinazio
     sesso,femmina,3
     ```
 
-### count
 
-!!! aiuto "mlr count --help"
-
-    ```
-    Prints number of records, optionally grouped by distinct values for specified field names.
-    Options:
-    -g {a,b,c} Optional group-by-field names for counts, e.g. a,b,c
-    -n {n} Show only the number of distinct values. Not interesting without -g.
-    -o {name} Field name for output-count. Default "count".
-    ```
 
 ### count-similar
+
+Aggiunge un campo, con il conteggio dei record che ha lo stesso valore per uno o più campi.
 
 !!! aiuto "mlr count-similar --help"
 
@@ -349,7 +383,34 @@ Aggiungendo il parametro `-u`, si ottengono i valori distinti non per combinazio
     -o {name} Field name for output-counts. Defaults to "count".
     ```
 
+File di esempio:
+
+``` title="base_category.csv"
+nome,dataNascita,altezza,peso,comuneNascita
+andy,1973-05-08,176,86.5,Roma
+chiara,1993-12-13,162,58.3,Milano
+guido,2001-01-22,196,90.4,Roma
+sara,2000-02-22,166,70.4,Roma
+giulia,1997-08-13,169,68.3,Milano
+```
+
+A seguire ad esempio viene aggiunto il campo `conteggio` al file di input, con il conteggio dei valori distinti per il campo `comuneNascita`.
+
+!!! comando "mlr --csv count-similar -g comuneNascita -o conteggio ./base_category.csv"
+
+    ```
+    nome,dataNascita,altezza,peso,comuneNascita,conteggio
+    andy,1973-05-08,176,86.5,Roma,3
+    guido,2001-01-22,196,90.4,Roma,3
+    sara,2000-02-22,166,70.4,Roma,3
+    chiara,1993-12-13,162,58.3,Milano,2
+    giulia,1997-08-13,169,68.3,Milano,2
+    ```
+
+
 ### cut
+
+Estrae/rimuove dall'input uno o più campi.
 
 !!! aiuto "mlr cut --help"
 
@@ -370,6 +431,56 @@ Aggiungendo il parametro `-u`, si ottengono i valori distinti non per combinazio
       mlr cut -r -f '^status$,sda[0-9]'
       mlr cut -r -f '^status$,"sda[0-9]"'
       mlr cut -r -f '^status$,"sda[0-9]"i' (this is case-insensitive)
+    ```
+
+File di esempio:
+
+``` title="base_category.csv"
+nome,dataNascita,altezza,peso,comuneNascita
+andy,1973-05-08,176,86.5,Roma
+chiara,1993-12-13,162,58.3,Milano
+guido,2001-01-22,196,90.4,Roma
+sara,2000-02-22,166,70.4,Roma
+giulia,1997-08-13,169,68.3,Milano
+```
+
+Per estrarre soltanto il campo `nome`:
+
+!!! comando "mlr --csv cut -f nome base_category.csv"
+
+    ```
+    nome
+    andy
+    chiara
+    guido
+    sara
+    giulia
+    ```
+
+Per rimuovere il campo `nome`, bisognerà aggiungere l'opzione `-x`:
+
+!!! comando "mlr --csv cut -x -f nome base_category.csv"
+
+    ```
+    dataNascita,altezza,peso,comuneNascita
+    1973-05-08,176,86.5,Roma
+    1993-12-13,162,58.3,Milano
+    2001-01-22,196,90.4,Roma
+    2000-02-22,166,70.4,Roma
+    1997-08-13,169,68.3,Milano
+    ```
+
+Per impostare il filtro tramite espressione regolare si usa l'opzione `-r`. Ad esempio estrarre soltanto i campi che iniziano per `a` e che terminano per `o`:
+
+!!! comando "mlr --csv cut -r -f "^a","o$" base_category.csv"
+
+    ```
+    altezza,peso
+    176,86.5
+    162,58.3
+    196,90.4
+    166,70.4
+    169,68.3
     ```
 
 ### decimate
