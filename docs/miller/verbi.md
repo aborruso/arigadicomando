@@ -485,6 +485,8 @@ Per impostare il filtro tramite espressione regolare si usa l'opzione `-r`. Ad e
 
 ### decimate
 
+Estrae un record ogni `n`, opzionalmente per categoria.
+
 !!! aiuto "mlr decimate --help"
 
     ```
@@ -497,6 +499,8 @@ Per impostare il filtro tramite espressione regolare si usa l'opzione `-r`. Ad e
     ```
 
 ### fill-down
+
+Se un dato record ha un valore mancante per un dato campo, verrà riempito dal valore corrispondente del record precedente, se presente.
 
 !!! aiuto "mlr fill-down --help"
 
@@ -515,7 +519,31 @@ Per impostare il filtro tramite espressione regolare si usa l'opzione `-r`. Ad e
      -f  Field names for fill-down.
     ```
 
+File di esempio:
+
+``` title="fill-down.csv"
+a,b,c
+1,,3
+4,5,
+7,,9
+```
+
+Con l'opzione `-all` il verbo viene applicato per tutti i record:
+
+!!! comando "mlr --csv  fill-down --all  fill-down.csv"
+
+    ```
+    a,b,c
+    1,,3
+    4,5,3
+    7,5,9
+    ```
+
+Con `-f` è possibile scegliere di applicaro a 1 o più campi.
+
 ### fill-empty
+
+Riempe le celle vuote, con un valore specifico
 
 !!! aiuto "mlr fill-empty --help"
 
@@ -524,6 +552,26 @@ Per impostare il filtro tramite espressione regolare si usa l'opzione `-r`. Ad e
     Options:
     -v {string} Fill-value: defaults to "N/A"
     -S          Don't infer type -- so '-v 0' would fill string 0 not int 0.
+    ```
+
+File di esempio:
+
+``` title="fill-down.csv"
+a,b,c
+1,,3
+4,5,
+7,,9
+```
+
+Come impopstazione predefinita, il valore assegnato sarà `N/A`, ma è possibile impostarlo con `-v`:
+
+!!! comando "mlr --csv  fill-empty fill-down.csv"
+
+    ```
+    a,b,c
+    1,N/A,3
+    4,5,N/A
+    7,N/A,9
     ```
 
 ### filter
