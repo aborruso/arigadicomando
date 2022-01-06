@@ -99,13 +99,13 @@ A seguire, lo stesso input in altri dei formati supportati da Miller.
     giulia 1997-08-13 169 68.3 Milano
     ```
 
-### JSON (JSON Lines)
+### JSON
 
 !!! warning
 
     Il JSON di output di default di Miller non è propriamente un JSON.
 
-In **Miller 5 **(versione attuale, che a breve sarà superata dalla 6), l'output di *default*  è il [JSON Lines](https://jsonlines.org/). La scelta deriva dal fatto che è un formato molto più comodo per l'elaborazione con strumenti di *parsing* di testo e di versionamento; perché in questo formato ogni linea è un JSON valido, e l'elaborazione per linea è molto più comoda e tipica per i *client*.
+In **Miller 5** (versione attuale, che a breve sarà superata dalla 6), l'output di *default*  è il [JSON Lines](https://jsonlines.org/). La scelta deriva dal fatto che è un formato molto più comodo per l'elaborazione con strumenti di *parsing* di testo e di versionamento; perché in questo formato ogni linea è un JSON valido, e l'elaborazione per linea è molto più comoda e tipica per i *client*.
 
 È quindi come sotto:
 
