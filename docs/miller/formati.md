@@ -133,7 +133,7 @@ Se si vuole un "vero" JSON bisogna aggiungere il *flag* `--jlistwrap`:
     ]
     ```
 
-In **Miller 6** (prossimo al rilascio) l'*output* di *default* è un `single-level JSON objects`, in cui ogni record è un JSON valido, ma non su una sola linea:
+In **Miller 6** (prossimo al rilascio) l'*output* di *default* è un `single-level JSON objects`, in cui ogni *record* (non linea di testo) è un JSON valido, ma non su una sola linea:
 
 !!! comando "mlr --c2j cat base_category.csv"
 
