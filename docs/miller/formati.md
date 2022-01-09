@@ -16,7 +16,7 @@ A seguire un esempio.
 Spesso si pensa ai dati come "rettangolari": se sono previsti 10 campi, ogni record sarà composto da 10 valori.<br>
 Ma non è sempre così, come nel caso del formato [`JSON`](#json) o appunto di quello nativo di Miller, in cui ogni record non ha necessariamente lo stesso numero di campi degli altri.
 
-Miller di *default* gestisce i dati a partire quindi dalla [**eterogeneità dei record**](eterogeneita_record.md).
+Miller di *default* gestisce quindi l'[**eterogeneità dei record**](eterogeneita_record.md).
 
 ## Conversione di formato
 
