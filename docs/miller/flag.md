@@ -14,7 +14,7 @@ A seguire sono riportati i *flag* che si possono utilizzare in Miller. Ad esempi
     }
     ```
 
-`--icsv` e `--ojson` sono i flag con cui impostare il [formato](formati.md) di *input* e *output*.
+`--icsv` e `--ojson` sono i *flag* con cui impostare il [formato](formati.md) di *input* e *output*.
 
 ## CSV
 
