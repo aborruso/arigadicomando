@@ -11,8 +11,6 @@ if [ -f "$folder"/../docs/utilities/index.md ]; then
   rm "$folder"/../docs/utilities/index.md
 fi
 
-#echo -e "# Utility\n" >> "$folder"/../docs/utilities/index.md
-
 cp "$folder"/../risorse/utility_header.md "$folder"/../docs/utilities/index.md
 
 yq -c '.[]' "$folder"/../docs/utilities/utilities.yml | mlr --json put -S '$name=tolower($nome)' then sort -f name | while read line;do
