@@ -2,10 +2,10 @@
 
 I verbi sono i sub comandi di Miller. Queste le categorie:
 
-- quelli analaoghi ai nomi dello Unix-toolkit: [cat](#cat), [cut](#cut), [grep](#grep), [head](#head), [join](#join), [sort](#sort), [tac](#tac), [tail](#tail), [top](#top), [uniq](#uniq).
+- quelli analoghi allo Unix-toolkit: [cat](#cat), [cut](#cut), [grep](#grep), [head](#head), [join](#join), [sort](#sort), [tac](#tac), [tail](#tail), [top](#top), [uniq](#uniq).
 - quelli con funziolità simili a quelli di `awk`: [filter](#filter), [put](#put), [sec2gmt](#sec2gmt), [sec2gmtdate](#sec2gmtdate), [step](#step), [tee](#tee).
 - quelli statistici: [bar](#bar), [bootstrap](#bootstrap), [decimate](#decimate), [histogram](#histogram), [least-frequent](#least-frequent), [most-frequent](#most-frequent), [sample](#sample), [shuffle](#shuffle), [stats1](#stats1), [stats2](#stats2).
-- quelli orientati all'eterogeneità dei record, sebbene tutti i verbi di Miller sono in grado di gestire record eterogenei: [group-by](#group-by), [group-like](#group-like), [having-fields](#having-fields).
+- quelli orientati all'[eterogeneità dei record](eterogeneita_record.md), sebbene tutti i verbi di Miller sono in grado di gestire record eterogenei: [group-by](#group-by), [group-like](#group-like), [having-fields](#having-fields).
 - e altri ancora: [check](#check), [count-distinct](#count-distinct), [label](#label), [merge-fields](#merge-fields), [nest](#nest), [nothing](#nothing), [regularize](#regularize), [rename](#rename), [reorder](#reorder), [reshape](#reshape), [seqgen](#seqgen).
 
 ## File di esempio
@@ -51,8 +51,6 @@ Options:
 A seguire, per ogni verbo, sarà inserito l'*help* ufficiale di ogni comando.
 
 ## Lista dei verbi
-
-L'elenco completo dei verbi di Miller è nella [guida ufficiale](https://miller.readthedocs.io/en/latest/reference-verbs.html).
 
 ### altkv
 

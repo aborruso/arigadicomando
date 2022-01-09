@@ -137,7 +137,7 @@ In **Miller 5** (versione attuale, che a breve sarà superata dalla 6), l'output
     {"nome": "giulia", "dataNascita": "1997-08-13", "altezza": 169, "peso": 68.3, "comuneNascita": "Milano"}
     ```
 
-Se si vuole un "vero" JSON bisogna aggiungere il *flag* `--jlistwrap`:
+Se si vuole un "vero" JSON bisogna aggiungere il [*flag*](flag.md#json) `--jlistwrap`:
 
 !!! comando "mlr --c2j --jlistwrap cat base_category.csv"
 
@@ -193,7 +193,7 @@ In **Miller 6** (prossimo al rilascio) l'*output* di *default* è un `single-lev
     }
     ```
 
-Se in Miller 6 si vuole un JSON Lines (formato molto consigliato), bisogna aggiungere il flag `--no-jvstack`:
+Se in Miller 6 si vuole un JSON Lines (formato molto consigliato), bisogna aggiungere il [flag](flag.md#json) `--no-jvstack`:
 
 
 !!! comando "mlr --c2j --no-jvstack cat base_category.csv"
