@@ -1,6 +1,13 @@
 - nome: chardet
   URL: https://github.com/chardet/chardet
-  cosaFa: Rileva l'*encoding* dei caratteri
+  cosaFa: Rileva l'*encoding* dei caratteri.
 - nome: tldr
   URL: https://github.com/tldr-pages/tldr
-  cosaFa: Una mini guida con i comandi essenziali per utilizzare le utility più diffuse
+  cosaFa: Una mini guida con i comandi essenziali per utilizzare le utility più diffuse.
+- nome: file
+  URL: https://www.darwinsys.com/file/
+  cosaFa: Restituisce informazioni sui file.
+- nome: iconv
+  URL: https://pubs.opengroup.org/onlinepubs/009695399/functions/iconv.html
+  cosaFa: Trasforma una codifica di caratteri in un'altra.
+
