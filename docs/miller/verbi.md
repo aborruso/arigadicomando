@@ -543,6 +543,8 @@ Con `-f` è possibile scegliere di applicaro a 1 o più campi.
 
 ### fill-empty
 
+!!! warning "Il verbo `fill-empty` richiede Miller >= 6.0"
+
 Riempe le celle vuote, con un valore specifico
 
 !!! aiuto "mlr fill-empty --help"
@@ -1147,6 +1149,8 @@ Come impopstazione predefinita, il valore assegnato sarà `N/A`, ma è possibile
 
 ### regularize
 
+Il verbo `regularize` riordina le righe nello stesso ordine della prima (qualunque sia l'ordine).
+
 !!! aiuto "mlr regularize --help"
 
     ```
@@ -1389,6 +1393,8 @@ a `long`
 
 ### sort-within-records
 
+Riordina i campi in ordine lessicamente crescente per nome campo.
+
 !!! aiuto "mlr sort-within-records --help"
 
     ```
@@ -1396,6 +1402,25 @@ a `long`
     Options:
     -r        Recursively sort subobjects/submaps, e.g. for JSON input.
     ```
+
+Ad esempio a questo file, in cui i campi hanno ordine diverso
+
+``` title="eterogeneita_irregular.json"
+{ "a": 1, "b": 2, "c": 3 }
+{ "c": 6, "a": 4, "b": 5 }
+{ "b": 8, "c": 9, "a": 7 }
+```
+
+si potrà applicare questo comando per ordinare i campi secondo l'ordine alfabetico dei loro nomi
+
+!!! comando "mlr --json sort-within-records ./eterogeneita_irregular.json"
+
+    ```
+    { "a": 1, "b": 2, "c": 3 }
+    { "a": 4, "b": 5, "c": 6 }
+    { "a": 7, "b": 8, "c": 9 }
+    ```
+
 
 ### stats1
 
@@ -1673,7 +1698,7 @@ Alcuni formati, come il `JSON`, non devono avere lo stesso numero di campi per r
 ]
 ```
 
-Con `unsparsify`, viene di default prodotto un output in cui tutti i record hanno gli stessi campi; laddove erano assenti viene assegnato un valore nullo<!-- .slide: data-fullscreen -->
+Con `unsparsify`, viene di default prodotto un output in cui tutti i record hanno gli stessi campi, e l'input viene fatto diventare rettangolare (vedi [eterogeneità dei record](eterogeneita_record.md)); laddove erano assenti viene assegnato un valore nullo.
 
 !!! comando "mlr --json unsparsify input.json"
 

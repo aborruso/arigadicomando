@@ -1,6 +1,6 @@
 # Gestione formati
 
-Il **formato nativo** di Miller è il [`**DKVP**`](#dkvp-il-formato-nativo) ("*Delimited Key-Value Pairs*"), ovvero delle coppie chiave-valore, separate da virgola (la `,` è il separatore di default).<br>
+Il **formato nativo** di Miller è il [**`DKVP`**](#dkvp-il-formato-nativo) ("*Delimited Key-Value Pairs*"), ovvero delle coppie chiave-valore, separate da virgola (la `,` è il separatore di default).<br>
 A seguire un esempio.
 
 !!! info "Esempio del formato nativo. Notare che i record non hanno lo stesso numero di campi"
