@@ -6,5 +6,5 @@ hide:
 
 # Utility
 
-In questo elenco, le principali *utility* citate nella guida.
+In questo elenco, le principali *utility* citate nella guida e/o in generale consigliate.
 
