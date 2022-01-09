@@ -3,7 +3,7 @@
   cosaFa: Rileva l'*encoding* dei caratteri.
 - nome: tldr
   URL: https://github.com/tldr-pages/tldr
-  cosaFa: Una mini guida con i comandi essenziali per utilizzare le utility più diffuse.
+  cosaFa: Una mini guida con i comandi essenziali per utilizzare le *utility* più diffuse.
 - nome: file
   URL: https://www.darwinsys.com/file/
   cosaFa: Restituisce informazioni sui file.
@@ -12,7 +12,10 @@
   cosaFa: Trasforma una codifica di caratteri in un'altra.
 - nome: Miller
   URL: https://miller.readthedocs.io/en/latest/
-  cosaFa: Uno strumento per eseguire query, modellare e ristrutturare file di testo strutturati in vari formati, tra cui CSV, TSV, JSON e JSON Lines.
+  cosaFa: Uno strumento per eseguire *query*, modellare e ristrutturare file di testo strutturati in vari formati, tra cui CSV, TSV, JSON e JSON Lines.
 - nome: yq
   URL: https://github.com/kislyuk/yq
-  cosaFa: Per fare il *parsing* e trasformare file in formato YAML, TOML e XML.
+  cosaFa: "Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformandolo in JSON via `jq`."
+- nome: jq
+  URL: https://stedolan.github.io/jq/
+  cosaFa: "Fa il parsing e trasforma file in formato `JSON`."
