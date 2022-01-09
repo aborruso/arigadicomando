@@ -20,7 +20,7 @@ Miller di *default* gestisce quindi l'[**eterogeneità dei record**](eterogeneit
 
 ## Conversione di formato
 
-Miller legge e scrive [diversi formati di testo strutturato](formati.md#elenco). Per impostare quello di *input* e di *output* è necessario indicarli con una delle opzioni dedicate e una delle modalità per farlo.
+Miller legge e scrive [diversi formati di testo strutturato](formati.md#elenco-formati). Per impostare quello di *input* e di *output* è necessario utilizzare uno dei [flag dedicati](flag.md#formati-file) e una delle modalità per farlo.
 
 Ad esempio per convertire un file da `CSV` a `TSV`, si può usare questo comando:
 
