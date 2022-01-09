@@ -10,4 +10,9 @@
 - nome: iconv
   URL: https://pubs.opengroup.org/onlinepubs/009695399/functions/iconv.html
   cosaFa: Trasforma una codifica di caratteri in un'altra.
-
+- nome: Miller
+  URL: https://miller.readthedocs.io/en/latest/
+  cosaFa: Uno strumento per eseguire query, modellare e ristrutturare file di testo strutturati in vari formati, tra cui CSV, TSV, JSON e JSON Lines.
+- nome: yq
+  URL: https://github.com/kislyuk/yq
+  cosaFa: Per fare il *parsing* e trasformare file in formato YAML, TOML e XML.

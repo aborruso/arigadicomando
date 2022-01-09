@@ -18,6 +18,7 @@ Questi testi sono stati un riferimento per arrivare allo sviluppo di questo prog
 
 - Bashing data, <https://www.datafix.com.au/BASHing/index.html>
 - The Programming Historian, <https://programminghistorian.org/en/>
+- explain shell, <https://explainshell.com/>
 
 ## Spunti
 
