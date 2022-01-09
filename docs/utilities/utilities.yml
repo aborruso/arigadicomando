@@ -15,7 +15,7 @@
   cosaFa: Uno strumento per eseguire *query*, modellare e ristrutturare file di testo strutturati in vari formati, tra cui CSV, TSV, JSON e JSON Lines.
 - nome: yq
   URL: https://github.com/kislyuk/yq
-  cosaFa: "Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`]."
+  cosaFa: "Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`](#jq)."
 - nome: jq
   URL: https://stedolan.github.io/jq/
   cosaFa: "Fa il parsing e trasforma file in formato `JSON`."

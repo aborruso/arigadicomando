@@ -1,10 +1,11 @@
 # Trasforma
 
-## Disposizione
+## Stuttura
 ### Da wide a long
 
 ### Da long a wide
 
+### Pivot
 ## Encoding
 
 Tante volte è necessario trasformare i file da una codifica di caratteri a un'altra. Un caso classico è quello di un lavoro in cui la gran parte dei dati è in `UTF-8`, ma alcuni file "esterni" sono in `Windows-1252` e sono da uniformare ai precedenti.

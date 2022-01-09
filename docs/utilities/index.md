@@ -52,7 +52,7 @@ Una mini guida con i comandi essenziali per utilizzare le *utility* più diffuse
 
 ## yq
 
-Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`].
+Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`](#jq).
 
 :arrow_right: <https://github.com/kislyuk/yq>
 
