@@ -15,15 +15,15 @@ theme:
   palette:
     - scheme: preference
       primary: blue
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+#      toggle:
+#        icon: material/weather-night
+#        name: Switch to dark mode
+#    - scheme: slate
+#      primary: indigo
+#      accent: indigo
+#      toggle:
+#        icon: material/weather-sunny
+#        name: Switch to light mode
 
   language: it
   favicon: images/favicon.png
