@@ -43,7 +43,7 @@ che darà in output
 +--------+-------------+---------+------+
 ```
 
-È possibile fare il *merge*, l'unione in verticale, anche di due file con uno **schema** in parte **diverso**. Se ad esempio si è in presenza di un file che ha una colonna in più (`coloreOcchi`) rispetto a [`base.csv`](risorse/base.csv), come questo ([`base_altro.csv`](risorse/base_altro.csv))
+È possibile fare il *merge*, l'unione in verticale, anche di due file con uno **schema** in parte **diverso**, perché Miller gestiste l'[eterogeneità dei record](eterogeneita_record.md). Se ad esempio si è in presenza di un file che ha una colonna in più (`coloreOcchi`) rispetto a [`base.csv`](risorse/base.csv), come questo ([`base_altro.csv`](risorse/base_altro.csv))
 
 ```
 nome,dataNascita,altezza,peso,coloreOcchi
