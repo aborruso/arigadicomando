@@ -42,7 +42,7 @@ Uno strumento per eseguire *query*, modellare e ristrutturare file di testo stru
 
 Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`
 
-:arrow_right: <https://aborruso.github.io/scrape-cli/>
+:arrow_right: <https://github.com/aborruso/scrape-cli>
 
 ## tldr
 

@@ -20,5 +20,5 @@
   URL: https://stedolan.github.io/jq/
   cosaFa: "Fa il parsing e trasforma file in formato `JSON`."
 - nome: scrape-cli
-  URL: https://aborruso.github.io/scrape-cli/
+  URL: https://github.com/aborruso/scrape-cli
   cosaFa: "Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`"
