@@ -15,7 +15,7 @@ fi
 
 cp "$folder"/../risorse/utility_header.md "$folder"/../docs/utilities/index.md
 
-yq -c '.[]' "$folder"/../docs/utilities/utilities.yml | mlr --json sort -f nome | while read line;do
+yq -c '.[]' "$folder"/../docs/utilities/utilities.yml | mlr --json put -S '$name=tolower($nome)' then sort -f name | while read line;do
 nome=$(echo "$line" | jq -r '.nome')
 URL=$(echo "$line" | jq -r '.URL')
 descrizione=$(echo "$line" | jq -r '.cosaFa')
