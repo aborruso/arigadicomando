@@ -1,6 +1,6 @@
 # Eterogeneità dei record
 
-Il modo nativo di "pensare" ai dati per Miller, è per record eterogenei: ogni record non deve necessariamente avere lo stesso numero di campi degli altri.
+Per Miller il modo nativo di "pensare" ai dati è per **record eterogenei**: ogni record non deve necessariamente avere lo stesso numero di campi degli altri.
 
 !!! info "I record non hanno lo stesso numero di campi"
 
@@ -27,7 +27,7 @@ a,b,c
 7,8,9
 ```
 
-### Dati con rettangolari, con celle vuote
+### Dati rettangolari, ma con celle vuote
 
 Questo è un file che non ha record eterogenei, ma ha alcune celle vuote (per il campo `b` a riga 2 e per il campo `a` a riga 3).
 
@@ -75,7 +75,7 @@ Se si prova semplicemente a stamparlo a schermo, Miller restituisce un errore:
 
 Questi gli errori del file, che ha un'intestazione composta da 3 campi:
 
-1. nella riga 2, ci sono 3 campi e non 2;
+1. nella riga 2, ci sono 2 campi e non 3;
 2. nella riga 4, ci sono 4 campi e non 3.
 
 Miller è in grado di gestire anche questa eterogeneità, che deriva da errori, utilizzando il [*flag*](flag.md#csv) `--allow-ragged-csv-input`:
