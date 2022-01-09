@@ -57,7 +57,9 @@ nav:
     - Introduzione: monografie.md
     - Miller:
       - miller/index.md
-      - Formati: miller/formati.md
+      - Formati:
+        - Gestione formati: miller/formati.md
+        - Eterogeneità record: miller/eterogeneita_record.md
       - Verbi: miller/verbi.md
       - DSL: miller/dsl.md
       - Ricette: miller/ricette.md

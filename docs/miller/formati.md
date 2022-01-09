@@ -1,4 +1,22 @@
-# Formati
+# Gestione formati
+
+Il **formato nativo** di Miller è il [`**DKVP**`](#dkvp-il-formato-nativo) ("*Delimited Key-Value Pairs*"), ovvero delle coppie chiave-valore, separate da virgola (la `,` è il separatore di default).<br>
+A seguire un esempio.
+
+!!! info "Esempio del formato nativo. Notare che i record non hanno lo stesso numero di campi"
+
+    ```
+    nome=andy,dataNascita=1973-05-08,altezza=176,peso=86.5,comuneNascita=Roma
+    nome=chiara,dataNascita=1993-12-13,altezza=162,peso=58.3,comuneNascita=Milano
+    nome=guido,altezza=196,peso=90.4,comuneNascita=Roma
+    nome=sara,dataNascita=2000-02-22,altezza=166,peso=70.4,comuneNascita=Roma
+    nome=giulia,dataNascita=1997-08-13,altezza=169,peso=68.3
+    ```
+
+Spesso si pensa ai dati come "rettangolari": se sono previsti 10 campi, ogni record sarà composto da 10 valori.<br>
+Ma non è sempre così, come nel caso del formato [`JSON`](#json) o appunto di quello nativo di Miller, in cui ogni record non ha necessariamente lo stesso numero di campi degli altri.
+
+Miller di *default* gestisce i dati a partire quindi dalla [**eterogeneità dei record**](eterogeneita_record.md).
 
 ## Conversione di formato
 
