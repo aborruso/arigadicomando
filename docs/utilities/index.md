@@ -38,6 +38,12 @@ Uno strumento per eseguire *query*, modellare e ristrutturare file di testo stru
 
 :arrow_right: <https://miller.readthedocs.io/en/latest/>
 
+## scrape-cli
+
+Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`
+
+:arrow_right: <https://aborruso.github.io/scrape-cli/>
+
 ## tldr
 
 Una mini guida con i comandi essenziali per utilizzare le *utility* più diffuse.
@@ -46,7 +52,7 @@ Una mini guida con i comandi essenziali per utilizzare le *utility* più diffuse
 
 ## yq
 
-Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformandolo in JSON via `jq`.
+Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`].
 
 :arrow_right: <https://github.com/kislyuk/yq>
 
