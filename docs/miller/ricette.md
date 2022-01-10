@@ -1,7 +1,5 @@
 # Ricette
 
-## Trova e sostituisci globale
-
 ## Concatenare in "verticale" più file
 
 Il verbo "tipico" per concatenare due o più file è [`cat`](verbi.md#cat). Ad esempio se voglio unire in verticale questi due file `CSV`
@@ -70,3 +68,19 @@ In output, verrà aggiunta la colonna `coloreOcchi`, che non sarà valorizzata p
 | licia  | 1993-12-07  | 158     | 57.9 | neri        |
 +--------+-------------+---------+------+-------------+
 ```
+
+## Suddividere un file di input in più file di output, ogni xxx record
+
+```
+ mlr --csv put -q '
+  begin {
+    @batch_size = 1000;
+  }
+  index = int(floor((NR-1) / @batch_size));
+  label = fmtnum(index,"%04d");
+  filename = "part-".label.".json";
+  tee > filename, $*
+' ./input.csv
+```
+
+Verrà creato un file di output, con nome `part-000XXX`, ogni 1000 (si imposta tramite `@batch_size`) record.
