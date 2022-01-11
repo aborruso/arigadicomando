@@ -273,3 +273,37 @@ Se in Miller 6 si vuole un JSON Lines (formato molto consigliato), bisogna scegl
     | sara | 2000-02-22 | 166 | 70.4 | Roma |
     | giulia | 1997-08-13 | 169 | 68.3 | Milano |
     ```
+
+## Casi speciali e consigli
+
+### File CSV (anche TSV) senza riga di intestazione
+
+In questo file non è presente la riga di intestazione.
+
+``` title="input.csv"
+1,861265,C,A,0.071
+1,861265,C,A,0.148
+1,861265,C,G,0.001
+1,861265,C,G,0.108
+1,861265,C,T,0
+1,861265,C,T,0.216
+2,193456,G,A,0.006
+2,193456,G,A,0.094
+2,193456,G,C,0.011
+2,193456,G,C,0.152
+2,193456,G,T,0.003
+2,193456,G,T,0.056
+```
+
+Si può fare riferimento ai campi in modo da numerico, con un progressivo numerico di una unità a partire da 1, da sinistra verso destra. Il [`flag`](flag.md#csv) utile al caso è `-N`, che dà per implicito che non ci sia la riga di intestazione (e ne assegna una temporanea con campi numerici) e che non venga aggiunta in *output*.
+<br>Quindi se da questo file vorrò estrarre le prime tre righe della prima colonna il comando sarà:
+
+!!! comando "mlr --csv -N cut -f 1 then head -n 3 input.csv"
+
+    ```
+    1
+    1
+    1
+    ```
+
+

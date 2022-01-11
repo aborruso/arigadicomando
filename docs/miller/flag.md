@@ -23,6 +23,9 @@ Si tratta di *flag* applicabili al formato `CSV`.
 Lista:
 
 - `--allow-ragged-csv-input` o `--ragged`: Se una riga dati ha meno campi della riga di intestazione, viene riempire con i campi rimanenti, vuoti. Se una riga di dati ha più campi della riga di intestazione, Miller utilizza dei nomi di campo numerici interi, a partire da 1;
+- `--implicit-csv-header`, associa ai campi un nome implicito, un numero intero che parte da 1 e viene incrementato di 1, dal primo campo a sinistra all'ultimo a destra;
+- `--headerless-csv-output`, rimuove dall'output la riga di intestazione;
+- `-N`: una scorciatoia per mettere insieme la coppia `--implicit-csv-header` `--headerless-csv-output` (utile in casi come [questo](formati.md#file-csv-anche-tsv-senza-riga-di-intestazione));
 
 ## JSON
 
