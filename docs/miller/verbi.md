@@ -1611,6 +1611,8 @@ si potrà applicare questo comando per ordinare i campi secondo l'ordine alfabet
 
 ### top
 
+Restituisce i record con i valori più grandi/più piccoli, per uno o più campi, anche raggruppati per campi.
+
 !!! aiuto "mlr top --help"
 
     ```
@@ -1625,6 +1627,36 @@ si potrà applicare questo comando per ordinare i campi secondo l'ordine alfabet
     -o {name}     Field name for output indices. Default "top_idx".
     Prints the n records with smallest/largest values at specified fields,
     optionally by category.
+    ```
+
+Qui un file (senza intestazione, si usa infatti il flag [`N`](flag.md#csv)), in cui i primi 4 campi sono a volte duplicati in più record.
+
+``` title="input.csv"
+1,861265,C,A,0.071
+1,861265,C,A,0.148
+1,861265,C,G,0.001
+1,861265,C,G,0.108
+1,861265,C,T,0
+1,861265,C,T,0.216
+2,193456,G,A,0.006
+2,193456,G,A,0.094
+2,193456,G,C,0.011
+2,193456,G,C,0.152
+2,193456,G,T,0.003
+2,193456,G,T,0.056
+```
+
+Se se si vogliono estrarre le righe con il valore massimo del campo `5`, a parità di valori dei campi `1`,`2`,`3`,`4`, il comando sarà:
+
+!!! comando "mlr --csv -N top -f 5  -g 1,2,3,4 input.tsv"
+
+    ```
+    1,861265,C,A,1,0.148
+    1,861265,C,G,1,0.108
+    1,861265,C,T,1,0.216
+    2,193456,G,A,1,0.094
+    2,193456,G,C,1,0.152
+    2,193456,G,T,1,0.056
     ```
 
 ### unflatten
