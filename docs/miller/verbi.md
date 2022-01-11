@@ -1629,7 +1629,7 @@ Restituisce i record con i valori più grandi/più piccoli, per uno o più campi
     optionally by category.
     ```
 
-Qui un file (senza intestazione, si usa infatti il flag [`N`](flag.md#csv)), in cui i primi 4 campi sono a volte duplicati in più record.
+Qui un file (senza intestazione, si usa infatti il flag [`-N`](flag.md#csv)), in cui i primi 4 campi sono a volte duplicati in più record.
 
 ``` title="input.csv"
 1,861265,C,A,0.071
