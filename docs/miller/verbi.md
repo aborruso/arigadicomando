@@ -1611,7 +1611,7 @@ si potrà applicare questo comando per ordinare i campi secondo l'ordine alfabet
 
 ### top
 
-Restituisce i record con i valori più grandi/più piccoli, per uno o più campi, anche raggruppati per campi.
+Restituisce i record con i valori più grandi (o più piccoli), per uno o più campi, anche raggruppando per campi.
 
 !!! aiuto "mlr top --help"
 
