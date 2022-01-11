@@ -89,32 +89,32 @@ Verrà creato un file di output, con nome `part-000XXX`, ogni 1000 (si imposta t
 
 Alcune delle righe sottostanti, sono identiche, fatta eccezione per il V campo.
 
-``` title="input.tsv"
-1	861265	C	A	0.071
-1	861265	C	A	0.148
-1	861265	C	G	0.001
-1	861265	C	G	0.108
-1	861265	C	T	0
-1	861265	C	T	0.216
-2	193456	G	A	0.006
-2	193456	G	A	0.094
-2	193456	G	C	0.011
-2	193456	G	C	0.152
-2	193456	G	T	0.003
-2	193456	G	T	0.056
+``` title="input.csv"
+1,861265,C,A,0.071
+1,861265,C,A,0.148
+1,861265,C,G,0.001
+1,861265,C,G,0.108
+1,861265,C,T,0
+1,861265,C,T,0.216
+2,193456,G,A,0.006
+2,193456,G,A,0.094
+2,193456,G,C,0.011
+2,193456,G,C,0.152
+2,193456,G,T,0.003
+2,193456,G,T,0.056
 ```
 
 Se si vogliono estrarre soltanto quelle con il valore massimo del V campo, raggruppate per i valori degli altri 4, il verbo da usare è [top](verbi.md#top)
 
-!!! comando "mlr --tsv --barred -N top -f 5  -g 1,2,3,4 input.tsv"
+!!! comando "mlr --csv -N top -f 5  -g 1,2,3,4 input.tsv"
 
     ```
-    1       861265  C       A       1       0.148
-    1       861265  C       G       1       0.108
-    1       861265  C       T       1       0.216
-    2       193456  G       A       1       0.094
-    2       193456  G       C       1       0.152
-    2       193456  G       T       1       0.056
+    1,861265,C,A,1,0.148
+    1,861265,C,G,1,0.108
+    1,861265,C,T,1,0.216
+    2,193456,G,A,1,0.094
+    2,193456,G,C,1,0.152
+    2,193456,G,T,1,0.056
     ```
 
 Vedi <https://stackoverflow.com/a/70664880/757714>
