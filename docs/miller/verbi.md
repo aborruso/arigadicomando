@@ -1659,6 +1659,8 @@ Se se si vogliono estrarre le righe con il valore massimo del campo `5`, a parit
     2,193456,G,T,1,0.056
     ```
 
+!!! info "In output soltanto i campi definiti nel comando. Se si vogliono tutti, bisogna aggiungere `-a`"
+
 ### unflatten
 
 !!! aiuto "mlr unflatten --help"
