@@ -23,3 +23,4 @@ Questi testi sono stati un riferimento per arrivare allo sviluppo di questo prog
 ## Spunti
 
 - Five reasons why researchers should learn to love the command line (NdR: è stato utilizzato per scrivere gran parte della pagina [CLI](cli.md)), <https://www.nature.com/articles/d41586-021-00263-0>
+- Nine simple ways to make it easier to (re)use your data, <https://ojs.library.queensu.ca/index.php/IEE/article/view/4608>
