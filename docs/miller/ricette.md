@@ -118,3 +118,40 @@ Se si vogliono estrarre soltanto quelle con il valore massimo del V campo, raggr
     ```
 
 Vedi <https://stackoverflow.com/a/70664880/757714>
+
+## Eseguire un comando esterno all'interno di una funzione
+
+All'interno di un comando Miller è possibile lanciare una *utility* esterna, usando la funzione `system`.
+
+Immaginiamo ad esempio di avere un file come questo
+
+``` title="input.txt"
+a,b
+1,"15,1,2/AX,22,1/C,1/A,1/BA,2,3"
+```
+
+e di voler applicare il cosiddetto *natural sorting* alla stringa `15,1,2/AX,22,1/C,1/A,1/BA,2,3`, ottenendo questo ordinamento `1,1/A,1/BA,1/C,2,2/AX,3,15,22.
+
+Utilizzando le *utility* standard della shell di Linux basterebbe fare così:
+
+```
+echo "15,1,2/AX,22,1/C,1/A,1/BA,2,3" | tr , "\n" | sort -V | paste -sd, -
+```
+
+Per riportare questa sintassi in un comando Miller, il comando sarebbe questo:
+
+```
+<input.txt mlr --c2p --barred cat  then put -S '$toto=system("echo ".$b." | tr , \"\n\" | sort -V | paste -sd, -")'
+```
+
+E l'output:
+
+```
++---+-------------------------------+-------------------------------+
+| a | b                             | toto                          |
++---+-------------------------------+-------------------------------+
+| 1 | 15,1,2/AX,22,1/C,1/A,1/BA,2,3 | 1,1/A,1/BA,1/C,2,2/AX,3,15,22 |
++---+-------------------------------+-------------------------------+
+```
+
+Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `"`.
