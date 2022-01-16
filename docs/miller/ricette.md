@@ -132,7 +132,7 @@ a,b
 
 e di voler applicare il cosiddetto *natural sorting* alla stringa `15,1,2/AX,22,1/C,1/A,1/BA,2,3`, ottenendo questo ordinamento `1,1/A,1/BA,1/C,2,2/AX,3,15,22`.
 
-Utilizzando le *utility* standard della shell di Linux basterebbe fare così:
+Utilizzando le *utility* standard della shell di Linux basterebbe fare così (in `paste` si usa `-` perché l'input è l'[`stdin`](https://stackoverflow.com/a/26480035/757714)):
 
 ```
 echo "15,1,2/AX,22,1/C,1/A,1/BA,2,3" | tr , "\n" | sort -V | paste -sd, -
