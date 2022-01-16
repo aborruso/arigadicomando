@@ -138,7 +138,9 @@ Utilizzando le *utility* standard della shell di Linux basterebbe fare così (in
 echo "15,1,2/AX,22,1/C,1/A,1/BA,2,3" | tr , "\n" | sort -V | paste -sd, -
 ```
 
-Per riportare questa sintassi in un comando Miller, il comando sarebbe come questo di sotto, in cui viene creato il campo `toto`, che raccoglie valori derivanti dal lancio di *utility* esterne, grazie alla funzione `system`.
+Per riportare questa sintassi[^1] in un comando Miller, il comando sarebbe come questo di sotto, in cui viene creato il campo `toto`, che raccoglie valori derivanti dal lancio di *utility* esterne, grazie alla funzione `system`.
+
+[^1]: qui commentata su [explainshell](https://explainshell.com/explain?cmd=echo+%2215%2C1%2C2%2FAX%2C22%2C1%2FC%2C1%2FA%2C1%2FBA%2C2%2C3%22+%7C+tr+%2C+%22%5Cn%22+%7C+sort+-V+%7C+paste+-sd%2C+-)
 
 ```
 <input.txt mlr --c2p --barred cat  then put -S '$toto=system("echo ".$b." | tr , \"\n\" | sort -V | paste -sd, -")'
