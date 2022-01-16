@@ -121,7 +121,7 @@ Vedi <https://stackoverflow.com/a/70664880/757714>
 
 ## Eseguire un comando esterno all'interno di una funzione
 
-All'interno di un comando Miller è possibile lanciare una *utility* esterna, usando la funzione `system`.
+All'interno di un comando Miller è possibile lanciare una *utility* esterna, usando la funzione [`system`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#system).
 
 Immaginiamo ad esempio di avere un file come questo
 
@@ -138,7 +138,7 @@ Utilizzando le *utility* standard della shell di Linux basterebbe fare così:
 echo "15,1,2/AX,22,1/C,1/A,1/BA,2,3" | tr , "\n" | sort -V | paste -sd, -
 ```
 
-Per riportare questa sintassi in un comando Miller, il comando sarebbe questo:
+Per riportare questa sintassi in un comando Miller, il comando sarebbe come questo di sotto, in cui viene creato il campo `toto`, che raccoglie valori derivanti dal lancio di *utility* esterne, grazie alla funzione `system`.
 
 ```
 <input.txt mlr --c2p --barred cat  then put -S '$toto=system("echo ".$b." | tr , \"\n\" | sort -V | paste -sd, -")'
