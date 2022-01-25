@@ -13,6 +13,7 @@ Questi testi sono stati un riferimento per arrivare allo sviluppo di questo prog
 - [Janssens, Jeroen](https://twitter.com/jeroenhjanssens). Data Science at the Command Line, 2e. <https://www.datascienceatthecommandline.com/2e/>
 - [Vince, Buffalo](https://twitter.com/vsbuffalo). Bioinformatics Data Skills. <https://www.oreilly.com/library/view/bioinformatics-data-skills/9781449367480/>
 - [William, Shotts](https://twitter.com/William_Shotts). The Linux Command Line. <https://linuxcommand.org/tlcl.php>
+- Robert Mesibov. A data cleaner's cookbook. <https://www.datafix.com.au/cookbook/>
 
 ## Siti
 
