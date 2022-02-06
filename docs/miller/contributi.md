@@ -9,4 +9,19 @@ Tutto questo è possibile grazie al suo straordinario autore, John Kerl, che cur
 
 Prima era gestito come uno speciale `CSV`, in realtà sono formati differenti.
 
-Vedi [#922](https://github.com/johnkerl/miller/issues/922) e [#923](https://github.com/johnkerl/miller/pull/923#issue-1125106948)
+Vedi [`#922`](https://github.com/johnkerl/miller/issues/922) e [`#923`](https://github.com/johnkerl/miller/pull/923#issue-1125106948).
+
+### 2022-01-09 | Supporto al formato JSON Lines
+
+Prima non era supportato. Vedi [`#755]`(https://github.com/johnkerl/miller/discussions/755#discussioncomment-1935634) e [`#844`](https://github.com/johnkerl/miller/pull/844).
+
+### 2022-01-09 | JSON di output corretto
+
+Prima non era supportato di *default*. Vedi [`#755`](https://github.com/johnkerl/miller/discussions/755#discussioncomment-1935634) e [`#844`](https://github.com/johnkerl/miller/pull/844).
+
+
+### 2021-10-10 | Gestione corretta del carattere pipe nella creazione di Markdown
+
+Prima un carettere `|` in una cella di input, faceva produrre Markdown di output scorretti.
+
+Vedi [`#610`](https://github.com/johnkerl/miller/issues/610).

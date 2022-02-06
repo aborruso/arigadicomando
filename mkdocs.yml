@@ -64,6 +64,7 @@ nav:
       - Verbi: miller/verbi.md
       - DSL: miller/dsl.md
       - Ricette: miller/ricette.md
+      - Contributi: miller/contributi.md
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md
