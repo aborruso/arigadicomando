@@ -5,6 +5,11 @@ Alcune sono diventate nuove caratteristiche di Miller e ci fa un particolare pia
 
 Tutto questo è possibile grazie al suo straordinario autore, John Kerl, che cura in modo esemplare il rapporto con la comunità che utilizza questa applicazione.
 
+### 2022-02-07 | Espansa sintassi di strptime
+
+Prima non era possibile utilizzare `%j`.
+
+Vedi [`#914`](https://github.com/johnkerl/miller/issues/914#issuecomment-1031510453).
 ### 2022-02-06 | Supporto più rigoroso al formato CSV
 
 Prima era gestito come uno speciale `CSV`, in realtà sono formati differenti.
