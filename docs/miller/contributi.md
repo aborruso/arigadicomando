@@ -18,7 +18,7 @@ Vedi [`#874`](https://github.com/johnkerl/miller/issues/874) e [`#872`](https://
 Prima non era possibile utilizzare `%j`.
 
 Vedi [`#914`](https://github.com/johnkerl/miller/issues/914#issuecomment-1031510453).
-### 2022-02-06 | Supporto più rigoroso al formato CSV
+### 2022-02-06 | Supporto più rigoroso al formato TSV
 
 Prima era gestito come uno speciale `CSV`, in realtà sono formati differenti.
 
