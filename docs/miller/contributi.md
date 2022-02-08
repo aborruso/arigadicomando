@@ -8,7 +8,7 @@ Tutto questo è possibile grazie al suo straordinario autore, John Kerl, che cur
 
 ### 2022-02-08 | Aggiunto il natural sorting
 
-È possibile usare il *natural sorting*[^1], sia per il verbo [sort](verbi.md#sort), che per la [funzione DSL `sort`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sort). Grazie a [Salvatore Fiandaca](https://twitter.com/totofiandaca) per [l'ispirazione](https://gis.stackexchange.com/q/421166/466).
+È possibile usare il *natural sorting*[^1], sia per il verbo [`sort`](verbi.md#sort), che per la [funzione DSL `sort`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sort). Grazie a [Salvatore Fiandaca](https://twitter.com/totofiandaca) per [l'ispirazione](https://gis.stackexchange.com/q/421166/466).
 
 Vedi [`#874`](https://github.com/johnkerl/miller/issues/874) e [`#872`](https://github.com/johnkerl/miller/discussions/872#discussioncomment-1977161).
 
