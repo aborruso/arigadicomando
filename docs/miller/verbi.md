@@ -1382,6 +1382,9 @@ a `long`
     -n  {comma-separated field names}  Numerical ascending; nulls sort last
     -nf {comma-separated field names}  Same as -n
     -nr {comma-separated field names}  Numerical descending; nulls sort first
+    -t  {comma-separated field names}  Natural ascending
+    -tr {comma-separated field names}  Natural descending
+    -h|--help Show this message.
 
     Example:
       mlr sort -f a,b -nr x,y,z
