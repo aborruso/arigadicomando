@@ -8,9 +8,11 @@ Tutto questo è possibile grazie al suo straordinario autore, John Kerl, che cur
 
 ### 2022-02-08 | Aggiunto il natural sorting
 
-È possibile il *natural sorting*, sia per il verbo [sort](verbi.md#sort), che per la [funzione DSL `sort`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sort).
+È possibile usare il *natural sorting*[^1], sia per il verbo [sort](verbi.md#sort), che per la [funzione DSL `sort`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sort).
 
 Vedi [`#874`](https://github.com/johnkerl/miller/issues/874) e [`#872`](https://github.com/johnkerl/miller/discussions/872#discussioncomment-1977161).
+
+[^1] https://blog.codinghorror.com/sorting-for-humans-natural-sort-order/
 ### 2022-02-07 | Espansa sintassi di strptime
 
 Prima non era possibile utilizzare `%j`.
