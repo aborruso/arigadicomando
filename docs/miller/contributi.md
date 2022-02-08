@@ -12,7 +12,7 @@ Tutto questo è possibile grazie al suo straordinario autore, John Kerl, che cur
 
 Vedi [`#874`](https://github.com/johnkerl/miller/issues/874) e [`#872`](https://github.com/johnkerl/miller/discussions/872#discussioncomment-1977161).
 
-[^1] https://blog.codinghorror.com/sorting-for-humans-natural-sort-order/
+[^1]: https://blog.codinghorror.com/sorting-for-humans-natural-sort-order/
 ### 2022-02-07 | Espansa sintassi di strptime
 
 Prima non era possibile utilizzare `%j`.
