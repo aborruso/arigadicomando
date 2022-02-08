@@ -26,7 +26,7 @@ Vedi [`#922`](https://github.com/johnkerl/miller/issues/922) e [`#923`](https://
 
 ### 2022-01-09 | Supporto al formato JSON Lines
 
-Prima non era supportato. Vedi [`#755]`(https://github.com/johnkerl/miller/discussions/755#discussioncomment-1935634) e [`#844`](https://github.com/johnkerl/miller/pull/844).
+Prima non era supportato. Vedi [`#755`](https://github.com/johnkerl/miller/discussions/755#discussioncomment-1935634) e [`#844`](https://github.com/johnkerl/miller/pull/844).
 
 ### 2022-01-09 | JSON di output corretto
 
