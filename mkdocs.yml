@@ -81,6 +81,7 @@ plugins:
       lang: it
 - mkdocstrings
 - charts
+- tags
 #- rss
 
 extra_javascript:
@@ -117,7 +118,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
         - name: vegalite
           class: vegalite
           format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
