@@ -157,3 +157,47 @@ E l'output:
 ```
 
 Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `"`.
+
+## Fare un trova e sostituisci globale
+
+È comodo utilizzare [`DSL`](https://miller.readthedocs.io/en/latest/reference-dsl/), il linguaggio di scripting di Miller e usare un [ciclo *for*](https://miller.readthedocs.io/en/latest/reference-dsl-control-structures/#for-loops):
+
+```
+mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "e", "X");}' foo.csv
+```
+
+Per tutti i campi - `k` - verrà abblicata la funzione [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub) (trova e sostituisci globale con supporto a regex), che (in questo esempio) cerca la stringa `e` e la sostituisce con `X`.
+
+L'opzione `-S` per considerare tutti i campi come stringhe.
+
+## Rimuovere i ritorni a capo nelle celle
+
+Prendendo spunto dalla ricetta sul [trova e sostituisce globale](ricette.md#fare-un-trova-e-sostituisci-globale), basta cercare il carattere di ritorno a capo.
+
+In input un CSV come quello di sotto ([qui](risorse/rimuovi-a-capo.txt)), in cui all'interno delle celle, ci sono dei ritorno a capo materializzati da dei *line feed*, ovvero mappati con i caratteri speciali `\n`.
+
+``` title="rimuovi-a-capo.txt"
+Campo 1,Campo 2
+"Cella con
+A capo
+Fastidiosi",Ipsum
+Lorem,"uno
+Due
+Tre
+Quattro
+Cinque"
+```
+
+Si può cercare appunto `\n` e sostituirlo con spazio, e poi rimuovere eventuali doppi spazi usando il [verbo](verbi.md#clean-whitespace):
+
+```
+mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "\n", " ");}' then clean-whitespace rimuovi-a-capo.txt
+```
+
+In output:
+
+```
+Campo 1,Campo 2
+Cella con A capo Fastidiosi,Ipsum
+Lorem,uno Due Tre Quattro Cinque
+```
