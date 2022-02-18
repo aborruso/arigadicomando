@@ -202,6 +202,6 @@ Cella con A capo Fastidiosi,Ipsum
 Lorem,uno Due Tre Quattro Cinque
 ```
 
-!!! note
+!!! note "Nota bene"
 
     `\n` non è l'unico modo di materializzare un [ritorno a capo](https://en.wikipedia.org/wiki/Carriage_return?oldformat=true), quindi è possibile dover modificare l'esempio di sopra.
