@@ -166,9 +166,9 @@ Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `
 mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "e", "X");}' foo.csv
 ```
 
-Per tutti i campi - `k` - verrà abblicata la funzione [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub) (trova e sostituisci globale con supporto a regex), che (in questo esempio) cerca la stringa `e` e la sostituisce con `X`.
+Per tutti i campi - `k` - verrà applicata la funzione [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub) (trova e sostituisci globale con supporto a regex), che (in questo esempio) cerca la stringa `e` e la sostituisce con `X`.
 
-L'opzione `-S` per considerare tutti i campi come stringhe.
+L'opzione `-S` per forzare che tutti i campi siano interpretati come stringhe.
 
 ## Rimuovere i ritorni a capo nelle celle
 
@@ -188,7 +188,7 @@ Quattro
 Cinque"
 ```
 
-Si può cercare appunto `\n` e sostituirlo con spazio, e poi rimuovere eventuali doppi spazi usando il [verbo](verbi.md#clean-whitespace):
+Si può cercare appunto `\n` e sostituirlo con spazio, e poi rimuovere eventuali doppi spazi usando il verbo [`clean-whitespace`](verbi.md#clean-whitespace):
 
 ```
 mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "\n", " ");}' then clean-whitespace rimuovi-a-capo.txt
