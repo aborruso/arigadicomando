@@ -163,7 +163,7 @@ Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `
 È comodo utilizzare [`DSL`](https://miller.readthedocs.io/en/latest/reference-dsl/), il linguaggio di scripting di Miller e usare un [ciclo *for*](https://miller.readthedocs.io/en/latest/reference-dsl-control-structures/#for-loops):
 
 ```
-mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "e", "X");}' foo.csv
+mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "e", "X")}' foo.csv
 ```
 
 Per tutti i campi - `k` - verrà applicata la funzione [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub) (trova e sostituisci globale con supporto a espressioni regolari), che (in questo esempio) cerca la stringa `e` e la sostituisce con `X`.
@@ -191,7 +191,7 @@ Cinque"
 Si può cercare appunto `\n` e sostituirlo con spazio, e poi rimuovere eventuali doppi spazi usando il verbo [`clean-whitespace`](verbi.md#clean-whitespace):
 
 ```
-mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "\n", " ");}' then clean-whitespace rimuovi-a-capo.txt
+mlr --csv -S put 'for (k in $*) {$[k] = gsub($[k], "\n", " ")}' then clean-whitespace rimuovi-a-capo.txt
 ```
 
 In output:
