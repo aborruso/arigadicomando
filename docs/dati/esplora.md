@@ -92,7 +92,7 @@ less colored-shapes.csv
 
     In questo modo - con `head`, `tail` e `less` - è possibile **esplorare** anche **file** di testo di **grandi dimensioni**.
 
-Le *utility* di questa sezione però fanno **soltanto visualizzare** contenuti, non estraggo informazioni (numero di righe, colonne, *encoding*, dimensioni, ecc..).
+Le *utility* di questa sezione però fanno **soltanto visualizzare** contenuti, non estraggono informazioni (numero di righe, colonne, *encoding*, dimensioni, ecc..).
 
 
 ## Informazioni sui file
