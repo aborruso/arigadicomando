@@ -84,7 +84,7 @@ less colored-shapes.csv
     - con ++"N"++ il risultato successivo della ricerca;
     - con ++"G"++ si va alla fine del file;
     - con ++"g"++ si va all'inizio;
-    - con ++q++ si si esce da `less`.
+    - con ++q++ si esce da `less`.
 
 ![](./../images/less.gif)
 
