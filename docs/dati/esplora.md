@@ -179,7 +179,7 @@ id,titolo
 
     Se si vuole **soltanto** il **numero** di **righe**, **senza** il **nome** del **file**, il comando è `<wc-01.csv wc -l`
 
-`wc` **non** è però un comando che **interpreta** il tipo di **formato**, e quindi in presenza di un file di input come [questo sottostante](../data/wc-02.csv) - un CSV di due righe (più una d'intestazione) e due colonne - il conteggio delle righe sarà pari a 8
+`wc` **non** è però un comando che **interpreta** il tipo di **formato**, e quindi in presenza di un file di input come [questo sottostante](../data/wc-02.csv) - un CSV di due righe (più una d'intestazione) e due colonne - il conteggio delle righe sarà pari a 8.
 
 ``` linenums="1"
 FieldA,FieldB
@@ -192,7 +192,7 @@ Due
 Tre"
 ```
 
-Questo file - vedi qui sotto - contiene dei ritorni a capo nelle celle, e per ognuno viene conteggiata una riga.
+Questo file - vedi anteprima sottostante - contiene dei ritorni a capo nelle celle, e per ognuno viene conteggiata una riga.
 
 | FieldA | FieldB |
 | --- | --- |
