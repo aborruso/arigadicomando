@@ -134,3 +134,4 @@ markdown_extensions:
       toc_depth: 3
 - pymdownx.arithmatex:
       generic: true
+- pymdownx.keys
