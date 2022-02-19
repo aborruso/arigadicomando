@@ -167,7 +167,7 @@ id,titolo
 2,Il mago di oz
 ```
 
-| Comando | output | descrizione |
+| comando | output | descrizione |
 | --- | --- | --- |
 | `wc wc-01.csv` | `3 9 50 wc-01.csv` | numero di righe, numero di parole e numero di *byte* |
 | `wc -l wc-01.csv` | `3 wc-01.csv` | numero di righe |
