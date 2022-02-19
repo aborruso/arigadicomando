@@ -155,7 +155,7 @@ id,nomeComune
 
 ## Le "misure"
 
-A un file testuale di dati è importante "**prendere le misure**", come il numero di righe, il numero di caratteri, numero di colonne (se è un file a griglia tabellare), ecc.
+A un file testuale di dati è importante "**prendere le misure**", come il numero di righe, il numero di caratteri, numero di colonne (se è un file a griglia tabellare), ecc..
 
 ### wc
 
