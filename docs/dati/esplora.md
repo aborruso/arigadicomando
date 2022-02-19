@@ -114,7 +114,7 @@ Con l'opzione `-i` si ottengono informazioni sull'[**_encoding_**](#encoding).
     ```
     encoding_iso-8859-1.csv: application/csv; charset=iso-8859-1
     ```
-Conoscere l'*encoding* di un file di testo strutturato, da usare per fare analisi e trasformazione di dati è un elemento essenziale, perché se "mappato" scorrettamente porta a una lettera errata dei contenuti del file.
+Conoscere l'*encoding* di un file di testo strutturato, da usare per fare analisi e trasformazione di dati è un elemento essenziale, perché se "mappato" scorrettamente porta a una lettura errata dei contenuti del file.
 
 ### stat
 
