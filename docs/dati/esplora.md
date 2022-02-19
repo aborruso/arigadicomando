@@ -237,6 +237,34 @@ righe,colonne
 2,2
 ```
 
+Un esempio più eclatante è quando il file di input è un `JSON` come quello sottostante, composto da 2 "record" (qui è improprio come termine, ma per dare l'idea), ognuno con due campi.
+
+```json linenums="1"
+[
+  {
+    "id": 1,
+    "titolo": "La spada nella roccia"
+  },
+  {
+    "id": 2,
+    "titolo": "Il mago di oz"
+  }
+]
+```
+
+Il comando
+
+```bash
+mlr --j2c tail -n 1 then put '$righe=NR;$colonne=NF-1' then cut -f righe,colonne input.json
+```
+
+restituirà sempre (`--j2c` è per trasformare l'input in `JSON` in `CSV`)
+
+```
+righe,colonne
+2,2
+```
+
 
 !!! info
 
