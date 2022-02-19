@@ -86,7 +86,9 @@ less colored-shapes.csv
     - con ++"g"++ si va all'inizio;
     - con ++q++ si esce da `less`.
 
-![](./../images/less.gif)
+<figure markdown>
+  ![](./../images/less.gif)
+</figure>
 
 !!! tip
 
