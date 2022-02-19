@@ -169,9 +169,9 @@ id,titolo
 
 | comando | output | descrizione |
 | --- | --- | --- |
-| `wc wc-01.csv` | `3 9 50 wc-01.csv` | numero di righe, numero di parole e numero di *byte* |
+| `wc wc-01.csv` | `3 9 50 wc-01.csv` | numero di righe, parole e *byte* |
 | `wc -l wc-01.csv` | `3 wc-01.csv` | numero di righe |
-| `wc -w wc-01.csv` | `9 wc-01.csv` | numero di parole (il separatore è lo spazio) |
+| `wc -w wc-01.csv` | `9 wc-01.csv` | numero di parole (separate da spazio) |
 | `wc -c wc-01.csv` | `50 wc-01.csv` | numero di *byte* |
 | `wc --max-line-length wc-01.csv` | `23 wc-01.csv` | il numero di caratteri della riga più lunga |
 
