@@ -38,6 +38,7 @@ theme:
     - navigation.indexes
   font:
     text: Montserrat
+    code: Fira Code
   custom_dir: overrides
 
 # foglio di stile personalizzato
