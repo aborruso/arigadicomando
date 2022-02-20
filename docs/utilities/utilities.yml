@@ -40,3 +40,12 @@
 - nome: wc
   URL: https://man7.org/linux/man-pages/man1/wc.1.html
   cosaFa: "Restituisce numero di linee, caratteri, parole e di *byte* di un file."
+- nome: xsv
+  URL: https://github.com/BurntSushi/xsv
+  cosaFa: "Uno straordinario toolkit per leggere, filtrare, analizzare un CSV."
+- nome: csvkit
+  URL: https://csvkit.readthedocs.io/
+  cosaFa: "Una bella suite di *utility* a riga di comando per convertire ed elaborare file CSV. Ha fatto la storia."
+- nome: frictionless
+  URL: https://framework.frictionlessdata.io/docs/tutorials/working-with-cli
+  cosaFa: "L'utility a riga di comando del *framework* Frictionless"

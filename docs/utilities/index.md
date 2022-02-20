@@ -20,11 +20,23 @@ Rileva l'*encoding* dei caratteri.
 
 :arrow_right: <https://github.com/chardet/chardet>
 
+## csvkit
+
+Una bella suite di *utility* a riga di comando per convertire ed elaborare file CSV. Ha fatto la storia.
+
+:arrow_right: <https://csvkit.readthedocs.io/>
+
 ## file
 
 Restituisce informazioni sui file.
 
 :arrow_right: <https://www.darwinsys.com/file/>
+
+## frictionless
+
+L'utility a riga di comando del *framework* Frictionless
+
+:arrow_right: <https://framework.frictionlessdata.io/docs/tutorials/working-with-cli>
 
 ## head
 
@@ -85,6 +97,12 @@ Una mini guida con i comandi essenziali per utilizzare le *utility* più diffuse
 Restituisce numero di linee, caratteri, parole e di *byte* di un file.
 
 :arrow_right: <https://man7.org/linux/man-pages/man1/wc.1.html>
+
+## xsv
+
+Uno straordinario toolkit per leggere, filtrare, analizzare un CSV.
+
+:arrow_right: <https://github.com/BurntSushi/xsv>
 
 ## yq
 
