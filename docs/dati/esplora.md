@@ -171,11 +171,11 @@ id,titolo
 
 | comando | output | descrizione |
 | --- | --- | --- |
-| `wc wc-01.csv` | `3 9 50 wc-01.csv` | numero di righe, parole e *byte* |
+| `wc wc-01.csv` | `3 9 50 wc-01.csv` | numero di righe, <br>parole e *byte* |
 | `wc -l wc-01.csv` | `3 wc-01.csv` | numero di righe |
-| `wc -w wc-01.csv` | `9 wc-01.csv` | numero di parole (separate da spazio) |
+| `wc -w wc-01.csv` | `9 wc-01.csv` | numero di parole  <br>(separate da spazio) |
 | `wc -c wc-01.csv` | `50 wc-01.csv` | numero di *byte* |
-| `wc --max-line-length wc-01.csv` | `23 wc-01.csv` | il numero di caratteri della riga più lunga |
+| `wc --max-line-length wc-01.csv` | `23 wc-01.csv` | il numero di caratteri  <br>della riga più lunga |
 
 !!! tip
 
