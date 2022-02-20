@@ -401,7 +401,7 @@ chiara;1993-12-13;162;58.3
 guido;2001-01-22;196;90.4
 ```
 
-con il comando `frictionless describe ./base-semicolon.csv`, verrà restituito (tra le altre cose) il tipo per ogni campo di *input*, l'encoding e il separatore:
+con il comando `frictionless describe ./base-semicolon.csv`, verranno restituiti (tra le altre cose) il tipo per ogni campo di *input*, l'*encoding* e il separatore:
 
 ``` yaml
 # --------
