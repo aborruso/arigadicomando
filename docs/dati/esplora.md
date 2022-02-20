@@ -345,6 +345,8 @@ restituisce
 
 Alcuni dei formati di **file di testo strutturato** (`CSV`, `TSV`, quelli a larghezza fissa, ecc.), **non** sono **associati** alla **definizione** dei **campi** da cui sono composti, né rendono disponibile informazioni sul loro `encoding` o sul separatore di campi.
 
+Nè tantomeno quale sia il **formato**. Perché è vero che spesso lo possiamo dedurre dall'estensione (`.csv`, `.json`), ma questa non è detto che sia sempre associata al file (un file `CSV` si potrebbe chiamare semplicemente `input` e non `input.csv`), e non è ci sono controlli di coerenza tra un'estensione e il contenuto del file (un file con estensione `.tsv`, potrebbe contenere un `JSON`).
+
 Da dati come quelli di sotto ([questo `CSV`](../miller/risorse/base-semicolon.csv)), non è possibile leggere che si tratta di campi rispettivamente, con stringhe di testo, date, numeri interi e numeri decimali. Sono **tutte stringhe**.<br>
 Che il separatore sia il `;` si deduce visualizzandolo, ma non è un'informazione che accompagna il file.
 
@@ -381,7 +383,7 @@ Con il formato **`JSON`**  - per schema e tipo campi - va **un po' meglio** ma l
 ]
 ```
 
-Quello che è possibile fare è il cosiddetto *field inferencing*, ovvero leggere il contenuto dei campi e derivarne il possibile tipo.
+Quello che è possibile fare è il cosiddetto **_inferencing_**, ovvero dedurre tipo di campi, encoding, separatore e formato, leggendo il contenuto dei dati di *input*.
 
 !!! note "Nota"
 
@@ -389,7 +391,7 @@ Quello che è possibile fare è il cosiddetto *field inferencing*, ovvero legger
 
 ### **`frictionless`**
 
-`frictionless` con il comando [`describe`](../frictionless/descrivere.md), consente di estrarre lo **schema dati**, l'**_encoding_** e il **separatore di campo** (per i formati in cui è applicabile), a partire da una sorgente di input.
+`frictionless` con il comando [`describe`](../frictionless/descrivere.md), consente di estrarre lo **schema dati**, l'**_encoding_**, il **separatore di campo** (per i formati in cui è applicabile) e il **formato**, a partire da una sorgente di *input*.
 
 A partire ad esempio da [questo file](../miller/risorse/base-semicolon.csv)
 
