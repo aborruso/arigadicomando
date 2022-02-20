@@ -130,26 +130,26 @@ Si può utilizzare il verbo [`unsparsify`](verbi.md#unsparsify) per fare in modo
 
 !!! comando "mlr --json unsparsify ./eterogeneita_sparse.json"
 
-```
-{
-  "host": "xy01.east",
-  "status": "running",
-  "volume": "/dev/sda1",
-  "purpose": "",
-  "reimaged": ""
-}
-{
-  "host": "xy92.west",
-  "status": "running",
-  "volume": "",
-  "purpose": "",
-  "reimaged": ""
-}
-{
-  "host": "xy55.east",
-  "status": "",
-  "volume": "/dev/sda1",
-  "purpose": "failover",
-  "reimaged": true
-}
-```
+    ```
+    {
+      "host": "xy01.east",
+      "status": "running",
+      "volume": "/dev/sda1",
+      "purpose": "",
+      "reimaged": ""
+    }
+    {
+      "host": "xy92.west",
+      "status": "running",
+      "volume": "",
+      "purpose": "",
+      "reimaged": ""
+    }
+    {
+      "host": "xy55.east",
+      "status": "",
+      "volume": "/dev/sda1",
+      "purpose": "failover",
+      "reimaged": true
+    }
+    ```
