@@ -1,5 +1,9 @@
 # Trasforma
 
+!!! warning "Attenzione"
+
+    Questa pagina è una bozza, è ancora quasi tutta da scrivere.
+
 ## Stuttura
 ### Da wide a long
 
