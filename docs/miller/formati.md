@@ -318,7 +318,7 @@ Ad esempio se lo si vuole applicare a [questo `CSV`](./risorse/base_category.csv
 mlr --c2p --barred cat ./base_category.csv
 ```
 
-produce in *output* la stringa sottostante, che si potrà copiare e incollare dovunque serva, producendo qualcosa di leggibile ovunque, senza vincoli di formattazione o *client* usato.
+produce l'*output* sottostante, che si potrà copiare e incollare dovunque serva, producendo qualcosa di leggibile ovunque, senza vincoli di formattazione o *client* usato.
 
 ```
 +--------+-------------+---------+------+---------------+
