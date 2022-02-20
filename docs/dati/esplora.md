@@ -391,7 +391,7 @@ Quello che è possibile fare è il cosiddetto *field inferencing*, ovvero legger
 
 `frictionless` con il comando [`describe`](../frictionless/descrivere.md), consente di estrarre lo **schema dati**, l'**_encoding_** e il **separatore di campo** (per i formati in cui è applicabile), a partire da una sorgente di input.
 
-A partire da [questo file](../miller/risorse/base-semicolon.csv)
+A partire ad esempio da [questo file](../miller/risorse/base-semicolon.csv)
 
 
 ``` title="base-semicolon.csv"
