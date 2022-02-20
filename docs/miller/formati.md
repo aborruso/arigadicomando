@@ -306,4 +306,30 @@ Si può fare riferimento ai campi in modo da numerico, con un progressivo numeri
     1
     ```
 
+### Per condividere esempi di dati da "leggere" a schermo
 
+Molto spesso in *mailing list*, *forum*, su *Stack Exchange*, su GitHub è utile condividere una porzione di file sui cui si sta lavorando, in modo da essere più chiari nel descrivere qual è la questione che si sta affrontando con i dati.
+
+Il formato consigliato è il [pretty printed](./formati.md#pprint-pretty-printed-tabular), che produce un output ben leggibile ovunque.
+
+Ad esempio se lo si vuole applicare a [questo `CSV`](./risorse/base_category.csv), il comando
+
+```
+mlr --c2p --barred cat ./base_category.csv
+```
+
+produce in *output* la stringa sottostante, che si potrà copiare e incollare dovunque serva, producendo qualcosa di leggibile ovunque, senza vincoli di formattazione o *client* usato.
+
+```
++--------+-------------+---------+------+---------------+
+| nome   | dataNascita | altezza | peso | comuneNascita |
++--------+-------------+---------+------+---------------+
+| andy   | 1973-05-08  | 176     | 86.5 | Roma          |
+| chiara | 1993-12-13  | 162     | 58.3 | Milano        |
+| guido  | 2001-01-22  | 196     | 90.4 | Roma          |
+| sara   | 2000-02-22  | 166     | 70.4 | Roma          |
+| giulia | 1997-08-13  | 169     | 68.3 | Milano        |
++--------+-------------+---------+------+---------------+
+```
+
+In alternativa si può produrre un *output* in [`Markdown`](./formati.md#markdown), ma non è compatibile con tutti gli spazi di pubblicazione e/o tutti i client.
