@@ -345,7 +345,7 @@ restituisce
 
 Alcuni dei formati di **file di testo strutturato** (`CSV`, `TSV`, quelli a larghezza fissa, ecc.), **non** sono **associati** alla **definizione** dei **campi** da cui sono composti, né rendono disponibile informazioni sul loro `encoding` o sul separatore di campi.
 
-Nè tantomeno quale sia il **formato**. Perché è vero che spesso lo possiamo dedurre dall'estensione (`.csv`, `.json`), ma questa non è detto che sia sempre associata al file (un file `CSV` si potrebbe chiamare semplicemente `input` e non `input.csv`), e non è ci sono controlli di coerenza tra un'estensione e il contenuto del file (un file con estensione `.tsv`, potrebbe contenere un `JSON`).
+Nè tantomeno quale sia il **formato**. Perché è vero che spesso lo possiamo dedurre dall'estensione (`.csv`, `.json`), ma questa non è detto che sia sempre associata al file (un file `CSV` si potrebbe chiamare semplicemente `input` e non `input.csv`), e non è ci sono controlli di coerenza tra un'estensione e il contenuto del file (un file con estensione `.tsv`, potrebbe contenere un `JSON`). Un'estensione è essenzialmente un'etichetta.
 
 Da dati come quelli di sotto ([questo `CSV`](../miller/risorse/base-semicolon.csv)), non è possibile leggere che si tratta di campi rispettivamente, con stringhe di testo, date, numeri interi e numeri decimali. Sono **tutte stringhe**.<br>
 Che il separatore sia il `;` si deduce visualizzandolo, ma non è un'informazione che accompagna il file.
@@ -383,7 +383,7 @@ Con il formato **`JSON`**  - per schema e tipo campi - va **un po' meglio** ma l
 ]
 ```
 
-Quello che è possibile fare è il cosiddetto **_inferencing_**, ovvero dedurre tipo di campi, encoding, separatore e formato, leggendo il contenuto dei dati di *input*.
+Quello che è possibile fare è il cosiddetto **_inferencing_**, ovvero dedurre tipo di campi, *encoding*, separatore e formato, leggendo il contenuto dei dati di *input*.
 
 !!! note "Nota"
 
@@ -403,7 +403,7 @@ chiara;1993-12-13;162;58.3
 guido;2001-01-22;196;90.4
 ```
 
-con il comando `frictionless describe ./base-semicolon.csv`, verranno restituiti (tra le altre cose) il tipo per ogni campo di *input*, l'*encoding* e il separatore:
+con il comando `frictionless describe ./base-semicolon.csv`, verranno restituiti (tra le altre cose) il tipo per ogni campo di *input*, l'*encoding*, il **formato** e il separatore:
 
 ``` yaml
 # --------
