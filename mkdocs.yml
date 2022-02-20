@@ -66,6 +66,15 @@ nav:
       - DSL: miller/dsl.md
       - Ricette: miller/ricette.md
       - Contributi: miller/contributi.md
+    - Frictionless:
+      - frictionless/index.md
+      - Descrivere: frictionless/descrivere.md
+    - csvkit:
+      - csvkit/index.md
+      - csvstat: csvkit/csvstat.md
+    - xsv:
+      - xsv/index.md
+      - stats: xsv/stats.md
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md
