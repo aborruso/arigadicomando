@@ -346,7 +346,7 @@ restituisce
 Alcuni dei formati di **file di testo strutturato** (`CSV`, `TSV`, quelli a larghezza fissa, ecc.), **non** sono **associati** alla **definizione** dei **campi** da cui sono composti, né rendono disponibile informazioni sul loro `encoding` o sul separatore di campi.
 
 Da dati come quelli di sotto ([questo `CSV`](../miller/risorse/base-semicolon.csv)), non è possibile leggere che si tratta di campi rispettivamente, con stringhe di testo, date, numeri interi e numeri decimali. Sono **tutte stringhe**.<br>
-Che il separatore si il `;` si deduce visualizzandolo, ma non è un'informazione che accompagna il file.
+Che il separatore sia il `;` si deduce visualizzandolo, ma non è un'informazione che accompagna il file.
 
 ``` title="base-semicolon.csv"
 nome;dataNascita;altezza;peso
