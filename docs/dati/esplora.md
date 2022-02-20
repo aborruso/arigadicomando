@@ -336,19 +336,26 @@ restituisce
 
     In questo *output*, a proposito di misure, anche i **valori univoci** e i **parametri statistici** di base.
 
-## Le "forme" (i tipi di campo)
+## Le "forme" (la descrizione dei dati)
 
-Alcuni dei formati di **file di testo strutturato** (`CSV`, `TSV`, quelli a larghezza fissa), **non** sono **associati** a una **definizione** dei **campi** da cui sono composti.
+!!! abstract "Intro"
 
-Quindi da dei dati come quelli di sotto ([questo `CSV`](../miller/risorse/base.csv)), non è possibile leggere che si tratta di campi rispettivamente, con stringhe di testo, date, numeri interi e numeri decimali. Sono **tutte stringhe**.
+    Quale è lo **schema dati**? Quale è il **formato**? Qual è il **separatore dei campi**?<br>
+    Poter leggere o estrarre da una sorgente dati questi elementi descrittivi è prezioso, delle volte è propedeutico al loro uso.
 
-| nome | dataNascita | altezza | peso |
-| --- | --- | --- | --- |
-| andy | 1973-05-08 | 176 | 86.5 |
-| chiara | 1993-12-13 | 162 | 58.3 |
-| guido | 2001-01-22 | 196 | 90.4 |
+Alcuni dei formati di **file di testo strutturato** (`CSV`, `TSV`, quelli a larghezza fissa, ecc.), **non** sono **associati** alla **definizione** dei **campi** da cui sono composti, né rendono disponibile informazioni sul loro `encoding` o sul separatore di campi.
 
-Con il formato **`JSON`** va **un po' meglio**, ma le date sono sempre stringhe e non c'è differenza tra numeri interi e decimali.
+Da dati come quelli di sotto ([questo `CSV`](../miller/risorse/base-semicolon.csv)), non è possibile leggere che si tratta di campi rispettivamente, con stringhe di testo, date, numeri interi e numeri decimali. Sono **tutte stringhe**.<br>
+Che il separatore si il `;` si deduce visualizzandolo, ma non è un'informazione che accompagna il file.
+
+``` title="base-semicolon.csv"
+nome;dataNascita;altezza;peso
+andy;1973-05-08;176;86.5
+chiara;1993-12-13;162;58.3
+guido;2001-01-22;196;90.4
+```
+
+Con il formato **`JSON`**  - per schema e tipo campi - va **un po' meglio** ma le date sono sempre stringhe e non c'è differenza tra numeri interi e decimali.
 <br>I tipi di campo possibili in questo formato sono infatti: `string`, `number`, `boolean` (`"sposato":true`) e `null` (`"secondoNome":null`).
 
 ```json
@@ -376,35 +383,38 @@ Con il formato **`JSON`** va **un po' meglio**, ma le date sono sempre stringhe 
 
 Quello che è possibile fare è il cosiddetto *field inferencing*, ovvero leggere il contenuto dei campi e derivarne il possibile tipo.
 
-!!! important "Nota bene"
+!!! note "Nota"
 
     Come visto sopra, [`csvstat`](../csvkit/csvstat.md) e [`xsv stats`](../xsv/stats.md) estraggono il tipo di campo, e qui a seguire non verranno di nuovi riportati
 
 ### **`frictionless`**
 
-`frictionless` con il comando [`describe`](../frictionless/descrivere.md), consente di estrarre lo schema dati a partire da una sorgente di input.
+`frictionless` con il comando [`describe`](../frictionless/descrivere.md), consente di estrarre lo **schema dati**, l'**_encoding_** e il **separatore di campo** (per i formati in cui è applicabile), a partire da una sorgente di input.
 
-A partire da [questo file](../miller/risorse/base.csv)
+A partire da [questo file](../miller/risorse/base-semicolon.csv)
 
-``` title="base.csv"
-nome,dataNascita,altezza,peso
-andy,1973-05-08,176,86.5
-chiara,1993-12-13,162,58.3
-guido,2001-01-22,196,90.4
+
+``` title="base-semicolon.csv"
+nome;dataNascita;altezza;peso
+andy;1973-05-08;176;86.5
+chiara;1993-12-13;162;58.3
+guido;2001-01-22;196;90.4
 ```
 
-con il comando `frictionless describe ./base.csv`, restituisce (tra le altre cose) il tipo per ogni campo di input:
+con il comando `frictionless describe ./base-semicolon.csv`, restituisce (tra le altre cose) il tipo per ogni campo di *input*, l'encoding e il separatore:
 
 ``` yaml
 # --------
-# metadata: base.csv
+# metadata: ./base-semicolon.csv
 # --------
 
+dialect:
+  delimiter: ;
 encoding: utf-8
 format: csv
 hashing: md5
-name: base
-path: base.csv
+name: base-semicolon
+path: ./base-semicolon.csv
 profile: tabular-data-resource
 schema:
   fields:
