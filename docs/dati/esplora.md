@@ -9,7 +9,7 @@ Sono spesso (in modo evidente) più comodi della gran parte di quelli con interf
 
 Uno dei modi per conoscere un file è quello di **visualizzarne** i **contenuti**. Queste sono alcune delle *utility* classiche per farlo nel terminale.
 
-### cat
+### **`cat`**
 
 L'*utility* tipica è [**`cat`**](../utilities/index.md#cat) che "stampa" a schermo uno o più file (in questo caso concatena e stampa).
 
@@ -25,7 +25,7 @@ Vengono però **stampate** a schermo **tutte le righe**, e con **file molto gran
 
     Esiste anche la versione di `cat`, che consente di leggere anche file di testo compressi: [`zcat`](https://man7.org/linux/man-pages/man1/zcat.1p.html).
 
-### head
+### **`head`**
 
 Per **visualizzare** soltanto le **prime righe** c'è l'*utility* [**`head`**](../utilities/index.md#head), che in maniere predefinita stampa le prime 10 righe:
 
@@ -56,7 +56,7 @@ Con l'opzione `-n numeroDiRighe` è possibile scegliere il numero di righe da vi
 
 Per un formato come il `CSV` il comando `head` è prezioso, perché nella gran parte dei casi restituisce una buona visione del file: qual è il separatore dei campi, quali sono i campi, qual è il separatore dei decimali (se presenti), se ci sono caratteri speciali (come le `"`), ecc..
 
-### tail
+### **`tail`**
 
 Ma è bene poter **vedere** anche le **ultime righe**, per valutare se la struttura è identica a quella di intestazione e se ci sono "strani" contenuti (alle volte purtroppo ci sono note di testo, campi calcolati).<br>
 Il comando è [**`tail`**](../utilities/index.md#tail):
@@ -67,7 +67,7 @@ tail colored-shapes.csv
 
 Di default, le ultime 10 righe; si può definire quante se ne desiderano sempre con l'opzione `-n numeroDiRighe`.
 
-### less
+### **`less`**
 
 Un altro strumento consigliato (ce sono tanti altri), per visualizzare ed esplorare il contenuto di un file di testo è [**`less`**](../utilities/index.md#less), che consente di **sfogliare** il contenuto **schermata dopo schermata**, man mano che lo schermo viene riempito:
 
@@ -99,7 +99,7 @@ Le *utility* di questa sezione però fanno **soltanto visualizzare** contenuti, 
 
 ## Informazioni sui file
 
-### file
+### **`file`**
 
 L'utility di base, preinstallata in tutti i sistemi Linux è [**`file`**](../utilities/index.md#file), che è utile per avere **informazioni** sul **tipo** di **file**.
 
@@ -118,7 +118,7 @@ Con l'opzione `-i` si ottengono informazioni sull'[**_encoding_**](#encoding).
     ```
 Conoscere l'*encoding* di un file di testo strutturato, da usare per fare analisi e trasformazione di dati è un elemento essenziale, perché se "mappato" scorrettamente porta a una lettura errata dei contenuti del file.
 
-### stat
+### **`stat`**
 
 [**`stat`**](../utilities/index.md#stat) fornisce moltissime informazioni sui file, come le dimensioni, i permessi, la data di modifica, ecc.:
 
@@ -159,7 +159,7 @@ id,nomeComune
 
 A un file testuale di dati è importante "**prendere le misure**", come il numero di righe, il numero di caratteri, numero di colonne (se è un file a griglia tabellare), ecc..
 
-### wc
+### **`wc`**
 
 [**`wc`**](../utilities/index.md#wc) è una delle *utility* più importanti per "**esplorare**" **file di testo**.<br>Questo il [file](../data/wc-01.csv) di input di esempio:
 
@@ -271,3 +271,143 @@ righe,colonne
 !!! info
 
     A Miller è dedicata una [monografia](../miller/index.md) di questo sito.
+
+### **`csvkit`**
+
+`csvkit` mette a disposizione il comando [`csvstat`](../csvkit/csvstat.md), che restituisce tante "misure" della sorgente dati di input.
+
+Ad esempio a partire dal file sottostante
+
+``` title="base.csv"
+nome,dataNascita,altezza,peso
+andy,1973-05-08,176,86.5
+chiara,1993-12-13,162,58.3
+guido,2001-01-22,196,90.4
+```
+
+con il comando
+
+```
+csvstat --csv ./base.csv
+```
+
+restituisce
+
+| column_id | column_name | type | nulls | unique | min | max | sum | mean | median | stdev | len | freq |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | nome | Text | False | 3 |  |  |  |  |  |  | 6 | andy, chiara, guido |
+| 2 | dataNascita | Date | False | 3 | 1973-05-08 | 2001-01-22 |  |  |  |  |  | 1973-05-08, 1993-12-13, 2001-01-22 |
+| 3 | altezza | Number | False | 3 | 162 | 196 | 534 | 178 | 176 | 17.088 |  | 176, 162, 196 |
+| 4 | peso | Number | False | 3 | 58.3 | 90.4 | 235.2 | 78.4 | 86.5 | 17.516 |  | 86.5, 58.3, 90.4 |
+
+### **`xsv`**
+
+`xsv` mette a disposizione il comando [`stats`](../xsv/stats.md), che restituisce tante "misure" della sorgente dati di input.
+
+Ad esempio a partire dal file sottostante
+
+``` title="base.csv"
+nome,dataNascita,altezza,peso
+andy,1973-05-08,176,86.5
+chiara,1993-12-13,162,58.3
+guido,2001-01-22,196,90.4
+```
+
+con il comando
+
+```
+xsv stats  --everything ./base.csv
+```
+
+restituisce
+
+| field | type | sum | min | max | min_length | max_length | mean | stddev | median | mode | cardinality |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| nome | Unicode |  | andy | guido | 4 | 6 |  |  |  | N/A | 3 |
+| dataNascita | Unicode |  | 1973-05-08 | 2001-01-22 | 10 | 10 |  |  |  | N/A | 3 |
+| altezza | Integer | 534 | 162 | 196 | 3 | 3 | 178 | 13.9522996909709 | 176 | N/A | 3 |
+| peso | Float | 235.20000000000002 | 58.3 | 90.4 | 4 | 4 | 78.4 | 14.30174814489474 | 86.5 | N/A | 3 |
+
+## Le "forme" (i tipi di campo)
+
+Alcuni dei formati di **file di testo strutturato** (`CSV`, `TSV`, quelli a larghezza fissa), **non** sono **associati** a una **definizione** dei **campi** da cui sono composti.
+
+Quindi da dei dati come quelli di sotto ([questo `CSV`](../miller/risorse/base.csv)), non è possibile leggere che si tratta di campi rispettivamente, con stringhe di testo, date, numeri interi e numeri decimali. Sono **tutte stringhe**.
+
+| nome | dataNascita | altezza | peso |
+| --- | --- | --- | --- |
+| andy | 1973-05-08 | 176 | 86.5 |
+| chiara | 1993-12-13 | 162 | 58.3 |
+| guido | 2001-01-22 | 196 | 90.4 |
+
+Con il formato **`JSON`** va **un po' meglio**, ma le date sono sempre stringhe e non c'è differenza tra numeri interi e decimali.
+<br>I tipi di campo possibili in questo formato sono infatti: `string`, `number`, `boolean` (`"sposato":true`) e `null` (`"secondoNome":null`).
+
+```json
+[
+  {
+    "nome": "andy",
+    "dataNascita": "1973-05-08",
+    "altezza": 176,
+    "peso": 86.5
+  },
+  {
+    "nome": "chiara",
+    "dataNascita": "1993-12-13",
+    "altezza": 162,
+    "peso": 58.3
+  },
+  {
+    "nome": "guido",
+    "dataNascita": "2001-01-22",
+    "altezza": 196,
+    "peso": 90.4
+  }
+]
+```
+
+Quello che è possibile fare è il cosiddetto *field inferencing*, ovvero leggere il contenuto dei campi e derivarne il possibile tipo.
+
+!!! important "Nota bene"
+
+    Come visto sopra, [`csvstat`](../csvkit/csvstat.md) e [`xsv stats`](../xsv/stats.md) estraggono il tipo di campo, e qui a seguire non verranno di nuovi riportati
+
+### **`frictionless`**
+
+`frictionless` con il comando [`describe`](../frictionless/descrivere.md), consente di estrarre lo schema dati a partire da una sorgente di input.
+
+A partire da [questo file](../miller/risorse/base.csv)
+
+``` title="base.csv"
+nome,dataNascita,altezza,peso
+andy,1973-05-08,176,86.5
+chiara,1993-12-13,162,58.3
+guido,2001-01-22,196,90.4
+```
+
+con il comando `frictionless describe ./base.csv`, restituisce (tra le altre cose) il tipo per ogni campo di input:
+
+``` yaml
+# --------
+# metadata: base.csv
+# --------
+
+encoding: utf-8
+format: csv
+hashing: md5
+name: base
+path: base.csv
+profile: tabular-data-resource
+schema:
+  fields:
+    - name: nome
+      type: string
+    - name: dataNascita
+      type: date
+    - name: altezza
+      type: integer
+    - name: peso
+      type: number
+scheme: file
+```
+
