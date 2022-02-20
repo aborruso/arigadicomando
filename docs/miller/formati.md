@@ -332,4 +332,4 @@ produce l'*output* sottostante, che si potrà copiare e incollare dovunque serva
 +--------+-------------+---------+------+---------------+
 ```
 
-In alternativa si può produrre un *output* in [`Markdown`](./formati.md#markdown), ma non è compatibile con tutti gli spazi di pubblicazione e/o tutti i client.
+In alternativa si può produrre un *output* in [`Markdown`](./formati.md#markdown), ma non è compatibile con tutti gli spazi di pubblicazione e/o tutti i *client*.
