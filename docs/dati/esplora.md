@@ -300,6 +300,10 @@ restituisce
 | 3 | altezza | Number | False | 3 | 162 | 196 | 534 | 178 | 176 | 17.088 |  | 176, 162, 196 |
 | 4 | peso | Number | False | 3 | 58.3 | 90.4 | 235.2 | 78.4 | 86.5 | 17.516 |  | 86.5, 58.3, 90.4 |
 
+!!! tip "Di interesse"
+
+    In questo *output*, a proposito di misure, anche i **valori univoci**, i **valori nulli** e i **parametri statistici** di base.
+
 ### **`xsv`**
 
 `xsv` mette a disposizione il comando [`stats`](../xsv/stats.md), che restituisce tante "misure" della sorgente dati di input.
@@ -327,6 +331,10 @@ restituisce
 | dataNascita | Unicode |  | 1973-05-08 | 2001-01-22 | 10 | 10 |  |  |  | N/A | 3 |
 | altezza | Integer | 534 | 162 | 196 | 3 | 3 | 178 | 13.9522996909709 | 176 | N/A | 3 |
 | peso | Float | 235.20000000000002 | 58.3 | 90.4 | 4 | 4 | 78.4 | 14.30174814489474 | 86.5 | N/A | 3 |
+
+!!! tip "Di interesse"
+
+    In questo *output*, a proposito di misure, anche i **valori univoci** e i **parametri statistici** di base.
 
 ## Le "forme" (i tipi di campo)
 
