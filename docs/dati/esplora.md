@@ -276,7 +276,7 @@ righe,colonne
 
 `csvkit` mette a disposizione il comando [`csvstat`](../csvkit/csvstat.md), che restituisce tante "misure" della sorgente dati di input.
 
-Ad esempio a partire dal file sottostante
+Ad esempio a partire dal [file sottostante](../miller/risorse/base.csv)
 
 ``` title="base.csv"
 nome,dataNascita,altezza,peso
@@ -304,7 +304,7 @@ restituisce
 
 `xsv` mette a disposizione il comando [`stats`](../xsv/stats.md), che restituisce tante "misure" della sorgente dati di input.
 
-Ad esempio a partire dal file sottostante
+Ad esempio a partire dal [file sottostante](../miller/risorse/base.csv)
 
 ``` title="base.csv"
 nome,dataNascita,altezza,peso
