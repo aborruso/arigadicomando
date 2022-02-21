@@ -31,5 +31,5 @@ Mette a disposizione diversi comandi:
 -  **slice** - Slice rows from any part of a CSV file. When an index is present, this only has to parse the rows in the slice (instead of all rows leading up to the start of the slice).
 -  **sort** - Sort CSV data.
 -  **split** - Split one CSV file into many CSV files of N chunks.
--  [**stats**](stats.md) - Show basic types and statistics of each column in the CSV file. (i.e., mean, standard deviation, median, range, etc.)
+-  [**stats**](stats.md) - restituisce delle statistiche di base, per ogni campo.
 -  **table** - Show aligned output of any CSV data using [elastic tabstops](https://github.com/BurntSushi/tabwriter).
