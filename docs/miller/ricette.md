@@ -179,7 +179,8 @@ Alcune note:
 - i nomi dei campi, nelle funzioni scritte in `put` hanno come suffisso il `$`. Se ci sono spazi usare le parentesi graffe (i.e. `${nome campo}`);
 - in questo esempio si dice al campo `nomeCampo`, che sarà uguale a se stesso, con le sostituzioni da fare.
 
-È possibile usare le **espressioni regolari**, usando la sintassi del caso, ed è possibile mettere in fila enne processi di sostituzione, separati da `;` (`$nomeCampo=sub($nomeCampo,"Denis","Dennis");$altroCampo=sub($altroCampo,"^Bau","Miao")`).
+È possibile usare le **espressioni regolari**, usando la sintassi del caso, ed è possibile mettere in fila enne processi di sostituzione, separati da `;`:<br>
+`$nomeCampo=sub($nomeCampo,"Denis","Dennis");$altroCampo=sub($altroCampo,"^Bau","Miao")`
 
 !!! note "Nota bene"
 
