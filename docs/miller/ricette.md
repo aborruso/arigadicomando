@@ -160,7 +160,7 @@ Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `
 
 ## Fare un trova e sostituisci per campo
 
-È un'operazione classica che si realizza sfruttando il verbo [**`put`**](./verbi.md#put) e sfruttando funzioni come `sub` e `gsub`.
+È un'operazione classica che si realizza sfruttando il verbo [**`put`**](./verbi.md#put) e funzioni come [`sub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sub) e [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub).
 
 La sintassi tipo è:
 
@@ -183,7 +183,7 @@ Alcune note:
 
 !!! note "Nota bene"
 
-    `sub` esegue il trova e sostituisci della prima occorrenza che trova in una cella, mentre `gsub` per tutte le occorrenze.
+    `sub` esegue il trova e sostituisci della prima occorrenza che trova in una cella, mentre `gsub` per tutte le occorrenze di quella cella.
 
 ## Fare un trova e sostituisci globale
 
