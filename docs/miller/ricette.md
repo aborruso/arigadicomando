@@ -182,7 +182,7 @@ Alcune note:
 È possibile usare le **espressioni regolari**, usando la sintassi del caso, ed è possibile mettere in fila enne processi di sostituzione, separati da `;`:<br>
 
 ```
-`$nomeCampo=sub($nomeCampo,"Denis","Dennis");$altroCampo=sub($altroCampo,"^Bau","Miao")`
+$nomeCampo=sub($nomeCampo,"Denis","Dennis");$altroCampo=sub($altroCampo,"^Bau","Miao")
 ```
 
 !!! note "Nota bene"
