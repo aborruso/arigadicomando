@@ -162,7 +162,7 @@ Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `
 
 È un'operazione classica che si realizza sfruttando il verbo [**`put`**](./verbi.md#put) e funzioni come [`sub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sub) e [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub).
 
-La sintassi tipo è:
+Se ad esempio si vuole cercare la stringa `Denis` e sostituirla con `Dennis`, la sintassi tipo è:
 
 ```bash
 mlr --csv put '$nomeCampo=sub($nomeCampo,"Denis","Dennis")' input.csv
@@ -187,7 +187,7 @@ $nomeCampo=sub($nomeCampo,"Denis","Dennis");$altroCampo=sub($altroCampo,"^Bau","
 
 !!! note "Nota bene"
 
-    `sub` esegue il trova e sostituisci della prima occorrenza che trova in una cella, mentre `gsub` per tutte le occorrenze di quella cella.
+    `sub` esegue il trova e sostituisci della **prima occorrenza** che trova in una cella, mentre `gsub` per **tutte le occorrenze** in quella cella.
 
 ## Fare un trova e sostituisci globale
 
