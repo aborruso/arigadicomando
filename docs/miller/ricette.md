@@ -162,7 +162,7 @@ Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `
 
 È un'operazione classica che si realizza sfruttando il verbo [**`put`**](./verbi.md#put) e funzioni come [`sub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#sub) e [`gsub`](https://miller.readthedocs.io/en/latest/reference-dsl-builtin-functions/index.html#gsub).
 
-Se ad esempio si vuole cercare la stringa `Denis` e sostituirla con `Dennis`, la sintassi tipo è:
+Se ad esempio si vuole cercare la stringa `Denis` e sostituirla con `Dennis`, nel campo `nomeCampo`, la sintassi tipo è:
 
 ```bash
 mlr --csv put '$nomeCampo=sub($nomeCampo,"Denis","Dennis")' input.csv
