@@ -11,39 +11,25 @@ title: xsv
 
 È un *toolkit* dedicato alla lettura, interrogazione, analisi di **file CSV**. È scritto in `Rust` ed è sorprendente per **rapidità** e **facilità d'uso**.
 
-Mette a disposizione diversi comandi.
+Mette a disposizione diversi comandi:
 
-## stats
-
-Il comando **`stats`** restituisce delle statistiche di base, per ogni campo:
-
-  - `type`, il tipo di campo (è un valore dedotto, non letto, quindi ci potrebbe essere qualche errore);
-  - `sum`, la somma;
-  - `min`, il minimo (se numerico);
-  - `max`, il massimo (se numerico);
-  - `min_length`, la lunghezza minima;
-  - `max_length`, la lunghezza massima;
-  - `mean`, la media;
-  - `stddev`, la deviazione standard;
-  - `median`, la mediana;
-  - `mode`, la moda;
-  - `cardinality`, la cardinalità, ovvero quanti valori distinti.
-
-Ad esempio applicato a [questo file](../data/colored-shapes.csv)
-
-```bash
-xsv stats  --everything docs/data/colored-shapes.csv
-```
-
-restituisce
-
-| field | type | sum | min | max | min_length | max_length | mean | stddev | median | mode | cardinality |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| color | Unicode |  | blue | yellow | 3 | 6 |  |  |  | red | 6 |
-| shape | Unicode |  | circle | triangle | 6 | 8 |  |  |  | square | 3 |
-| flag | Integer | 4020 | 0 | 1 | 1 | 1 | 0.3988886683865837 | 0.48966978528326777 | 0 | 0 | 2 |
-| i | Integer | 2526603201 | 56 | 499974 | 2 | 6 | 250704.82248462 | 144927.94969629444 | 251091 | N/A | 10056 |
-| u | Float | 5022.132880999998 | 0.000044 | 0.999969 | 8 | 8 | 0.49832634262750636 | 0.29031110004586974 | 0.497603 | 0.969583 | 10027 |
-| v | Float | 5016.69704200001 | -0.092709 | 1.0725 | 8 | 9 | 0.4977869658662455 | 0.28882812412153674 | 0.49699249999999995 | N/A | 10026 |
-| w | Float | 5034.4910549999895 | 0.042795 | 0.901171 | 8 | 8 | 0.49955259525699414 | 0.033577377526502444 | 0.499945 | 0.542539 | 9434 |
-| x | Float | 50464.12851900001 | 1.113294 | 8.921095 | 8 | 8 | 5.007355479162526 | 1.1660887238185873 | 4.997097 | 6.466293 | 10071 |
+-  **cat** - Concatenate CSV files by row or by column.
+-  **count** - Count the rows in a CSV file. (Instantaneous with an index.)
+-  **fixlengths** - Force a CSV file to have same-length records by either padding or truncating them.
+-  **flatten** - A flattened view of CSV records. Useful for viewing one record at a time. e.g., `xsv slice -i 5 data.csv | xsv flatten`.
+-  **fmt** - Reformat CSV data with different delimiters, record terminators or quoting rules. (Supports ASCII delimited data.)
+-  **frequency** - Build frequency tables of each column in CSV data. (Uses parallelism to go faster if an index is present.)
+-  **headers** - Show the headers of CSV data. Or show the intersection of all headers between many CSV files.
+-  **index** - Create an index for a CSV file. This is very quick and provides constant time indexing into the CSV file.
+-  **input** - Read CSV data with exotic quoting/escaping rules.
+-  **join** - Inner, outer and cross joins. Uses a simple hash index to make it fast.
+-  **partition** - Partition CSV data based on a column value.
+-  **sample** - Randomly draw rows from CSV data using reservoir sampling (i.e., use memory proportional to the size of the sample).
+-  **reverse** - Reverse order of rows in CSV data.
+-  **search** - Run a regex over CSV data. Applies the regex to each field individually and shows only matching rows.
+-  **select** - Select or re-order columns from CSV data.
+-  **slice** - Slice rows from any part of a CSV file. When an index is present, this only has to parse the rows in the slice (instead of all rows leading up to the start of the slice).
+-  **sort** - Sort CSV data.
+-  **split** - Split one CSV file into many CSV files of N chunks.
+-  [**stats**](stats.md) - Show basic types and statistics of each column in the CSV file. (i.e., mean, standard deviation, median, range, etc.)
+-  **table** - Show aligned output of any CSV data using [elastic tabstops](https://github.com/BurntSushi/tabwriter).
