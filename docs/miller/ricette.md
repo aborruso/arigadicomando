@@ -158,6 +158,33 @@ E l'output:
 
 Nel comando bisogna avere cura di inserire eventuali `escape` a caratteri come `"`.
 
+## Fare un trova e sostituisci per campo
+
+È un'operazione classica che si realizza sfruttando il verbo [**`put`**](./verbi.md#put) e sfruttando funzioni come `sub` e `gsub`.
+
+La sintassi tipo è:
+
+```bash
+mlr --csv put '$nomeCampo=sub($nomeCampo,"Denis","Dennis")' input.csv
+```
+
+La funzione `sub` ha tre argomenti, separati `,`:
+
+- a cosa applicare la sostituzione;
+- cosa cercare;
+- con cosa sostituirlo.
+
+Alcune note:
+
+- i nomi dei campi, nelle funzioni scritte in `put` hanno come suffisso il `$`. Se ci sono spazi usare le parentesi graffe (i.e. `${nome campo}`);
+- in questo esempio si dice al campo `nomeCampo`, che sarà uguale a se stesso, con le sostituzioni da fare.
+
+È possibile usare le **espressioni regolari**, usando la sintassi del caso, ed è possibile mettere in fila enne processi di sostituzione, separati da `;` (`$nomeCampo=sub($nomeCampo,"Denis","Dennis");$altroCampo=sub($altroCampo,"^Bau","Miao")`).
+
+!!! note "Nota bene"
+
+    `sub` esegue il trova e sostituisci della prima occorrenza che trova in una cella, mentre `gsub` per tutte le occorrenze.
+
 ## Fare un trova e sostituisci globale
 
 È comodo utilizzare [`DSL`](https://miller.readthedocs.io/en/latest/reference-dsl/), il linguaggio di scripting di Miller e usare un [ciclo *for*](https://miller.readthedocs.io/en/latest/reference-dsl-control-structures/#for-loops):
