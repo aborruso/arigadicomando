@@ -10,7 +10,7 @@ Il comando **`csvstat`** restituisce delle statistiche di base, per ogni campo:
   - `column_id`, il numero della colonna (1, se è la prima e a seguire);
   - `column_name`, il nome;
   - `type`, il tipo di campo (è un valore dedotto, non letto, quindi ci potrebbe essere qualche errore);
-  - `nulls`, il numero di valori nulli;
+  - `nulls`, se il campo contiene valori nulli (è un *booleano*, con `True` e `False`);
   - `unique`, il numero di valori univoci;
   - `min`, il valore minimo (se numerico);
   - `max`, il valore massimo (se numerico);
