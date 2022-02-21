@@ -24,9 +24,10 @@ Il comando **`csvstat`** restituisce delle statistiche di base, per ogni campo:
 
 Ad esempio applicato a [questo file](../data/colored-shapes.csv)
 
-```bash
-csvstat --csv  --everything colored-shapes.csv
-```
+
+!!! comando "csvstat --csv  --everything colored-shapes.csv"
+
+    È stata aggiunta l'opzione `--csv`, per forzare l'output del comando in formato `CSV`.
 
 restituisce
 
@@ -41,6 +42,6 @@ restituisce
 | 7 | w | Number | False | 9434 | 0.043 | 0.901 | 5,034.491 | 0.5 | 0.5 | 0.034 |  | 0.506155, 0.521158, 0.499156, 0.494010, 0.520913 |
 | 8 | x | Number | False | 10071 | 1.113 | 8.921 | 50,464.129 | 5.007 | 4.997 | 1.166 |  | 5.458618, 4.011646, 5.332571, 4.315572, 5.178077 |
 
-!!! info
+!!! note "Nota"
 
-    Nel comando di esempio soprastante, è stata aggiunta l'opzione `--csv`, per forzare l'output del comando in formato `CSV`.
+    Se avesse pure il **conteggio** dei **valori nulli**, sarebbe perfetto.
