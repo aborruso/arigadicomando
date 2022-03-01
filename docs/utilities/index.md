@@ -26,6 +26,12 @@ Una bella suite di *utility* a riga di comando per convertire ed elaborare file 
 
 :arrow_right: <https://csvkit.readthedocs.io/>
 
+## datamash
+
+Esegue analisi statistiche su file di testo strutturati.
+
+:arrow_right: <https://www.gnu.org/software/datamash/manual/.html>
+
 ## file
 
 Restituisce informazioni sui file.

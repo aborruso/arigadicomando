@@ -49,3 +49,6 @@
 - nome: frictionless
   URL: https://framework.frictionlessdata.io/docs/tutorials/working-with-cli
   cosaFa: "L'utility a riga di comando del *framework* Frictionless"
+- nome: datamash
+  URL: https://www.gnu.org/software/datamash/manual/.html
+  cosaFa: "Esegue analisi statistiche su file di testo strutturati."
