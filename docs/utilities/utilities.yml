@@ -52,3 +52,9 @@
 - nome: datamash
   URL: https://www.gnu.org/software/datamash/manual/.html
   cosaFa: "Esegue analisi statistiche su file di testo strutturati."
+- nome: ckanapi
+  URL: https://github.com/ckan/ckanapi
+  cosaFa: "Per utilizzare le API di CKAN, a riga di comando."
+- nome: sqlite
+  URL: https://www.sqlite.org/index.html
+  cosaFa: "Uno straordinario database relazionale."

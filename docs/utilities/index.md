@@ -20,6 +20,12 @@ Rileva l'*encoding* dei caratteri.
 
 :arrow_right: <https://github.com/chardet/chardet>
 
+## ckanapi
+
+Per utilizzare le API di CKAN, a riga di comando.
+
+:arrow_right: <https://github.com/ckan/ckanapi>
+
 ## csvkit
 
 Una bella suite di *utility* a riga di comando per convertire ed elaborare file CSV. Ha fatto la storia.
@@ -79,6 +85,12 @@ Uno strumento per eseguire *query*, modellare e ristrutturare file di testo stru
 Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`
 
 :arrow_right: <https://github.com/aborruso/scrape-cli>
+
+## sqlite
+
+Uno straordinario database relazionale.
+
+:arrow_right: <https://www.sqlite.org/index.html>
 
 ## stat
 
