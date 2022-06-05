@@ -58,3 +58,6 @@
 - nome: sqlite
   URL: https://www.sqlite.org/index.html
   cosaFa: "Uno straordinario database relazionale."
+- nome: tree
+  URL: http://mama.indstate.edu/users/ice/tree/
+  cosaFa: "Restituisce l'albero di cartelle e file di percorso."

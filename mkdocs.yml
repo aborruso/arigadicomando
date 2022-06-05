@@ -76,6 +76,8 @@ nav:
     - xsv:
       - xsv/index.md
       - stats: xsv/stats.md
+  - Ricette:
+    - Lista file e cartelle in JSON: ricette/tree-lista-file-cartelle.md
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md
@@ -92,7 +94,9 @@ plugins:
       lang: it
 - mkdocstrings
 - charts
-- tags
+- tags:
+    tags_file: tags.md
+
 #- rss
 
 extra_javascript:

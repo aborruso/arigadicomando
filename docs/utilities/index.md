@@ -110,6 +110,12 @@ Una mini guida con i comandi essenziali per utilizzare le *utility* più diffuse
 
 :arrow_right: <https://github.com/tldr-pages/tldr>
 
+## tree
+
+Restituisce l'albero di cartelle e file di percorso.
+
+:arrow_right: <http://mama.indstate.edu/users/ice/tree/>
+
 ## wc
 
 Restituisce numero di linee, caratteri, parole e di *byte* di un file.
