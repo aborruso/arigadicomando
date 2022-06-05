@@ -128,6 +128,12 @@ Restituisce numero di linee, caratteri, parole e di *byte* di un file.
 
 :arrow_right: <https://man7.org/linux/man-pages/man1/wc.1.html>
 
+## xmlstarlet
+
+Per modifcare, interrogare e trasformare file XML.
+
+:arrow_right: <http://xmlstar.sourceforge.net/>
+
 ## xsv
 
 Uno straordinario toolkit per leggere, filtrare, analizzare un CSV.

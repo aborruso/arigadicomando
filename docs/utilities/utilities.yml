@@ -64,3 +64,6 @@
 - nome: split
   URL: https://pubs.opengroup.org/onlinepubs/9699919799/utilities/split.html
   cosaFa: "Suddivide un file di testo in più parti."
+- nome: xmlstarlet
+  URL: http://xmlstar.sourceforge.net/
+  cosaFa: "Per modifcare, interrogare e trasformare file XML."
