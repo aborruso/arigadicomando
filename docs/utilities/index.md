@@ -86,6 +86,12 @@ Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`
 
 :arrow_right: <https://github.com/aborruso/scrape-cli>
 
+## split
+
+Suddivide un file di testo in più parti.
+
+:arrow_right: <https://pubs.opengroup.org/onlinepubs/9699919799/utilities/split.html>
+
 ## sqlite
 
 Uno straordinario database relazionale.

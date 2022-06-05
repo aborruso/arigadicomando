@@ -78,6 +78,7 @@ nav:
       - stats: xsv/stats.md
   - Ricette:
     - Lista file e cartelle in JSON: ricette/tree-lista-file-cartelle.md
+    - Suddividere un file in parti: ricette/split-suddividere-file-parti.md
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md

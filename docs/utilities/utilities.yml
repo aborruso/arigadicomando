@@ -61,3 +61,6 @@
 - nome: tree
   URL: http://mama.indstate.edu/users/ice/tree/
   cosaFa: "Restituisce l'albero di cartelle e file di percorso."
+- nome: split
+  URL: https://pubs.opengroup.org/onlinepubs/9699919799/utilities/split.html
+  cosaFa: "Suddivide un file di testo in più parti."
