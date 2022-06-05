@@ -12,7 +12,7 @@ hide:
 
 # Esportare la lista di file e cartelle in formato JSON
 
-Si può usare l'*utility* [tree](../../utilities/#tree):
+Si può usare l'*utility* [`tree`](../../utilities/#tree):
 
 ```bash
 tree -Jhfpug /myPC/myFolder
@@ -37,5 +37,7 @@ In output (è un esempio):
 !!! note "Nota"
 
     Se non inserisci alcun *path*, il comando verrà eseguito per file e cartelle contenuti nella cartella corrente
+
+---
 
 Fonte: <https://twitter.com/climagic/status/1268900527561113600>
