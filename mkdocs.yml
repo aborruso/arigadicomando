@@ -79,6 +79,7 @@ nav:
   - Ricette:
     - ricette/index.md
     - Come rendere più leggibile un file XML: ricette/xmlstarlet-rendere-leggibile-file-xml.md
+    - Forzare chiamata tor da un determinato paese: ricette/tor-forzare-chiamata-italia.md
     - Lista file e cartelle in JSON: ricette/tree-lista-file-cartelle.md
     - Suddividere un file in parti: ricette/split-suddividere-file-parti.md
   - Partecipa: partecipa.md
