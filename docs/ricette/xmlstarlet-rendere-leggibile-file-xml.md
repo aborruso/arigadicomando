@@ -24,7 +24,7 @@ Si può usare l'*utility* [`xmlstarlet`](../../utilities/#xmlstarlet) e applicar
 il comando
 
 ```bash
-xmlstarlet format --indent-tab Z00199663A.xml
+xmlstarlet format --indent-tab input.xml
 ```
 
 per avere questa versione molto più leggibile dall'uomo:
