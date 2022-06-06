@@ -32,3 +32,7 @@ A cose fatte si potrà lanciare la chiamata, e l'IP assegnato sarà "italiano".
 ```
 curl --socks5-hostname localhost:9050  ifconfig.me
 ```
+
+!!! note "Nota"
+
+    In questa modalità si rischia di perdere l'anonimizzazione. Quindi usarla soltanto se non quest'ultima non è un requisito.
