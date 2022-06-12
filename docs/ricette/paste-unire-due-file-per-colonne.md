@@ -46,6 +46,10 @@ c,2,1985
 
 Con `-d ","` si restituisce a `paste` il fatto che il separatore di colonne del file di input è la `,`.
 
+!!! warning
+
+    `paste` non è `format aware`
+
 ## Usando qsv
 
 A partire dagli stessi file di sopra, il comando per [`qsv`](../../utilities/#qsv) da usare è [`cat`](https://github.com/jqnatividad/qsv/blob/master/src/cmd/cat.rs#L7):
@@ -53,3 +57,7 @@ A partire dagli stessi file di sopra, il comando per [`qsv`](../../utilities/#qs
 ```bash
 qsv cat columns input_01 input_02 >output
 ```
+
+!!! warning
+
+    `qsv` è `format aware`
