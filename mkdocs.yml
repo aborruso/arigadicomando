@@ -82,6 +82,7 @@ nav:
     - Forzare chiamata tor da un determinato paese: ricette/tor-forzare-chiamata-italia.md
     - Lista file e cartelle in JSON: ricette/tree-lista-file-cartelle.md
     - Suddividere un file in parti: ricette/split-suddividere-file-parti.md
+    - Unire colonne da file distinti: ricette/paste-unire-due-file-per-colonne.md
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md

@@ -67,3 +67,6 @@
 - nome: xmlstarlet
   URL: http://xmlstar.sourceforge.net/
   cosaFa: "Per modifcare, interrogare e trasformare file XML."
+- nome: paste
+  URL: https://manpages.ubuntu.com/manpages/kinetic/en/man1/paste.1.html
+  cosaFa: "Unisce più file in uno solo."

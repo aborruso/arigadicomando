@@ -80,6 +80,12 @@ Uno strumento per eseguire *query*, modellare e ristrutturare file di testo stru
 
 :arrow_right: <https://miller.readthedocs.io/en/latest/>
 
+## paste
+
+Unisce più file in uno solo.
+
+:arrow_right: <https://manpages.ubuntu.com/manpages/kinetic/en/man1/paste.1.html>
+
 ## scrape-cli
 
 Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`
