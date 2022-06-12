@@ -86,6 +86,12 @@ Unisce più file in uno solo.
 
 :arrow_right: <https://manpages.ubuntu.com/manpages/kinetic/en/man1/paste.1.html>
 
+## qsv
+
+Una ricchissima e potente utility per analizzare file in formato `CSV`.
+
+:arrow_right: <https://github.com/jqnatividad/qsv>
+
 ## scrape-cli
 
 Per estrarre testo da pagine HTML, tramite `XPATH` e `CSS selector.`

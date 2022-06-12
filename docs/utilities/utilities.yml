@@ -70,3 +70,6 @@
 - nome: paste
   URL: https://manpages.ubuntu.com/manpages/kinetic/en/man1/paste.1.html
   cosaFa: "Unisce più file in uno solo."
+- nome: qsv
+  URL: https://github.com/jqnatividad/qsv
+  cosaFa: "Una ricchissima e potente utility per analizzare file in formato `CSV`."
