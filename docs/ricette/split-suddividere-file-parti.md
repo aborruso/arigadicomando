@@ -28,3 +28,7 @@ split -l 50000 -d input.csv input_ --additional-suffix=.csv
 In output si avranno i file `input_00.csv`, `input_01.csv`, ecc..
 
 È possibile dividere il file anche in un determinato numero di parti e per tagli dimensionali in *byte*.
+
+!!! warning
+
+    `split` non è `format aware`
