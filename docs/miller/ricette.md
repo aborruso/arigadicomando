@@ -236,3 +236,40 @@ Lorem,uno Due Tre Quattro Cinque
 !!! note "Nota bene"
 
     `\n` non è l'unico modo di materializzare un [ritorno a capo](https://en.wikipedia.org/wiki/Carriage_return?oldformat=true), quindi è possibile dover modificare l'esempio di sopra.
+
+## Suddividere un file in più parti, in dipendenza del valore di un campo
+
+A partire ad esempio da
+
+    DeviceID,AreaName,Longitude,Latitude
+    12311,Dubai,55.55431,25.45631
+    12311,Dubai,55.55432,25.45634
+    12311,Dubai,55.55433,25.45637
+    12311,Dubai,55.55431,25.45621
+    12309,Dubai,55.55427,25.45627
+    12309,Dubai,55.55436,25.45655
+    12412,Dubai,55.55441,25.45657
+    12412,Dubai,55.55442,25.45656
+
+e lanciando
+
+    mlr --csv --from input.csv put -q 'tee > $DeviceID.".csv", $*'
+
+si avranno questi tre file
+
+    #12311.csv
+    DeviceID,AreaName,Longitude,Latitude
+    12311,Dubai,55.55431,25.45631
+    12311,Dubai,55.55432,25.45634
+    12311,Dubai,55.55433,25.45637
+    12311,Dubai,55.55431,25.45621
+
+    #12412.csv
+    DeviceID,AreaName,Longitude,Latitude
+    12412,Dubai,55.55441,25.45657
+    12412,Dubai,55.55442,25.45656
+
+    #12309.csv
+    DeviceID,AreaName,Longitude,Latitude
+    12309,Dubai,55.55427,25.45627
+    12309,Dubai,55.55436,25.45655
