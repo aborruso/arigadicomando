@@ -239,7 +239,7 @@ Lorem,uno Due Tre Quattro Cinque
 
 ## Suddividere un file in più parti, in dipendenza del valore di un campo
 
-Il verbo da usare è [`tee`](verbi#tee).
+Il verbo da usare è [`tee`](verbi.md#tee).
 
 A partire ad esempio da
 
