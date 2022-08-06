@@ -46,6 +46,14 @@ frictionless validate --skip-errors missing-label input.csv
 frictionless validate --dialect '{"delimiter": ";"}' input.csv
 ```
 
+### Aumentare l'ampiezza di informazioni da usare per fare inferencing su un file
+
+`frictionless` per dedurre l'_encoding_ di un file `CSV` usa un _byte sample_ di 10.000. Se si vuole ampliare, c'è l'opzione `--buffer-size`.
+
+``` bash
+frictionless validate --buffer-size 250000 input.csv
+```
+
 ## Estrarre
 
 ### Come estrarre uno specifico foglio, di un foglio elettronico
