@@ -381,7 +381,7 @@ In *output*, estratto automaticamente, l'elenco di errori annotato poco sopra.
 +-------+---------+------------+----------------------------------------------------+
 ```
 
-### Applicare uno schema definito per un file, ad altri
+## Applicare uno schema definito per un file, ad altri
 
 Per farlo basta usare l'opzione `--path` e lanciare il comando inserendo il percorso del file su cui fare la validazione.
 
