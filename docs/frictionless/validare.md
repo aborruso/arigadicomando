@@ -381,6 +381,14 @@ In *output*, estratto automaticamente, l'elenco di errori annotato poco sopra.
 +-------+---------+------------+----------------------------------------------------+
 ```
 
+!!! tips "Applicare uno schema definito per un file, ad altri"
+
+    Per farlo basta usare l'opzione `--path` e lanciare il comando inserendo il percorso del file su cui fare la validazione.
+
+    ``` bash
+    frictionless validate schema_01.yml --path /percorso/file.csv
+    ```
+
 ## Opzioni del comando
 
 
