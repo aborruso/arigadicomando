@@ -62,7 +62,7 @@ frictionless extract --valid  input.csv --csv
 
 !!! note
 
-    Da un'idea di `aborruso`, proposta tramite le issue [`#963`](https://github.com/frictionlessdata/frictionless-py/issues/963) e [`#1004`](https://github.com/frictionlessdata/frictionless-py/issues/1004)
+    Da un'idea di `aborruso`, proposta tramite le issue [`#963`](https://github.com/frictionlessdata/frictionless-py/issues/963) e [`#1004`](https://github.com/frictionlessdata/frictionless-py/issues/1004).
 
 ### Estrarre soltanto le righe che non passano la validazione
 
