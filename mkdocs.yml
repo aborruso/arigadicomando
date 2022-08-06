@@ -36,6 +36,7 @@ theme:
     - navigation.sections
     - navigation.tracking
     - navigation.indexes
+    - content.code.annotate
   font:
     text: Montserrat
     code: Fira Code
@@ -70,6 +71,7 @@ nav:
     - Frictionless:
       - frictionless/index.md
       - Descrivere: frictionless/descrivere.md
+      - Validare: frictionless/validare.md
     - csvkit:
       - csvkit/index.md
       - csvstat: csvkit/csvstat.md
@@ -117,41 +119,44 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/vega-embed@6
 
 markdown_extensions:
-- admonition
-- attr_list
-- md_in_html
-- footnotes
-- meta
-- mkdocs-click
-- pymdownx.betterem:
-      smart_enable: all
-- pymdownx.caret
-- pymdownx.critic:
-      mode: view
-- pymdownx.details
-- pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-- pymdownx.highlight
-- pymdownx.mark
-- pymdownx.smartsymbols
-- pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-        - name: vegalite
-          class: vegalite
-          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
-- pymdownx.tabbed:
-      alternate_style: true
-- pymdownx.tasklist:
-      custom_checkbox: true
-      clickable_checkbox: true
-- pymdownx.tilde
-- toc:
-      permalink: true
-      toc_depth: 3
-- pymdownx.arithmatex:
-      generic: true
-- pymdownx.keys
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - meta
+  - mkdocs-click
+  - pymdownx.betterem:
+        smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic:
+        mode: view
+  - pymdownx.details
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+          - name: vegalite
+            class: vegalite
+            format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
+  - pymdownx.tabbed:
+        alternate_style: true
+  - pymdownx.tasklist:
+        custom_checkbox: true
+        clickable_checkbox: true
+  - pymdownx.tilde
+  - toc:
+        permalink: true
+        toc_depth: 3
+  - pymdownx.arithmatex:
+        generic: true
+  - pymdownx.keys
