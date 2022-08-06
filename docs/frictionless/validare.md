@@ -1,7 +1,7 @@
 ---
 hide:
 #  - navigation
-  - toc
+#  - toc
 title: frictionless - validare dati
 ---
 
@@ -335,6 +335,10 @@ schema:
 3.  L'espressione regolare che i valori delle celle di questo campo devono rispettare
 4.  L'enumerazione, l'elenco, dei valori ammessi per le celle di questo campo
 
+!!! tip "Creare automaticamente un file `YAML`"
+
+    Utilizzando il comando [`describe`](descrivere.md), puoi creare la struttura di base di un file `frictionless` che descrive una risorsa, a cui aggiungere poi "a mano" ulteriori proprietà.
+
 Per ogni campo è definito il tipo di campo, con il parametro `type`, e sono definiti altri vincoli specifici tramite il parametro `constraints` ([documentazione ufficiale](https://specs.frictionlessdata.io/table-schema/#rich-types)). Tra questi ad esempio:
 
 - `required`, per indicare che i valori di quel campo sono obbligatori;
@@ -375,4 +379,104 @@ In *output*, estratto automaticamente, l'elenco di errori annotato poco sopra.
 |       |         | -error     | "type" at position "5" does not conform to a       |
 |       |         |            | constraint: constraint "enum" is "['A', 'B']"      |
 +-------+---------+------------+----------------------------------------------------+
+```
+
+## Opzioni del comando
+
+
+```
+Options:
+  --type TEXT                     Specify type e.g. "package"
+  --path TEXT                     Specify the data path explicitly (e.g. you
+                                  need to use it if your data is JSON)
+
+  --scheme TEXT                   Specify scheme  [default: inferred]
+  --format TEXT                   Specify format  [default: inferred]
+  --hashing TEXT                  Specify hashing algorithm  [default:
+                                  inferred]
+
+  --encoding TEXT                 Specify encoding  [default: inferred]
+  --innerpath TEXT                Specify in-archive path  [default: first]
+  --compression TEXT              Specify compression  [default: inferred]
+  --control TEXT                  An inline JSON object or a path to a JSON
+                                  file that provides the control
+                                  (configuration for the data Loader)
+
+  --dialect TEXT                  An inline JSON object or a path to a JSON
+                                  file that provides the dialect
+                                  (configuration for the parser)
+
+  --sheet TEXT                    The sheet to use from the input data (only
+                                  with XLS and ODS files/plugins)
+
+  --table TEXT                    The table to use from the SQL database (SQL
+                                  plugin)
+
+  --keys TEXT                     The keys to use as column names for the
+                                  Inline or JSON data plugins
+
+  --keyed / --no-keyed            Whether the input data is keyed for the
+                                  Inline or JSON data plugins
+
+  --header-rows TEXT              Comma-separated row numbers [default:
+                                  inferred]
+
+  --header-join TEXT              Multiline header joiner [default: inferred]
+  --pick-fields TEXT              Comma-separated fields to pick e.g.
+                                  "1,name1"
+
+  --skip-fields TEXT              Comma-separated fields to skip e.g.
+                                  "2,name2"
+
+  --limit-fields INTEGER          Limit fields by this integer e.g. "10"
+  --offset-fields INTEGER         Offset fields by this integer e.g "5"
+  --pick-rows TEXT                Comma-separated rows to pick e.g.
+                                  "1,<blank>"
+
+  --skip-rows TEXT                Comma-separated rows to skip e.g. "2,3,4,5"
+  --limit-rows INTEGER            Limit rows by this integer e.g "100"
+  --offset-rows INTEGER           Offset rows by this integer e.g. "50"
+  --schema TEXT                   Specify a path to a schema
+  --stats-hash TEXT               Expected hash based on hashing option
+  --stats-bytes INTEGER           Expected size in bytes
+  --stats-fields INTEGER          Expected amount of fields
+  --stats-rows INTEGER            Expected amount of rows
+  --buffer-size INTEGER           Limit the amount of bytes to be extracted as
+                                  a buffer  [default: 10000]
+
+  --sample-size INTEGER           Limit the number of rows to be extracted as
+                                  a sample  [default: 100]
+
+  --field-type TEXT               Force all the fields to have this type
+  --field-names TEXT              Comma-separated list of field names
+  --field-confidence FLOAT        Infer confidence. A float from 0 to 1. If 1,
+                                  (sampled) data is guaranteed to be valid
+                                  against the inferred schema  [default: 0.9]
+
+  --field-float-numbers / --no-field-float-numbers
+                                  Make number floats instead of decimals
+                                  [default: False]
+
+  --field-missing-values TEXT     Comma-separated list of missing values
+                                  [default: ""]
+
+  --schema-sync / --no-schema-sync
+                                  Sync the schema based on the data's header
+                                  row
+
+  --basepath TEXT                 Basepath of the resource/package
+  --pick-errors TEXT              Comma-separated errors to pick e.g. "type-
+                                  error"
+
+  --skip-errors TEXT              Comma-separated errors to skip e.g. "blank-
+                                  row"
+
+  --limit-errors INTEGER          Limit errors by this integer
+  --limit-memory INTEGER          Limit memory by this integer in MB
+  --original / --no-original      Don't call infer on resources
+  --parallel / --no-parallel      Enable multiprocessing
+  --yaml / --no-yaml              Return in pure YAML format  [default: False]
+  --json / --no-json              Return in JSON format  [default: False]
+  --resource-name TEXT            Name of resource to validate
+  --help                          Show this message and exit.
 ```

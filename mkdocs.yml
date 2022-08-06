@@ -72,6 +72,8 @@ nav:
       - frictionless/index.md
       - Descrivere: frictionless/descrivere.md
       - Validare: frictionless/validare.md
+      - Tipi di errore: frictionless/tipi-errore.md
+      - Ricette: frictionless/ricette.md
     - csvkit:
       - csvkit/index.md
       - csvstat: csvkit/csvstat.md
