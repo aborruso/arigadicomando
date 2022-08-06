@@ -7,6 +7,7 @@ title: frictionless - tipi di errore
 
 # Tipi di errore
 
+A seguire i tipi di errore gestiti da `frictionless`.
 
 ## General Error
 
@@ -351,6 +352,14 @@ Tags: `#table #header #label` <br/>
 Template: `Label in the header in field at position "{fieldPosition}" is blank` <br/>
 Description: `A label in the header row is missing a value. Label should be provided and not be blank.` <br/>
 
+Campo senza etichetta (sotto è il secondo).
+
+``` txt
+fieldA,
+1,bene
+4,male
+```
+
 
 ## Duplicate Label
 
@@ -358,6 +367,14 @@ Code: `duplicate-label` <br/>
 Tags: `#table #header #label` <br/>
 Template: `Label "{label}" in the header at position "{fieldPosition}" is duplicated to a label: {note}` <br/>
 Description: `Two columns in the header row have the same value. Column names should be unique.` <br/>
+
+Nome campo duplicato.
+
+``` txt
+fieldA,fieldA
+1,bene
+4,male
+```
 
 
 ## Incorrect Label
@@ -374,6 +391,15 @@ Code: `blank-row` <br/>
 Tags: `#table #row` <br/>
 Template: `Row at position "{rowPosition}" is completely blank` <br/>
 Description: `This row is empty. A row should contain at least one value.` <br/>
+
+Riga vuota.
+
+``` txt hl_lines="3"
+fieldA,fieldB
+1,bene
+,
+4,male
+```
 
 
 ## PrimaryKey Error

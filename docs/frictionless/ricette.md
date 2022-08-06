@@ -7,7 +7,7 @@ title: frictionless - Ricette
 
 # Ricette
 
-## Validazione
+## Validare
 
 ### Impostare i valori da considerare come nulli
 
@@ -28,4 +28,28 @@ frictionless validate --skip-fields "fieldA,fieldB" input.csv
 
 ```bash
 frictionless validate --skip-fields "22,46" input.csv
+```
+
+### Non eseguire uno specifico test di validazione
+
+Ad esempio non eseguire il controllo ([`missing-label`](tipi-errore.md#blank-row)) che verifica che tutte le colonne abbiano un'etichetta:
+
+```bash
+frictionless validate --skip-errors missing-label input.csv
+```
+
+### Definite il separatore di campo, senza inferencing
+
+`frictionless`, quando legge un file in formato `CSV`, prova a estrarne automaticamente il separatore di campo. Se si vuole forzarne la definizione:
+
+``` bash
+frictionless validate --dialect '{"delimiter": ";"}' input.csv
+```
+
+## Estrarre
+
+### Come estrarre uno specifico foglio, di un foglio elettronico
+
+```bash
+frictionless extract input.ods --dialect '{"sheet": "Sheet2"}'
 ```
