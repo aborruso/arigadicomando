@@ -344,7 +344,7 @@ Per ogni campo è definito il tipo di campo, con il parametro `type`, e sono def
 - `required`, per indicare che i valori di quel campo sono obbligatori;
 - `maximum`, per indicare qual è il valore massimo utilizzabile per un campo (non è applicabile a tutti i tipi di campo)
 - `pattern`, per indicare, per un campo di tipo `string`, qual è l'espressione regolare da rispettare;
-- `enum`, per indicare, per un campo di tipo `sting`, qual è l'elenco dei valori ammissibili.
+- `enum`, per indicare, per un campo di tipo `string`, qual è l'elenco dei valori ammissibili.
 
 Utilizzando questo file `YAML`, che fa riferimento al file `CSV` di _input_ (`path: input_01.csv`) è possibile lanciare la validazione:
 
