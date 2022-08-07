@@ -30,6 +30,12 @@ frictionless validate --skip-fields "fieldA,fieldB" input.csv
 frictionless validate --skip-fields "22,46" input.csv
 ```
 
+### Eseguire soltanto un certo tipo di test
+
+``` bash
+frictionless validate --pick-errors "type-error,missing-cell" input.csv
+```
+
 ### Non eseguire uno specifico test di validazione
 
 Ad esempio non eseguire il controllo ([`missing-label`](tipi-errore.md#blank-row)) che verifica che tutte le colonne abbiano un'etichetta:
