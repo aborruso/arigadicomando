@@ -7,7 +7,7 @@ title: frictionless - validare dati
 
 # Validare dati
 
-Il comando `validate` esegue la validazione di risorse e/o liste di risorse contenuti in un *datapackage*.
+Il comando `validate` esegue la validazione di risorse e/o liste di risorse contenute in un *datapackage*.
 
 In input ad esempio una risorsa tabellare di questo tipo (`···` è per rappresentare una cella vuota):
 
