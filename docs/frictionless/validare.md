@@ -264,7 +264,7 @@ Lorem,37.256,2022-01-13,012543,A
 ,Ciao,2023-01-13,78956,C
 ```
 
-A seguire l'elenco dei campi/colonne del file, e i vari vincoli sul tipo di campo, valori consentiti, obbligatorietà, ecc:
+A seguire l'elenco dei campi/colonne del file, e i vari vincoli che si vogliono imporre e poter verificare, sul tipo di campo, valori consentiti, obbligatorietà, ecc:
 
 - `text`, un campo stringa, obbligatorio
 - `number`, un campo numerico
