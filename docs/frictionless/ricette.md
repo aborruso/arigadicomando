@@ -68,6 +68,12 @@ frictionless validate --buffer-size 250000 input.csv
 frictionless extract input.ods --dialect '{"sheet": "Sheet2"}'
 ```
 
+Oppure utilizzando l'opzione `--sheet`
+
+```bash
+frictionless extract input.ods --sheet "sheetName"
+```
+
 ### Estrarre soltanto le righe che passano la validazione
 
 ``` bash
