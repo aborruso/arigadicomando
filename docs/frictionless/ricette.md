@@ -30,7 +30,7 @@ frictionless validate --skip-fields "fieldA,fieldB" input.csv
 frictionless validate --skip-fields "22,46" input.csv
 ```
 
-### Eseguire soltanto un certo tipo di test
+### Eseguire soltanto certi tipi di test
 
 ``` bash
 frictionless validate --pick-errors "type-error,missing-cell" input.csv
