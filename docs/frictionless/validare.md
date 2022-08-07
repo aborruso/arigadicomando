@@ -22,8 +22,8 @@ In formato `CSV` è:
 ``` txt linenums="1"
 text,number,date,,type
 Lorem,37.256,2022-01-13,012543,A
-,,,,
-,Ciao,2023-01-13,78956,C
+
+,Ciao,2023-01-13,C
 ```
 
 Questo input ha diversi problemi:
