@@ -73,3 +73,9 @@
 - nome: qsv
   URL: https://github.com/jqnatividad/qsv
   cosaFa: "Una ricchissima e potente utility per analizzare file in formato `CSV`."
+- nome: diff
+  URL: https://man7.org/linux/man-pages/man1/diff.1.html
+  cosaFa: "Per confrontare file, linea per linea."
+- nome: daff
+  URL: https://github.com/paulfitz/daff
+  cosaFa: "Per confrontare file di testo in formato tabellare (csv, tsv, ssv, psv, json, sqlite)."

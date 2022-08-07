@@ -32,11 +32,23 @@ Una bella suite di *utility* a riga di comando per convertire ed elaborare file 
 
 :arrow_right: <https://csvkit.readthedocs.io/>
 
+## daff
+
+Per confrontare file di testo in formato tabellare (csv, tsv, ssv, psv, json, sqlite).
+
+:arrow_right: <https://github.com/paulfitz/daff>
+
 ## datamash
 
 Esegue analisi statistiche su file di testo strutturati.
 
 :arrow_right: <https://www.gnu.org/software/datamash/manual/.html>
+
+## diff
+
+Per confrontare file, linea per linea.
+
+:arrow_right: <https://man7.org/linux/man-pages/man1/diff.1.html>
 
 ## file
 
