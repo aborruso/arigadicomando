@@ -44,7 +44,7 @@ Ad esempio non eseguire il controllo ([`missing-label`](tipi-errore.md#blank-row
 frictionless validate --skip-errors missing-label input.csv
 ```
 
-### Definite il separatore di campo, senza inferencing
+### Definire il separatore di campo, senza inferencing
 
 `frictionless`, quando legge un file in formato `CSV`, prova a estrarne automaticamente il separatore di campo. Se si vuole forzarne la definizione:
 
