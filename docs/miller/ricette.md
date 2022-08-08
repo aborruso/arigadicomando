@@ -1,4 +1,11 @@
-# Ricette
+---
+hide:
+#  - navigation
+#  - toc
+title: Miller - Ricette
+---
+
+# Ricette Miller
 
 ## Concatenare in "verticale" più file
 

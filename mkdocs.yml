@@ -66,14 +66,14 @@ nav:
       - Flag: miller/flag.md
       - Verbi: miller/verbi.md
       - DSL: miller/dsl.md
-      - Ricette: miller/ricette.md
+      - Ricette Miller: miller/ricette.md
       - Contributi: miller/contributi.md
     - Frictionless:
       - frictionless/index.md
       - Descrivere: frictionless/descrivere.md
       - Validare: frictionless/validare.md
       - Tipi di errore: frictionless/tipi-errore.md
-      - Ricette: frictionless/ricette.md
+      - Ricette frictionless: frictionless/ricette.md
     - csvkit:
       - csvkit/index.md
       - csvstat: csvkit/csvstat.md

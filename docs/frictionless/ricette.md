@@ -5,7 +5,7 @@ hide:
 title: frictionless - Ricette
 ---
 
-# Ricette
+# Ricette frictionless
 
 ## Validare
 
