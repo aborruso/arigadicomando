@@ -19,7 +19,7 @@ In input ad esempio una risorsa tabellare di questo tipo (nella tabella di sotto
 
 In formato `CSV` è:
 
-``` txt linenums="1"
+``` txt linenums="1" title="input_00.csv"
 text,number,date,,type
 Lorem,37.256,2022-01-13,012543,A
 
@@ -258,7 +258,7 @@ In *input* ad esempio questi dati
 
 che in CSV sono
 
-``` txt linenums="1"
+``` txt linenums="1" title="input_01.csv"
 text,number,date,code,type
 Lorem,37.256,2022-01-13,012543,A
 ,Ciao,2023-01-13,78956,C
