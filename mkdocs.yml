@@ -109,8 +109,8 @@ plugins:
 #- rss
 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - javascripts/tables.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  # - javascripts/tables.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - javascripts/varie.js
   - javascripts/mathjax.js
