@@ -99,3 +99,51 @@ scheme: file
 ```
 
 È possibile avere l'output in `JSON` aggiungendo l'opzione `--json`.
+
+## Aggiungere le statistiche della risorsa
+
+L'opzione `--stats` del comando `describe` è molto utile, perché restituisce alcune informazioni numeriche alla descrizione della risorsa:
+
+- le dimensioni in *byte*;
+- il numero di campi;
+- il numero di righe;
+- l'impronta *hash*.
+
+Si lancia così (è applicato al file [`base-semicolon.csv`](risorse/base-semicolon.csv))
+
+``` bash
+frictionless describe --stats base-semicolon.csv
+```
+
+e restituisce nelle output le proprietà di `stats` (vedi sotto).
+
+``` yaml hl_lines="11-15"
+# --------
+# metadata: base-semicolon.csv
+# --------
+
+path: base-semicolon.csv
+name: base-semicolon
+profile: tabular-data-resource
+scheme: file
+format: csv
+hashing: md5
+stats:
+  hash: 7ed86c23c432fd1b6586ce6399d1ac1c
+  bytes: 108
+  fields: 4
+  rows: 3
+encoding: utf-8
+dialect:
+  delimiter: ;
+schema:
+  fields:
+    - type: string
+      name: nome
+    - type: date
+      name: dataNascita
+    - type: integer
+      name: altezza
+    - type: number
+      name: peso
+```
