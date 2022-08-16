@@ -10,7 +10,7 @@ title: frictionless
 
 ## Esempi di query
 
-Le ricerche sono basate su `solr`, e per diversi campi non è una ricerca per stringa esatta (vedi [nota](ckanapi#note-sulle-ricerche-fatte-su-ckan)).
+Le ricerche sono basate su `solr`, e per diversi campi non è una ricerca per stringa esatta (vedi [nota](#note-sulle-ricerche-fatte-su-ckan)).
 
 ### Ricerca per titolo
 
