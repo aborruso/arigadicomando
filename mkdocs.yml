@@ -74,6 +74,8 @@ nav:
       - Validare: frictionless/validare.md
       - Tipi di errore: frictionless/tipi-errore.md
       - Ricette frictionless: frictionless/ricette.md
+    - CKAN API cli:
+      - ckanapi/index.md
     - csvkit:
       - csvkit/index.md
       - csvstat: csvkit/csvstat.md
