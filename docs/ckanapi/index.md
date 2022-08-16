@@ -117,7 +117,7 @@ Vedi <https://github.com/ckan/ckanapi/issues/197#issuecomment-1069173069>
 
 ## Note sulle ricerche fatte su CKAN
 
-Alcune delle ricerche fatte su CKAN, sfruttano come motore [`solr](https://solr.apache.org/)`.<br>
+Alcune delle ricerche fatte su CKAN, sfruttano come motore [`solr`](https://solr.apache.org/).<br>
 Di `default`, su `solr`, i campi su cui è possibile eseguire una ricerca sono impostati come `type=text`, e su questi non è attiva una ricerca "esatta", ma sempre una ricerca *fuzzy*.<br>
 Per la ricerca esatta i campi devono essere impostati come `type=string`.
 
