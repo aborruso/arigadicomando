@@ -6,9 +6,11 @@ title: frictionless
 ---
 # ckanapi cli
 
+È [un'*utility*](../utilities/utilities#ckanapi) per per utilizzare le API di [CKAN](https://ckan.org/), a riga di comando.
+
 ## Esempi di query
 
-La ricerca è basata su `solr`, e non è una ricerca per stringa esatta.
+Le ricerche sono basate su `solr`, e per diversi campi non è una ricerca per stringa esatta (vedi [nota](ckanapi#note-sulle-ricerche-fatte-su-ckan)).
 
 ### Ricerca per titolo
 
