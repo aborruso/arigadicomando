@@ -112,3 +112,11 @@ xargs -I _ ckanapi -r "$URL" dump datasets _ --datapackages=./out
 ```
 
 Vedi <https://github.com/ckan/ckanapi/issues/197#issuecomment-1069173069>
+
+## Note sulle ricerche fatte su CKAN
+
+Alcune delle ricerche fatte su CKAN, sfruttano come motore [`solr](https://solr.apache.org/)`.<br>
+Di `default`, su `solr`, i campi su cui è possibile eseguire una ricerca sono impostati come `type=text`, e su questi non è attiva una ricerca "esatta", ma sempre una ricerca *fuzzy*.<br>
+Per la ricerca esatta i campi devono essere impostati come `type=string`.
+
+Nello [schema `solr` di CKAN](https://github.com/ckan/ckan/blob/f2eb20ebf9de21016fd3d15ed028be1cce8d447c/ckan/config/solr/schema.xml) è possibile leggere il `type` dei vari campi. Ad esempio `res_format` è impostato come `string` e su questo sarà possibile eseguire ricerche esatte.
