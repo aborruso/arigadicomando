@@ -115,7 +115,7 @@ Si lancia così (è applicato al file [`base-semicolon.csv`](risorse/base-semico
 frictionless describe --stats base-semicolon.csv
 ```
 
-e restituisce nelle output le proprietà di `stats` (vedi sotto).
+e restituisce in *output* le proprietà di `stats` (vedi sotto).
 
 ``` yaml hl_lines="11-15"
 # --------
