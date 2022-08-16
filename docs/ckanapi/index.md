@@ -58,6 +58,8 @@ ckanapi -r https://dati.gov.it/opendata/ search datasets fq='(res_format:"CSV")'
 ckanapi -r https://dati.gov.it/opendata/ search datasets fq='(res_format:"CSV" AND organization:"regione-toscana")' rows=1
 ```
 
+Ad agosto del 2022, la cosa risulta ancora non documentata: <https://github.com/ckan/ckan/discussions/7013>.
+
 ### Utilizzare più parametri di ricerca di un dataset e combinarli in AND
 
 ```
@@ -85,11 +87,6 @@ Note:
 
 - `-O` per definire il file di output. È un JSON Lines;
 - `-z` per avere l'output JSON Lines compresso in gzip.
-
-Nota:
-
-- `-O` per definire il file di output
-- `-z` per impostare il file di output come file compresso
 
 ## Varie
 
