@@ -55,7 +55,7 @@
 - nome: ckanapi
   URL: https://github.com/ckan/ckanapi
   cosaFa: "Per utilizzare le API di CKAN, a riga di comando."
-  ardcmd:
+  ardcmd: "ckanapi"
 - nome: sqlite
   URL: https://www.sqlite.org/index.html
   cosaFa: "Uno straordinario database relazionale."
