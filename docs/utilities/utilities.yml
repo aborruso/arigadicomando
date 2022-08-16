@@ -16,6 +16,7 @@
 - nome: yq
   URL: https://github.com/kislyuk/yq
   cosaFa: "Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`](#jq)."
+  ardcmd: "yq"
 - nome: jq
   URL: https://stedolan.github.io/jq/
   cosaFa: "Fa il parsing e trasforma file in formato `JSON`."

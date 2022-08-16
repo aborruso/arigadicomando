@@ -17,8 +17,16 @@ yq -c '.[]' "$folder"/../docs/utilities/utilities.yml | mlr --json put -S '$name
 nome=$(echo "$line" | jq -r '.nome')
 URL=$(echo "$line" | jq -r '.URL')
 descrizione=$(echo "$line" | jq -r '.cosaFa')
+ardcmd=$(echo "$line" | jq -r '.ardcmd')
 echo -e "## $nome\n" >> "$folder"/../docs/utilities/index.md
 echo -e "$descrizione\n" >> "$folder"/../docs/utilities/index.md
-echo -e ":arrow_right: <$URL>\n" >> "$folder"/../docs/utilities/index.md
+if [ "$ardcmd" = "null" ]
+then
+    echo "vuoto"
+else
+    echo -e ":arrow_right: [pagina dedicata](../$ardcmd)<br>" >> "$folder"/../docs/utilities/index.md
+    echo "non vuoto"
+fi
+echo -e ":information_source: <$URL>\n" >> "$folder"/../docs/utilities/index.md
 done
 

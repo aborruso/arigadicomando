@@ -24,7 +24,7 @@ Rileva l'*encoding* dei caratteri.
 
 Per utilizzare le API di CKAN, a riga di comando.
 
-:arrow_right: [pagina dedicata](../<ckanapi>)<br>
+:arrow_right: [pagina dedicata](../ckanapi)<br>
 :information_source: <https://github.com/ckan/ckanapi>
 
 ## csvkit
@@ -169,6 +169,6 @@ Uno straordinario toolkit per leggere, filtrare, analizzare un CSV.
 
 Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`](#jq).
 
-:arrow_right: [pagina dedicata](../<yq>)<br>
+:arrow_right: [pagina dedicata](../yq)<br>
 :information_source: <https://github.com/kislyuk/yq>
 
