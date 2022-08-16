@@ -6,7 +6,8 @@ title: frictionless
 ---
 # ckanapi cli
 
-È [un'*utility*](../utilities/utilities#ckanapi) per per utilizzare le API di [CKAN](https://ckan.org/), a riga di comando.
+È [un'*utility*](../utilities/utilities#ckanapi) per per utilizzare le API di [CKAN](https://ckan.org/).<br>
+`CKAN` è la piattaforma *open source* più usata per la realizzazione di portali open data: imparare a usare questo strumento può essere quindi molto comodo per interagire "a riga di comando", con tantissimi portali di questo tipo.
 
 ## Esempi di query
 
