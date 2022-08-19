@@ -100,6 +100,14 @@ scheme: file
 
 È possibile avere l'output in `JSON` aggiungendo l'opzione `--json`.
 
+!!! warning "Descrivere un file JSON"
+
+    Per descrivere un file JSON si deve usare l'opzione `path`:
+
+    ```bash
+    frictionless describe --path input.json
+    ```
+
 ## Aggiungere le statistiche della risorsa
 
 L'opzione `--stats` del comando `describe` è molto utile, perché restituisce alcune informazioni numeriche alla descrizione della risorsa:
