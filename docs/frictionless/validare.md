@@ -87,6 +87,14 @@ La seconda - `Errors` - restituisce i dettagli di ciascun errore (sopra evidenzi
 
 È interessante notare come gli errori estratti automaticamente, coincidano con quelli descritti "a mano".
 
+!!! warning "Validare un file JSON"
+
+    Per validare un file JSON si deve usare l'opzione `path`:
+
+    ```bash
+    frictionless validate --path input.json
+    ```
+
 ## Output di validazione in formato JSON o YAML
 
 È molto importante potere avere l'**_output_** di validazione in un **formato _machine readable_**, in modo da poter ad esempio fare una validazione giornaliera di uno o più file, archiviare l'esito in un file di *log* e infine avvisare automaticamente l'utente se il processo non è andato a buon fine.

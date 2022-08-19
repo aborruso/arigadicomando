@@ -60,6 +60,15 @@ frictionless validate --dialect '{"delimiter": ";"}' input.csv
 frictionless validate --buffer-size 250000 input.csv
 ```
 
+### Validare un file JSON
+
+Per validare un file JSON si deve usare l'opzione `path`:
+
+
+```bash
+frictionless validate --path input.json
+```
+
 ## Estrarre
 
 ### Come estrarre uno specifico foglio, di un foglio elettronico
