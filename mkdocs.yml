@@ -76,6 +76,9 @@ nav:
       - Ricette frictionless: frictionless/ricette.md
     - CKAN API cli:
       - ckanapi/index.md
+    - GDAL/OGR:
+      - gdal-ogr/index.md
+      - Ricette GDAL/OGR: gdal-ogr/ricette.md
     - csvkit:
       - csvkit/index.md
       - csvstat: csvkit/csvstat.md
