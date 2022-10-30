@@ -57,3 +57,38 @@ ogr2ogr -overwrite -f SQLite -dsco SPATIALITE=YES -nlt MULTIPOLYGON -nln partice
 ```
 
 Nota: `-nlt MULTIPOLYGON` perché l'oggetto di input qui è un `MULTIPOLYGON`.
+
+## Usare gdal via docker
+
+Si inizia con il prelevare l'immagine da un repository. Ad esempio questa di osgeo:
+
+```bash
+docker pull osgeo/gdal:alpine-normal-latest
+```
+
+E poi si può lanciare in modo non interattivo dalla propria shell
+
+```bash
+docker run --rm -v "$(pwd)":/data osgeo/gdal:alpine-normal-latest gdalinfo data/input.tif
+```
+
+- `--rm` per rimuovere il container non appena si esce da esso;
+- `-v` per specificare i volumi da montare nell'*host* e nel *container* `/from/host/:/on/container`
+
+Nell'esempio di sopra sto montando la cartella corrente dell'*host* e la cartella `data` del *container*
+
+In modo interattivo, invece il comando diventa
+
+```bash
+docker run -ti --rm -v "$(pwd)":/data osgeo/gdal:alpine-normal-latest /bin/sh
+```
+
+Si usa in questo esempio `/bin/sh`, perché lanciando l'`inspect` dell'immagine - `docker inspect osgeo/gdal:alpine-normal-latest` - si ha (vedi [qui](https://stackoverflow.com/a/29535285/757714)):
+
+```json
+"Cmd": [
+    "/bin/sh",
+    "-c",
+    "#(nop) COPY dir:bfa76ede215e381fc0e06a919358cf3fe603fbc832802559c2e82eeec03e484d in /usr/ "
+]
+```
