@@ -66,7 +66,7 @@ Si inizia con il prelevare l'immagine da un repository. Ad esempio questa di osg
 docker pull osgeo/gdal:alpine-normal-latest
 ```
 
-E poi si può lanciare in modo non interattivo dalla propria shell
+E poi si può lanciare in modo **non interattivo** dalla propria shell:
 
 ```bash
 docker run --rm -v "$(pwd)":/data osgeo/gdal:alpine-normal-latest gdalinfo data/input.tif
@@ -75,9 +75,9 @@ docker run --rm -v "$(pwd)":/data osgeo/gdal:alpine-normal-latest gdalinfo data/
 - `--rm` per rimuovere il container non appena si esce da esso;
 - `-v` per specificare i volumi da montare nell'*host* e nel *container* `/from/host/:/on/container`
 
-Nell'esempio di sopra sto montando la cartella corrente dell'*host* e la cartella `data` del *container*
+Nell'esempio di sopra sto montando la cartella corrente dell'*host* e la cartella `data` del *container*.
 
-In modo interattivo, invece il comando diventa
+In **modo interattivo**, invece il comando diventa:
 
 ```bash
 docker run -ti --rm -v "$(pwd)":/data osgeo/gdal:alpine-normal-latest /bin/sh
