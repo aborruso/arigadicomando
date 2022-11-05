@@ -1,4 +1,13 @@
+---
+hide:
+  - toc
+---
+
 # Nushell
+
+!!! warning "Attenzione"
+
+    La sezione per csvkit non è ancora pronta. È possibile fare riferimento al [sito ufficiale](https://www.nushell.sh/).
 
 [Nushell](https://www.nushell.sh/) è una shell che vede un po' tutto in forma di dataset, tabelle, liste, ecc..
 
@@ -15,3 +24,7 @@ Ad esempio per avere in lista soltanto i file con dimensioni maggiori di 2kB, il
 ```bash
 ls | where size > 2kB
 ```
+
+---
+
+Alcune [ricette](ricette.md).
