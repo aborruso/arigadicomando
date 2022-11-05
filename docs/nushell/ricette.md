@@ -67,7 +67,7 @@ Qui sotto ad esempio, per valori distinti di `REGMCR`, si conteggiano per la col
 $df | group-by REGMCR  | agg [(col ANNO | count | as ANNO_count  ) (col ANNO | n-unique | as ANNO_unique)] | into nu
 ```
 
-!!! note ""
+!!! note
 
     In questo caso è necessario rinominare il campo `ANNO` usando il comando `as`, perché i due conteggi si fanno sulla stessa colonna e si avrebbe due volte il nome campo `ANNO`; e la cosa non è consentita.
 
