@@ -7,9 +7,9 @@ hide:
 
 !!! warning "Attenzione"
 
-    La sezione per csvkit non è ancora pronta. È possibile fare riferimento al [sito ufficiale](https://www.nushell.sh/).
+    La sezione per Nushell non è ancora pronta. È possibile fare riferimento al [sito ufficiale](https://www.nushell.sh/).
 
-[Nushell](https://www.nushell.sh/) è una shell che vede un po' tutto in forma di dataset, tabelle, liste, ecc..
+[**Nushell**](https://www.nushell.sh/) è una shell che vede un po' tutto in forma di dataset, tabelle, liste, ecc..
 
 Se si lancia ad esempio `ls`, il tipico comando per avere la lista dei contenuti di una directory, si ha indietro questa rappresentazione tabellare:
 
