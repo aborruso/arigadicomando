@@ -73,7 +73,7 @@ $df | group-by REGMCR  | agg [(col ANNO | count | as ANNO_count  ) (col ANNO | n
 
 In output
 
-```
+
 |index|REGMCR|ANNO_count|ANNO_unique|
 |-|-|-|-|
 |0|8|35748|1|
@@ -95,7 +95,7 @@ In output
 |16|17|14627|1|
 |17|1|52535|1|
 |18|9|29619|1|
-```
+
 
 ### Avere l'ouput di un comando in stdout
 
