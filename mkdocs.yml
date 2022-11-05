@@ -85,6 +85,9 @@ nav:
     - xsv:
       - xsv/index.md
       - stats: xsv/stats.md
+    - Nushell:
+      - nushell/index.md
+      - Ricette Nushell: nushell/ricette.md
   - Ricette:
     - ricette/index.md
     - Come rendere più leggibile un file XML: ricette/xmlstarlet-rendere-leggibile-file-xml.md
