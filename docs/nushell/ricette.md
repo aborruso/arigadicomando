@@ -85,7 +85,7 @@ Qui sotto ad esempio, per valori distinti di `REGMCR`, si conteggiano per la col
 $df | group-by REGMCR  | agg [(col ANNO | count | as ANNO_count  ) (col ANNO | n-unique | as ANNO_unique)] | into nu
 ```
 
-!!! note
+!!! note "Nota"
 
     In questo caso è necessario rinominare il campo `ANNO` usando il comando `as`, perché i due conteggi si fanno sulla stessa colonna e si avrebbe due volte il nome campo `ANNO`; e la cosa non è consentita.
 
@@ -149,6 +149,6 @@ ls *.csv | each { |it| open $it.name --raw | from csv --separator ";" | get Peri
 - di ognuno si estra la colonna `Period`
 - si "flattenizza" il risultato, perché l'output grezzo è una lista.
 
-!!! note
+!!! note "Nota"
 
     Si apre il file con opzione `--raw` grezza, in modo che non vengano fatte intepretazioni a partire dall'estensione del file, quindi ad esempio dare per scontato che il separatore di campo è la `,`.
