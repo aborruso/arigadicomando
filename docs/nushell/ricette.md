@@ -4,6 +4,8 @@
 
 ### Lanciare comandi Nushell da un'altra shell
 
+Si usa l'eseguibile `nu` e il flag `-c` seguito dal comando Nushell che si vuole lanciare. Ad esempio:
+
 ```bash
 nu -c 'ls | where size > 16kB | to json'
 ```
