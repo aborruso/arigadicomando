@@ -151,4 +151,4 @@ ls *.csv | each { |it| open $it.name --raw | from csv --separator ";" | get Peri
 
 !!! note "Nota"
 
-    Si apre il file con opzione `--raw` grezza, in modo che non vengano fatte intepretazioni a partire dall'estensione del file, quindi ad esempio dare per scontato che il separatore di campo è la `,`.
+    Si apre il file con opzione `--raw` (grezza), in modo che non vengano fatte intepretazioni a partire dall'estensione del file, quindi ad esempio dare per scontato che il separatore di campo è la `,`.
