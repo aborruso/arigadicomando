@@ -132,3 +132,21 @@ $df | describe | into nu | transpose | to csv | save foo.sv
 ```
 
 Utile leggere [questa discussione](https://github.com/nushell/nushell/discussions/7016#discussioncomment-4064367).
+
+## Scripting
+
+### Aprire tutti i file con una certa estensione in una cartella, estrarre valori e salvarli
+
+
+```bash
+ls *.csv | each { |it| open $it.name --raw | from csv --separator ";" | get Period } | flatten
+```
+
+- si filtrano tutti i `CSV`
+- si apre ognuno `|it| open $it.name --raw | from csv --separator ";"`
+- di ognuno si estra la colonna `Period`
+- si "flattenizza" il risultato, perché l'output grezzo è una lista
+
+!!! note
+
+    Si apre il file con opzione `--raw` grezza, in modo che non vengano fatte intepretazioni a partire dall'estensione del file, quindi ad esempio dare per scontato che il separatore di campo è la `,`.
