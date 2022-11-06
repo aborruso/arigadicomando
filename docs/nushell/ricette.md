@@ -125,9 +125,10 @@ Ad esempio
 $df | describe | into nu | to csv
 ```
 
-### Trasporre l'output del comando `describe`
+### Utilizzare comandi Nushell non disponibili per i dataframe
 
-Bisogna prima convertire l'output in una tabella `nu`, perché il comando `transpose` non è abilitato per i dataframe:
+Non tutti i comandi Nushell sono applicabili al tipo di dato `dataframe`. Uno di questi è ad esempio il comando `transpose`. Per applicarlo ad esempio ad una pipeline di comandi che deriva da un `dataframe`, bisogna convertire il tutto in una tabella `nu`:
+
 
 ```bash
 $df | describe | into nu | transpose | to csv | save foo.sv
