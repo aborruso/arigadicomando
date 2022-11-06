@@ -144,10 +144,10 @@ Utile leggere [questa discussione](https://github.com/nushell/nushell/discussion
 ls *.csv | each { |it| open $it.name --raw | from csv --separator ";" | get Period } | flatten
 ```
 
-- si filtrano tutti i `CSV`
+- si filtrano tutti i file con estensione `csv`
 - si apre ognuno `|it| open $it.name --raw | from csv --separator ";"`
 - di ognuno si estra la colonna `Period`
-- si "flattenizza" il risultato, perché l'output grezzo è una lista
+- si "flattenizza" il risultato, perché l'output grezzo è una lista.
 
 !!! note
 
