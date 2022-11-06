@@ -1,5 +1,21 @@
 # Ricette Nushell
 
+## Generali
+
+### Lanciare comandi Nushell da un'altra shell
+
+```bash
+nu -c 'ls | where size > 16kB | to json'
+```
+### Lanciare uno script Nushell da un'altra shell
+
+```bash
+$ cat myscript.nu
+ls | pivot
+
+$ nu myscript.nu
+```
+
 ## dataframe
 
 ### Creare un dataframe a partire da un CSV
