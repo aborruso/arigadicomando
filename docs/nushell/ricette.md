@@ -144,6 +144,17 @@ Utile leggere [questa discussione](https://github.com/nushell/nushell/discussion
 
 `df` è il nome di default assegnato al dataframe.
 
+
+### Applicare un filtro regex tramite una maschera
+
+Nell'esempio di sotto viene impostata una maschera tramite regex: quando il campo `CODICE_LOCALE_PROGETTO` contiene la stringa `PNRR`. Fissatala maschera poi si applica il comando `filter-with`.
+
+```bash
+let df = open-df  -d ";" --infer-schema 10000000 OpenCup_Progetti.csv
+let mask = ($df.CODICE_LOCALE_PROGETTO =~ "PNRR")
+$df | filter-with $mask
+```
+
 ## Scripting
 
 ### Aprire tutti i file con una certa estensione in una cartella, estrarre valori e salvarli
