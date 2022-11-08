@@ -136,7 +136,7 @@ $df | describe | into nu | transpose | to csv | save foo.sv
 
 Utile leggere [questa discussione](https://github.com/nushell/nushell/discussions/7016#discussioncomment-4064367).
 
-### Applicare una query SQL su un dataframe
+### Applicare una query SQL a un dataframe
 
 ```
 [[a, b, c];[1,2,3] [2,3,4] ]| into df | query df 'select * from df where a > 0 OR c > 2'
