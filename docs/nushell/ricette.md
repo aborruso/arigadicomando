@@ -155,6 +155,10 @@ let mask = ($df.CODICE_LOCALE_PROGETTO =~ "PNRR")
 $df | filter-with $mask
 ```
 
+!!! note "Nota"
+
+    Nell'apertura del dataframe viene usato il comando `--infer-schema 10000000`, perché si tratta di un file enorme, in cui nelle ultime righe di un campo che sembrava intero ci sono delle stringhe, quindi l'*inferencing* deve essere più profondo.
+
 ## Scripting
 
 ### Aprire tutti i file con una certa estensione in una cartella, estrarre valori e salvarli
