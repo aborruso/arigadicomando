@@ -58,6 +58,6 @@ A partire dagli stessi file di sopra, il comando per [`qsv`](../../utilities/#qs
 qsv cat columns input_01 input_02 >output
 ```
 
-!!! warning
+!!! note
 
     `qsv` è `format aware`
