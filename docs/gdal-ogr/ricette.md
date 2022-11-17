@@ -177,7 +177,7 @@ In output
 Il comando
 
 ```
-ogrinfo -ro -al "CSW:http://geodati.gov.it/RNDT/csw" -where "subject LIKE 'salute'"
+ogrinfo -ro -al "CSW:http://geodati.gov.it/RNDT/csw" -where "subject LIKE '*salut*'"
 ```
 
 restituirà quindi anche gli item con subject `rischio per la salute`, `Centri salute mentale`, `ambiente e salute`, ecc..
