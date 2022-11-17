@@ -97,13 +97,16 @@ Si usa in questo esempio `/bin/sh`, perché lanciando l'`inspect` dell'immagine 
 
 Se si vuole interrogare ad esempio il [server CSW](https://geodati.gov.it/geoportale/strumenti/2015-04-21-22-41-05) del Repertorio Nazionale dei Dati Territoriali, l'URL di riferimento è <http://geodati.gov.it/RNDT/csw>
 
-Se si vuole l'elenco di tutti gli *item*, che hanno come `subject` il valore salute, si può lanciare questo comando:
+Se si vuole l'elenco di tutti gli *item*, che hanno come `subject` il valore `salute`, si può lanciare questo comando:
 
 ```bash
 ogrinfo -ro -al "CSW:http://geodati.gov.it/RNDT/csw" -where "subject LIKE 'salute'"
 ```
 
 Si avrà a schermo l'elenco degli *item*.
+
+!!! note "Nota"
+    La ricerca viene eseguita non per stringa esatta, ma per tutto ciò che contiene nel `subject` la stringa `salute`. Per ricerche di stringhe esatte, leggere il [paragrafo di sotto](#query-basate-su-elenco-di-parole-mappate-come-stringa-esatta).
 
 Se si vuole l'output di questa *query* in CSV:
 
@@ -251,3 +254,22 @@ Notare che qui soprà è stato inserito `<ogc:Literal>"strutture sociali"</ogc:L
 
 
 curl -s -k -X POST -H "Content-Type: application/xml; charset=UTF-8" -d '<?xml version="1.0" encoding="UTF-8"?><csw:GetRecords resultType="results" service="CSW" version="2.0.2" startPosition="1" maxRecords="500" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:gml="http://www.opengis.net/gml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd"><csw:Query typeNames="csw:Record"><csw:ElementSetName>full</csw:ElementSetName><csw:Constraint version="1.1.0"><ogc:Filter><ogc:And><ogc:PropertyIsLike wildCard="*" singleChar="_" escapeChar="!"><ogc:PropertyName>dc:subject</ogc:PropertyName><ogc:Literal>s!*</ogc:Literal></ogc:PropertyIsLike><ogc:PropertyIsLike wildCard="*" singleChar="_" escapeChar="!"><ogc:PropertyName>dc:subject</ogc:PropertyName><ogc:Literal>strutture</ogc:Literal></ogc:PropertyIsLike></ogc:And></ogc:Filter></csw:Constraint></csw:Query></csw:GetRecords>' https://geodati.gov.it/RNDT/csw
+
+### Cercare per titolo (title)
+
+Come si vede [sopra](#elenco-dei-campi-interrogabili) il campo `title` non è di quelli ricercabili tramite OGR (vedi issue [6718](https://github.com/OSGeo/gdal/issues/6718)).
+
+Quindi la ricerca per titolo è fattibile soltanto tramite una *query* HTTP sul server CSW, utilizzando il nome del campo disponibile.<br>
+Nella [guida](https://geodati.gov.it/geoportale/images/RNDT_guida_operativa_csw_v2.0_20140725.pdf) al servizio CSW usato per questi esempi, è presenta la lista, e si può fare riferimento al campo `title` usando `apiso:title` o `dc:title`.
+
+![](images/lista-campi-csw-rndt.png)
+
+La query di sotto cerca la stringa `salute` nel `title`:
+
+```bash
+curl -s -k -X POST -H "Content-Type: application/xml; charset=UTF-8" -d '<?xml version="1.0" encoding="UTF-8"?><csw:GetRecords resultType="hits" service="CSW" version="2.0.2" startPosition="1" maxRecords="500" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:gml="http://www.opengis.net/gml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd"><csw:Query typeNames="csw:Record"><csw:ElementSetName>full</csw:ElementSetName><csw:Constraint version="1.1.0"><ogc:Filter><ogc:PropertyIsLike wildCard="*" singleChar="_" escapeChar="!"><ogc:PropertyName>dc:subject</ogc:PropertyName><ogc:Literal>salute</ogc:Literal></ogc:PropertyIsLike></ogc:Filter></csw:Constraint></csw:Query></csw:GetRecords>' https://geodati.gov.it/RNDT/csw
+```
+
+!!! note "Nota"
+
+    La ricerca senza virgolette dà in output l'elenco di tutti gli *item* che contengono la parola `salute`, quindi restituisce anche `Centri salute mentale`. Se si vuole fare una ricerca esatta, bisogna mettere la stringa tra virgolette. Ad esempio `<ogc:Literal>"salute"</ogc:Literal>`
