@@ -172,6 +172,49 @@ In output
 </csw:GetRecordsResponse>
 ```
 
+### Elenco dei campi interrogabili
+
+Si ottiene lanciando `ogrinfo CSW:http://www.pcn.minambiente.it/geoportal/csw -al -so`. In output, in basso, l'elenco dei campi interrogabili e il loro tipo:
+
+```
+INFO: Open of `CSW:http://www.pcn.minambiente.it/geoportal/csw'
+      using driver `CSW' successful.
+
+Layer name: records
+Geometry: Polygon
+Feature Count: 329
+Extent: (-180.000000, -90.000000) - (180.000000, 90.000000)
+Layer SRS WKT:
+GEOGCS["WGS 84",
+    DATUM["WGS_1984",
+        SPHEROID["WGS 84",6378137,298.257223563,
+            AUTHORITY["EPSG","7030"]],
+        AUTHORITY["EPSG","6326"]],
+    PRIMEM["Greenwich",0,
+        AUTHORITY["EPSG","8901"]],
+    UNIT["degree",0.0174532925199433,
+        AUTHORITY["EPSG","9122"]],
+    AUTHORITY["EPSG","4326"]]
+Geometry Column = boundingbox
+identifier: String (0.0)
+other_identifiers: StringList (0.0)
+type: String (0.0)
+subject: String (0.0)
+other_subjects: StringList (0.0)
+references: String (0.0)
+other_references: StringList (0.0)
+modified: String (0.0)
+abstract: String (0.0)
+date: String (0.0)
+language: String (0.0)
+rights: String (0.0)
+format: String (0.0)
+other_formats: StringList (0.0)
+creator: String (0.0)
+source: String (0.0)
+anytext: String (0.0)
+```
+
 ### Query in AND e OR
 
 Ad esempio tutti gli item che hanno come *subject* `salute` e `strutture`:
