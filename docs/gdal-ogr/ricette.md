@@ -172,6 +172,16 @@ In output
 </csw:GetRecordsResponse>
 ```
 
+È possibile anche usare un carattere *jolly* e fare ricerche per tutti gli item, che contengono la stringa `salut`. Il caratter `jolly` è `*`.
+
+Il comando
+
+```
+ogrinfo -ro -al "CSW:http://geodati.gov.it/RNDT/csw" -where "subject LIKE 'salute'"
+```
+
+restituirà quindi anche gli item con subject `rischio per la salute`, `Centri salute mentale`, `ambiente e salute`, ecc..
+
 ### Elenco dei campi interrogabili
 
 Si ottiene lanciando `ogrinfo CSW:http://www.pcn.minambiente.it/geoportal/csw -al -so`. In output, in basso, l'elenco dei campi interrogabili e il loro tipo:
@@ -239,3 +249,5 @@ curl -s -k -X POST -H "Content-Type: application/xml; charset=UTF-8" -d '<?xml v
 
 Notare che qui soprà è stato inserito `<ogc:Literal>"strutture sociali"</ogc:Literal>`.
 
+
+curl -s -k -X POST -H "Content-Type: application/xml; charset=UTF-8" -d '<?xml version="1.0" encoding="UTF-8"?><csw:GetRecords resultType="results" service="CSW" version="2.0.2" startPosition="1" maxRecords="500" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:gml="http://www.opengis.net/gml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd"><csw:Query typeNames="csw:Record"><csw:ElementSetName>full</csw:ElementSetName><csw:Constraint version="1.1.0"><ogc:Filter><ogc:And><ogc:PropertyIsLike wildCard="*" singleChar="_" escapeChar="!"><ogc:PropertyName>dc:subject</ogc:PropertyName><ogc:Literal>s!*</ogc:Literal></ogc:PropertyIsLike><ogc:PropertyIsLike wildCard="*" singleChar="_" escapeChar="!"><ogc:PropertyName>dc:subject</ogc:PropertyName><ogc:Literal>strutture</ogc:Literal></ogc:PropertyIsLike></ogc:And></ogc:Filter></csw:Constraint></csw:Query></csw:GetRecords>' https://geodati.gov.it/RNDT/csw
