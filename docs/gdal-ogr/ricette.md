@@ -277,10 +277,14 @@ curl -s -k -X POST -H "Content-Type: application/xml; charset=UTF-8" -d '<?xml v
 Da applicare soltanto se è una base da usare come sfondo, in cui una varizione dei valori dei pixel non è un problema.
 
 ```bash
-gdal_translate  -co NUM_THREADS=ALL_CPUS -b 1 -b 2 -b 3 \
+gdal_translate -b 1 -b 2 -b 3 \
 -co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR \
 -co TILED=YES --config COMPRESS_OVERVIEW JPEG \
 --config JPEG_QUALITY_OVERVIEW 50 -r average input.tif output.tif
 ```
 
 Fonte: <http://blog.cleverelephant.ca/2015/02/geotiff-compression-for-dummies.html>
+
+## Usare tutti i processori disponibili
+
+Basta aggiungere il parametro `-co NUM_THREADS=ALL_CPUS`.
