@@ -271,16 +271,32 @@ curl -s -k -X POST -H "Content-Type: application/xml; charset=UTF-8" -d '<?xml v
 
     La ricerca senza virgolette dà in output l'elenco di tutti gli *item* che contengono la parola `salute`, quindi restituisce anche `Centri salute mentale`. Se si vuole fare una ricerca esatta, bisogna mettere la stringa tra virgolette. Ad esempio `<ogc:Literal>"salute"</ogc:Literal>`
 
-## Comprimere una TIFF con perdita, ma senza che sia visibile
+## Comprimere una base raster, con perdita, ma senza che sia "visibile"
 
 È una compressione *lossy*, di cui la "perdita" è pressoché impercettibile ad occhio.<br>
-Da applicare soltanto se è una base da usare come sfondo, in cui una varizione dei valori dei pixel non è un problema.
+Da applicare soltanto se la raster è da usare come sfondo, non da sottoporre ad analisi, in cui una varizione dei valori dei pixel non è un problema.
 
 ```bash
-gdal_translate -b 1 -b 2 -b 3 \
--co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR \
--co TILED=YES --config COMPRESS_OVERVIEW JPEG \
---config JPEG_QUALITY_OVERVIEW 50 -r average input.tif output.tif
+gdal_translate \
+-b 1 -b 2 -b 3 \
+-co COMPRESS=JPEG \
+-co JPEG_QUALITY=75 \
+-co PHOTOMETRIC=YCBCR \
+-co TILED=YES \
+input.tif output.tif
+```
+
+E per rendere la visualizzazione più rapida si possono aggiungere i tasselli compressi, a varie scale di zoom, con `gdaladdo`:
+
+```bash
+gdaladdo \
+--config COMPRESS_OVERVIEW JPEG \
+--config JPEG_QUALITY_OVERVIEW 50 \
+--config PHOTOMETRIC_OVERVIEW YCBCR \
+--config INTERLEAVE_OVERVIEW PIXEL \
+-r average \
+output.tif \
+2 4 8 16
 ```
 
 Fonte: <http://blog.cleverelephant.ca/2015/02/geotiff-compression-for-dummies.html>
