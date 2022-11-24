@@ -301,6 +301,10 @@ output.tif \
 
 Fonte: <http://blog.cleverelephant.ca/2015/02/geotiff-compression-for-dummies.html>
 
+!!! note "Se sai che la TIFF di output sarà molto grande"
+
+    Il limite dimensionale di un file TIFF è 4 GB. Per fare in modo che GDAL produca output più grandi, bisogna aggiungere l'opzione `-co BIGTIFF=YES`
+
 ## Usare tutti i processori disponibili
 
 Basta aggiungere il parametro `-co NUM_THREADS=ALL_CPUS`.
