@@ -55,6 +55,36 @@ Tutti i dataset che hanno nel titolo le parola `farmacie` o `distributori`:
 ckanapi -r https://dati.gov.it/opendata/ search datasets q='(title:"farmacie" OR title:"distributori")'
 ```
 
+### Ricerca dataset basata su field extra
+
+Nei dataset spesso ci sono diversi campi descrittivi, nell'array `extras`. Due di esempio:
+
+```json
+{
+  "key": "contact_email",
+  "value": "dirigenteat@comune.copertino.le.it"
+},
+{
+  "key": "contact_name",
+  "value": "comune-di-copertino"
+},
+{
+  "key": "identifier",
+  "value": "c_c978:openpnrr-comune-di-copertino"
+}
+```
+
+Per cercare tramite questi campi, si può usare il nome della `key`. Ad esempio:
+
+```bash
+ckanapi -r https://dati.gov.it/opendata/ action package_search fq='identifier:*pnrr*' rows=10
+```
+
+!!! note "Carattere jolly"
+
+    `*` è il carattere jolly per le ricerche. Ad esempio con `identifier:*prova*` si avranno tutti i risultati che hanno come `identifier` "approvate", ma anche "approvadibomba".
+
+
 ### Ricerca per data di creazione dei metadati
 
 ```
