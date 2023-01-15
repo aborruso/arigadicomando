@@ -2,7 +2,7 @@
 hide:
   - navigation
 #  - toc
-title: frictionless
+title: ckanapi cli
 ---
 # ckanapi cli
 
