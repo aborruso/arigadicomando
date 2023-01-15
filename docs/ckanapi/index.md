@@ -21,6 +21,10 @@ Ad esempio la stringa `furgoni`, in qualsiasi campo:
 ckanapi -r https://dati.gov.it/opendata/ action package_search q='furgoni'
 ```
 
+!!! note "Numero di risultati"
+
+    Di default il numero di risultati presentati in un output di `package_search` è **pari a 10**. Per modificarlo bisogna introdurre il parametro `rows` (il valore massimo di default è pari a 1000).
+
 ### Il numero di risultati di una ricerca per dataset
 
 L'azione `package_search` restituisce sempre in output, il parametro `count`. Si può allora impostare a `0` il numero di record di output da visualizzare (perché non si vuole qui leggere i dettagli dei risultati) ed estrarre dall'output del JSON soltanto `count`:
