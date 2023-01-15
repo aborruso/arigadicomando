@@ -13,6 +13,24 @@ title: frictionless
 
 Le ricerche sono basate su `solr`, e per diversi campi non è una ricerca per stringa esatta (vedi [nota](#note-sulle-ricerche-fatte-su-ckan)).
 
+### Ricerca per stringa
+
+Ad esempio la stringa `furgoni`, in qualsiasi campo:
+
+```
+ckanapi -r https://dati.gov.it/opendata/ action package_search q='furgoni'
+```
+
+### Il numero di risultati di una ricerca per dataset
+
+L'azione `package_search` restituisce sempre in output, il parametro `count`. Si può allora impostare a `0` il numero di record di output da visualizzare (perché non si vuole qui leggere i dettagli dei risultati) ed estrarre dall'output del JSON soltanto `count`:
+
+```
+ckanapi -r https://dati.gov.it/opendata/ action package_search q='scuole' rows=0 | jq '.count'
+```
+
+La risposta è immediata, perché non vengono listate le decine di dataset che contengono la stringa `scuole`, ma soltanto il conteggio degli stessi.
+
 ### Ricerca per titolo
 
 Tutti i dataset che hanno nel titolo la parola `farmacie`:
