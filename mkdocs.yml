@@ -37,6 +37,7 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - content.code.annotate
+    - navigation.footer
   font:
     text: Montserrat
     code: Fira Code
