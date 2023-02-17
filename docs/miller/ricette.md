@@ -208,6 +208,14 @@ Per tutti i campi - `k` - verrà applicata la funzione [`gsub`](https://miller.r
 
 L'opzione `-S` per forzare che tutti i campi siano interpretati come stringhe.
 
+!!! note "Se usi Miller 5"
+
+    Il comando cambia in questo modo, inserendo l'opzione `-S` dopo il verbo `put`:
+
+    ```bash
+    mlr --csv put -S 'for (k in $*) {$[k] = gsub($[k], "e", "X")}' foo.csv
+    ```
+
 ## Rimuovere i ritorni a capo nelle celle
 
 Prendendo spunto dalla ricetta sul [trova e sostituisce globale](ricette.md#fare-un-trova-e-sostituisci-globale), basta cercare il carattere di ritorno a capo.
