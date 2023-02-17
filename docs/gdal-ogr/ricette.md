@@ -254,6 +254,11 @@ Notare che qui soprà è stato inserito `<ogc:Literal>"strutture sociali"</ogc:L
 
 ### Cercare per titolo (title)
 
+!!! note "Nota bene"
+
+    Quanto scritto sotto, **da dicembre 2022**, non è più valido: a seguito di [questa segnalazione](https://github.com/OSGeo/gdal/issues/6718#issue-1451880195) e di [questa modifica al codice](https://github.com/OSGeo/gdal/pull/6912) **in GDAL/OGR è possibile fare ricerche CSW per titolo**. Si lascia in ogni caso questa sezione, perché è un buon esempio di *query HTTP*.
+
+
 Come si vede [sopra](#elenco-dei-campi-interrogabili) il campo `title` non è di quelli ricercabili tramite OGR (vedi issue [6718](https://github.com/OSGeo/gdal/issues/6718)).
 
 Quindi la ricerca per titolo è fattibile soltanto tramite una *query* HTTP sul server CSW, utilizzando il nome del campo disponibile.<br>
