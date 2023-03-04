@@ -291,7 +291,7 @@ gdal_translate \
 input.tif output.tif
 ```
 
-E per rendere la visualizzazione più rapida si possono aggiungere i tasselli compressi, a varie scale di zoom, con `gdaladdo`:
+E per rendere la visualizzazione molto più rapida è essenziale aggiungere i tasselli compressi, a varie scale di zoom, con `gdaladdo`:
 
 ```bash
 gdaladdo \
@@ -300,16 +300,25 @@ gdaladdo \
 --config PHOTOMETRIC_OVERVIEW YCBCR \
 --config INTERLEAVE_OVERVIEW PIXEL \
 -r average \
-output.tif \
-2 4 8 16
+output.tif
 ```
 
 Fonte: <http://blog.cleverelephant.ca/2015/02/geotiff-compression-for-dummies.html>
 
 !!! note "Se sai che la TIFF di output sarà molto grande"
 
-    Il limite dimensionale di un file TIFF è 4 GB. Per fare in modo che GDAL produca output più grandi, bisogna aggiungere l'opzione `-co BIGTIFF=YES`
+    Il limite dimensionale di un file TIFF è 4 GB. Per fare in modo che GDAL produca output più grandi, bisogna aggiungere l'opzione `-co BIGTIFF=YES` in `gdal_translate`; se si vuole applicare anche nella piramidazione invece è `--config BIGTIFF_OVERVIEW YES` in `gdaladdo`.
 
 ## Usare tutti i processori disponibili
 
 Basta aggiungere il parametro `-co NUM_THREADS=ALL_CPUS`.
+
+## Fare una piramidazione su file esterno
+
+Di _default_ la piramidazione crea le piramidi all'interno del file a cui è applicata.
+
+Se si vogliono inserire in un file esterno bisogno aggiungere l'opzione `-ro`, che imposta il _read only_ sul file di input (se il file non è "scrivibile" da `gdaladdo`, `-ro` si può omettere, e la piramidiazione avrà luogo esternamente).
+
+```bash
+gdaladdo -ro --config COMPRESS_OVERVIEW DEFLATE input.ecw
+```
