@@ -303,9 +303,9 @@ A partire da
 | sara | 2000-02-22 | 166 | 70.4 | Roma | femmina |
 | giulia | 1997-08-13 | 169 | 68.3 | Milano | femmina |
 
-si vuole avere un colonna che riporti il numero di valori distinti relativi al campo `comuneNascita`.
+si vuole aggiungere un colonna che riporti il numero di valori distinti del campo `comuneNascita`.
 
-Il verbo da usare `count-similar`. Il comando è
+Si può usare `count-similar`. Il comando è
 
 ```
 mlr --csv count-similar -g comuneNascita input.csv
@@ -323,6 +323,5 @@ che in output restituisce
 
 Due note:
 
- - si può cambiare nome alla colonna di output usando il parametro `-o`;
- - si possono conteggiare i valori distinti per combinazioni di più campi. Ad esempio `-g comuneNascita,sesso`.
-
+- si può cambiare nome alla colonna di output usando il parametro `-o`;
+- si possono conteggiare i valori distinti per combinazioni di più campi. Ad esempio `-g comuneNascita,sesso`.
