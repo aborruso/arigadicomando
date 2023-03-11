@@ -290,3 +290,39 @@ si avranno questi tre file
     DeviceID,AreaName,Longitude,Latitude
     12309,Dubai,55.55427,25.45627
     12309,Dubai,55.55436,25.45655
+
+## Aggiungere una colonna con il conteggio dei valori distinti di un (o più) campo
+
+A partire da
+
+| nome | dataNascita | altezza | peso | comuneNascita | sesso |
+| --- | --- | --- | --- | --- | --- |
+| andy | 1973-05-08 | 176 | 86.5 | Roma | maschio |
+| chiara | 1993-12-13 | 162 | 58.3 | Milano | femmina |
+| guido | 2001-01-22 | 196 | 90.4 | Roma | maschio |
+| sara | 2000-02-22 | 166 | 70.4 | Roma | femmina |
+| giulia | 1997-08-13 | 169 | 68.3 | Milano | femmina |
+
+si vuole avere un colonna che riporti il numero di valori distinti relativi al campo `comuneNascita`.
+
+Il verbo da usare `count-similar`. Il comando è
+
+```
+mlr --csv count-similar -g comuneNascita input.csv
+```
+
+che in output restituisce
+
+| nome | dataNascita | altezza | peso | comuneNascita | sesso | count |
+| --- | --- | --- | --- | --- | --- | --- |
+| andy | 1973-05-08 | 176 | 86.5 | Roma | maschio | 3 |
+| guido | 2001-01-22 | 196 | 90.4 | Roma | maschio | 3 |
+| sara | 2000-02-22 | 166 | 70.4 | Roma | femmina | 3 |
+| chiara | 1993-12-13 | 162 | 58.3 | Milano | femmina | 2 |
+| giulia | 1997-08-13 | 169 | 68.3 | Milano | femmina | 2 |
+
+Due note:
+
+ - si può cambiare nome alla colonna di output usando il parametro `-o`;
+ - si possono conteggiare i valori distinti per combinazioni di più campi. Ad esempio `-g comuneNascita,sesso`.
+
