@@ -4,3 +4,4 @@ Senza questa GDAL/OGR, forse non sarei mai caduto dentro il buco nero della "rig
 
 È la più straordinaria *utility* per legger e trasformare dati spaziali.
 
+➡️ [Installazione e/o compilazione](installazione.md)
