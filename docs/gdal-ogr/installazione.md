@@ -35,6 +35,11 @@ cmake --build .
 sudo cmake --build . --target install
 ```
 
+!!! note "Nota bene"
+
+    Qui si dà per scontato nel sistema sia installato **Python**. Se non lo è, è bene installare la versione stabile per il sistema in uso.
+
+
 ## Installazione
 
 ### Windows
