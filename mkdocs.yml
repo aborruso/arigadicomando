@@ -80,6 +80,7 @@ nav:
     - GDAL/OGR:
       - gdal-ogr/index.md
       - Ricette GDAL/OGR: gdal-ogr/ricette.md
+      - Installazione/Compilazione: gdal-ogr/installazione.md
     - csvkit:
       - csvkit/index.md
       - csvstat: csvkit/csvstat.md
