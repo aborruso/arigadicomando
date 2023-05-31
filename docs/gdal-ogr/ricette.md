@@ -58,8 +58,8 @@ ogr2ogr -overwrite -f SQLite -dsco SPATIALITE=YES -nlt MULTIPOLYGON -nln partice
 
 !!! note
 
-- `-nlt MULTIPOLYGON` perché l'oggetto di input qui è un `MULTIPOLYGON`;
-- la paginazione della query è possibile quando `ArcGIS server >= 10.3` e i layer da interrogare hanno l'impostazione `supportsPagination=true`
+    - `-nlt MULTIPOLYGON` perché l'oggetto di input qui è un `MULTIPOLYGON`;
+    - la paginazione della query è possibile quando `ArcGIS server >= 10.3` e i layer da interrogare hanno l'impostazione `supportsPagination=true`
 
 ## Usare gdal via docker
 
