@@ -50,13 +50,16 @@ Shape_Length: Real (0.0)
 Shape_Area: Real (0.0)
 ```
 
-E poi, lo scarico paginando
+E poi, lo scarico paginando:
 
 ```
-ogr2ogr -overwrite -f SQLite -dsco SPATIALITE=YES -nlt MULTIPOLYGON -nln particelle particelle.sqlite  "https://map.sitr.regione.sicilia.it/gis/rest/services/catasto/cartografia_catastale/MapServer/6/query?where=objectid+%3D+objectid&outfields=*&f=json" ESRIJSON -lco FEATURE_SERVER_PAGING="YES"
+ogr2ogr -overwrite -f SQLite -dsco SPATIALITE=YES -nlt MULTIPOLYGON -nln particelle particelle.sqlite  "https://map.sitr.regione.sicilia.it/gis/rest/services/catasto/cartografia_catastale/MapServer/6/query?where=objectid+%3D+objectid&outfields=*&f=json" ESRIJSON -oo FEATURE_SERVER_PAGING="YES"
 ```
 
-Nota: `-nlt MULTIPOLYGON` perché l'oggetto di input qui è un `MULTIPOLYGON`.
+!!! note
+
+- `-nlt MULTIPOLYGON` perché l'oggetto di input qui è un `MULTIPOLYGON`;
+- la paginazione della query è possibile quando `ArcGIS server >= 10.3` e i layer da interrogare hanno l'impostazione `supportsPagination=true`
 
 ## Usare gdal via docker
 
