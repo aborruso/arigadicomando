@@ -325,3 +325,60 @@ Se si vogliono inserire in un file esterno bisogno aggiungere l'opzione `-ro`, c
 ```bash
 gdaladdo -ro --config COMPRESS_OVERVIEW DEFLATE input.ecw
 ```
+
+## Attivare il debug
+
+È molto comodo attivare il debug, sopratutto per leggere i comandi che GDAL esegue in *background*.<br>
+Per attivarlo basta aggiungere ai comandi `--config CPL_DEBUG ON`.
+
+Ad esempio questo comando `gdalinfo` sul secondo sub dataset del WMS del catasto dell'Agenzia delle entrate:
+
+```mardown
+gdalinfo --config CPL_DEBUG ON \
+wms:"https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php?VERSION=1.3.0" \
+-sd 2
+```
+
+## Creare file XML che descrive una sorgente WMS
+
+Per farlo torna utile la modalità di [`debug`](#attivare-il-debug):
+
+- si interroga con `gdalinfo` il *sub dataset* di interesse con il debug attivo;
+- si legge la chiamata WMS che fa GDAL per raccogliere le info;
+- si usa la chiamata GDAL come layer di input in `gdal_translate`, per produrre il file `XML`.
+
+Ad esempio qualcosa come
+
+```markdown
+gdal_translate -of WMS \
+WMS:"https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php?language=ita&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=province&CRS=EPSG:6706&BBOX=33,2,48,19" \
+province.xml
+```
+
+In output
+
+```XML
+<GDAL_WMS>
+  <Service name="WMS">
+    <Version>1.3.0</Version>
+    <ServerUrl>https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php?language=ita&amp;SERVICE=WMS</ServerUrl>
+    <Layers>province</Layers>
+    <CRS>EPSG:6706</CRS>
+    <ImageFormat>image/jpeg</ImageFormat>
+    <Transparent>FALSE</Transparent>
+    <BBoxOrder>yxYX</BBoxOrder>
+  </Service>
+  <DataWindow>
+    <UpperLeftX>2</UpperLeftX>
+    <UpperLeftY>48</UpperLeftY>
+    <LowerRightX>19</LowerRightX>
+    <LowerRightY>33</LowerRightY>
+    <SizeX>1073741824</SizeX>
+    <SizeY>947419256</SizeY>
+  </DataWindow>
+  <BandsCount>3</BandsCount>
+  <BlockSizeX>1024</BlockSizeX>
+  <BlockSizeY>1024</BlockSizeY>
+  <OverviewCount>20</OverviewCount>
+</GDAL_WMS>
+```
