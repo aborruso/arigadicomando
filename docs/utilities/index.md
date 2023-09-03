@@ -24,7 +24,7 @@ Rileva l'*encoding* dei caratteri.
 
 Per utilizzare le API di CKAN, a riga di comando.
 
-:arrow_right: [pagina dedicata](../ckanapi)<br>
+:arrow_right: [pagina dedicata](../ckanapi/index.md)<br>
 :information_source: <https://github.com/ckan/ckanapi>
 
 ## csvkit
@@ -61,7 +61,7 @@ Restituisce informazioni sui file.
 
 L'utility a riga di comando del *framework* Frictionless
 
-:arrow_right: [pagina dedicata](../frictionless)<br>
+:arrow_right: [pagina dedicata](../frictionless/index.md)<br>
 :information_source: <https://framework.frictionlessdata.io/docs/tutorials/working-with-cli>
 
 ## head
@@ -92,7 +92,7 @@ Mostra il contenuto di un file, una pagina per volta, permettendo di eseguire ri
 
 Uno strumento per eseguire *query*, modellare e ristrutturare file di testo strutturati in vari formati, tra cui CSV, TSV, JSON e JSON Lines.
 
-:arrow_right: [pagina dedicata](../miller)<br>
+:arrow_right: [pagina dedicata](../miller/index.md)<br>
 :information_source: <https://miller.readthedocs.io/en/latest/>
 
 ## paste
@@ -171,6 +171,4 @@ Uno straordinario toolkit per leggere, filtrare, analizzare un CSV.
 
 Per fare il *parsing* e trasformare file in formato `YAML` (anche `TOML` e `XML`). Lo fa trasformando l'*input* da `YAML` a `JSON`, via [`jq`](#jq).
 
-:arrow_right: [pagina dedicata](../yq)<br>
 :information_source: <https://github.com/kislyuk/yq>
-

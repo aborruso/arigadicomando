@@ -12,7 +12,7 @@ hide:
 
 # Esportare la lista di file e cartelle in formato JSON
 
-Si può usare l'*utility* [`tree`](../../utilities/#tree):
+Si può usare l'*utility* [`tree`](../utilities/index.md#tree):
 
 ```bash
 tree -Jhfpug /myPC/myFolder

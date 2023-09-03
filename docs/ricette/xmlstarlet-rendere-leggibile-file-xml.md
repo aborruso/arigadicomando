@@ -14,7 +14,7 @@ hide:
 
 Alle volte può essere utile applicare a un file `XML` un'indentazione che ne renda più leggibile la struttura.
 
-Si può usare l'*utility* [`xmlstarlet`](../../utilities/#xmlstarlet) e applicare ad esempio a questo input (è su una sola riga, scorrerlo tutto verso destra per farsi un'idea)
+Si può usare l'*utility* [`xmlstarlet`](../utilities/index.md#xmlstarlet) e applicare ad esempio a questo input (è su una sola riga, scorrerlo tutto verso destra per farsi un'idea)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

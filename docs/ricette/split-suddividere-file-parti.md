@@ -11,7 +11,7 @@ Con file di testo, specialmente quelli in cui ogni linea contiene un'informazion
 
 Ad esempio, a partire da un file `500.000` righe, suddividerlo in blocchi di file da `50.000`.
 
-Un'*utility* per farlo è [`split`](../../utilities/#split). La sintassi per l'esempio di sopra è:
+Un'*utility* per farlo è [`split`](../utilities/index.md#split). La sintassi per l'esempio di sopra è:
 
 ```bash
 split -l 50000 -d input.csv input_ --additional-suffix=.csv

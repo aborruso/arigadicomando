@@ -28,7 +28,7 @@ c,2
 1985
 ```
 
-Esiste un'*utility* standard di Linux, [`paste`](../../utilities/#paste), che si utilizza proprio per casi di questo tipo.
+Esiste un'*utility* standard di Linux, [`paste`](../utilities/index.md#paste), che si utilizza proprio per casi di questo tipo.
 
 Il comando da lanciare è
 
@@ -52,7 +52,7 @@ Con `-d ","` si restituisce a `paste` il fatto che il separatore di colonne del 
 
 ## Usando qsv
 
-A partire dagli stessi file di sopra, il comando per [`qsv`](../../utilities/#qsv) da usare è [`cat`](https://github.com/jqnatividad/qsv/blob/master/src/cmd/cat.rs#L7):
+A partire dagli stessi file di sopra, il comando per [`qsv`](../utilities/index.md#qsv) da usare è [`cat`](https://github.com/jqnatividad/qsv/blob/master/src/cmd/cat.rs#L7):
 
 ```bash
 qsv cat columns input_01 input_02 >output
