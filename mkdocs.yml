@@ -24,7 +24,6 @@ theme:
 #      toggle:
 #        icon: material/weather-sunny
 #        name: Switch to light mode
-
   language: it
   favicon: images/favicon.png
   icon:
@@ -37,6 +36,8 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - content.code.annotate
+    - content.action.edit
+    - content.action.view
     - navigation.footer
   font:
     text: Montserrat
