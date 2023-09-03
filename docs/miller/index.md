@@ -11,9 +11,9 @@ Miller 6 si può installare in diversi modi:
 - utilizzando i file binari precompilati, oresenti nella [pagina delle *release*](https://github.com/johnkerl/miller/releases);
 - [compilandolo](https://miller.readthedocs.io/en/latest/build/) a partire dal codice sorgente;
 - utilizzando un gestore di pacchetti:
-  - Linux, `yum install miller` o `apt-get install miller` in dipenendenza della versione di Linux, o [Homebrew](https://docs.brew.sh/linux)
-  - MacOS, `brew update` e `brew install miller`, o `sudo port selfupdate` e `sudo port install miller`, in dipendenza delle tue preferenze di [Homebrew](https://brew.sh) o [MacPorts](https://macports.org).
-  - Windows, `choco install miller` utilizzando [Chocolatey](https://chocolatey.org).
+    - Linux, `yum install miller` o `apt-get install miller` in dipenendenza della versione di Linux, o [Homebrew](https://docs.brew.sh/linux)
+    - MacOS, `brew update` e `brew install miller`, o `sudo port selfupdate` e `sudo port install miller`, in dipendenza delle tue preferenze di [Homebrew](https://brew.sh) o [MacPorts](https://macports.org).
+    - Windows, `choco install miller` utilizzando [Chocolatey](https://chocolatey.org).
 
 ## Primi passi
 
