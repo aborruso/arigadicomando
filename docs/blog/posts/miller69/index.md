@@ -32,7 +32,7 @@ Per i `timestamp` sono state introdotte numerose [funzioni `DSL`](https://miller
 
 ## Funzioni statistiche
 
-Sono state introdotte le singole [**funzioni statistiche**](https://miller.readthedocs.io/en/6.9.0/reference-dsl-builtin-functions/index.html#stats-functions), prime presenti soltnato nel verbo [**`stats`**](https://miller.readthedocs.io/en/6.9.0/reference-verbs/index.html#stats1): ora possono essere usate su *array* e *map*.
+Sono state introdotte le singole [**funzioni statistiche**](https://miller.readthedocs.io/en/6.9.0/reference-dsl-builtin-functions/index.html#stats-functions), prima presenti soltanto nel verbo [**`stats`**](https://miller.readthedocs.io/en/6.9.0/reference-verbs/index.html#stats1): ora possono essere usate su *array* e *map*.
 
 ## Verbi per "trova e sostituisci"
 
