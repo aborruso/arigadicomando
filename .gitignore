@@ -1,3 +1,6 @@
 tmp*
 *~lock*
 site/*
+.cache/*
+
+docs/duckdb/dati/Limiti01012023_g/*
