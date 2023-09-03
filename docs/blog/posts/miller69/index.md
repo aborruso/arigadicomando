@@ -74,4 +74,4 @@ Con la release `6.9` di Miller si potrà operare direttamente su file compresso 
 mlr --csv --ifs ";" head input.csv.zst
 ```
 
-Di questa novità sono un po' orgoglioso, perché deriva da [una mia proposta](https://github.com/johnkerl/miller/issues/1342), nata proprio mentre scrivevo il suddetto articolo. Prima c'era il supporto per `GZIP`, `BZIP2` e ZLIB.
+Di questa novità sono un po' orgoglioso, perché deriva da [una mia proposta](https://github.com/johnkerl/miller/issues/1342), nata proprio mentre scrivevo il suddetto articolo. Prima c'era il supporto per `GZIP`, `BZIP2` e `ZLIB`.
