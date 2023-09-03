@@ -216,6 +216,34 @@ L'opzione `-S` per forzare che tutti i campi siano interpretati come stringhe.
     mlr --csv put -S 'for (k in $*) {$[k] = gsub($[k], "e", "X")}' foo.csv
     ```
 
+## Fare un trova e sostituisci per campo - nuovi verbi
+
+[La release `6.9`](https://github.com/johnkerl/miller/releases/tag/v6.9.0) di Miller ha introdotto i nuovi verbi [`sub`](https://miller.readthedocs.io/en/6.9.0/reference-verbs/#sub), [`gsub`](https://miller.readthedocs.io/en/6.9.0/reference-verbs/#gsub) e [`ssub`](https://miller.readthedocs.io/en/6.9.0/reference-verbs/#ssub), per applicare comandi di **trova e sostituisci**, in modo molto più diretto e comodo della modalità descritta sopra.<br>
+Con i verbi `sub` e `gsub` sono supportate le espressioni regolari.
+
+Se ad esempio ho questa tabella di *input*:
+
+| nome | dataNascita | altezza | peso |
+| --- | --- | --- | --- |
+| andy | 1973-05-08 | 176 | 86.5 |
+| chiara | 1993-12-13 | 162 | 58.3 |
+| guido | 2001-01-22 | 196 | 90.4 |
+
+
+E voglio sostituire `1973` con `2021` nella colonna `dataNascita`, si può lanciare questo comando:
+
+```
+mlr --csv sub -f dataNascita 1973 2021 input.csv
+```
+
+Ed ottenere:
+
+| nome | dataNascita | altezza | peso |
+| --- | --- | --- | --- |
+| andy | 2021-05-08 | 176 | 86.5 |
+| chiara | 1993-12-13 | 162 | 58.3 |
+| guido | 2001-01-22 | 196 | 90.4 |
+
 ## Rimuovere i ritorni a capo nelle celle
 
 Prendendo spunto dalla ricetta sul [trova e sostituisce globale](ricette.md#fare-un-trova-e-sostituisci-globale), basta cercare il carattere di ritorno a capo.
