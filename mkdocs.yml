@@ -101,6 +101,8 @@ nav:
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md
+  - Blog:
+    - blog/index.md
   - Grazie: grazie.md
 
 #extra:
@@ -116,6 +118,29 @@ plugins:
 #- charts
 - tags:
     tags_file: tags.md
+- blog:
+    authors_file: blog/.authors.yml
+    blog_toc: true
+    post_url_format: "{date}/{slug}"
+    post_slugify_separator: "-"
+    post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+    post_excerpt: optional
+    archive_name: Archivio
+    categories_slugify_separator: "-"
+    categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+- rss:
+    match_path: blog/posts/.*
+    date_from_meta:
+      as_creation: date
+    categories:
+      - categories
+      - tags
+- social
+
 
 #- rss
 
