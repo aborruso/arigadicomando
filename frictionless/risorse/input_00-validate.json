@@ -1,0 +1,145 @@
+{
+  "version": "4.40.5",
+  "time": 0.032,
+  "errors": [],
+  "tasks": [
+    {
+      "resource": {
+        "path": "input_00.csv",
+        "name": "input_00",
+        "profile": "tabular-data-resource",
+        "scheme": "file",
+        "format": "csv",
+        "hashing": "md5",
+        "stats": {
+          "hash": "cf404937d0c1a8001585d5593640c7c3",
+          "bytes": 76,
+          "fields": 5,
+          "rows": 3
+        },
+        "encoding": "utf-8",
+        "schema": {
+          "fields": [
+            {
+              "type": "string",
+              "name": "text"
+            },
+            {
+              "type": "string",
+              "name": "number"
+            },
+            {
+              "type": "date",
+              "name": "date"
+            },
+            {
+              "type": "string",
+              "name": "field4"
+            },
+            {
+              "type": "string",
+              "name": "type"
+            }
+          ]
+        }
+      },
+      "time": 0.032,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "label": "",
+          "fieldName": "field4",
+          "fieldNumber": 4,
+          "fieldPosition": 4,
+          "labels": [
+            "text",
+            "number",
+            "date",
+            "",
+            "type"
+          ],
+          "rowPositions": [
+            1
+          ],
+          "code": "blank-label",
+          "name": "Blank Label",
+          "tags": [
+            "#table",
+            "#header",
+            "#label"
+          ],
+          "note": "",
+          "message": "Label in the header in field at position \"4\" is blank",
+          "description": "A label in the header row is missing a value. Label should be provided and not be blank."
+        },
+        {
+          "cells": [],
+          "rowNumber": 2,
+          "rowPosition": 3,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"3\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        },
+        {
+          "cell": "",
+          "fieldName": "type",
+          "fieldNumber": 5,
+          "fieldPosition": 5,
+          "cells": [
+            "",
+            "Ciao",
+            "2023-01-13",
+            "C"
+          ],
+          "rowNumber": 3,
+          "rowPosition": 4,
+          "code": "missing-cell",
+          "name": "Missing Cell",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "",
+          "message": "Row at position \"4\" has a missing cell in field \"type\" at position \"5\"",
+          "description": "This row has less values compared to the header row (the first row in the data source). A key concept is that all the rows in tabular data must have the same number of columns."
+        }
+      ],
+      "stats": {
+        "errors": 3
+      },
+      "valid": false
+    }
+  ],
+  "stats": {
+    "errors": 3,
+    "tasks": 1
+  },
+  "valid": false
+}
