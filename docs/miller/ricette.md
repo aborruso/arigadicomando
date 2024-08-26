@@ -353,3 +353,23 @@ Due note:
 
 - si può cambiare nome alla colonna di output usando il parametro `-o`;
 - si possono conteggiare i valori distinti per combinazioni di più campi. Ad esempio `-g comuneNascita,sesso`.
+
+## Estrarre una colonna in modo numerico
+
+In Miller si può puntare a una colonna in modo numerico, soltanto dentro [codice DSL](https://miller.readthedocs.io/en/6.12.0/miller-programming-language/) (il codice di programmazione di Miller).<br>
+Se si vuole ad esempio estrarre la colonna numero `3`, si può fare così:
+
+```bash
+mlrgo --csv put -q '
+  @i = 0;
+  for (k, v in $*) {
+    @i += 1;
+    if (@i == 3) {
+      emit {k: v};
+      break;
+    }
+  }
+' input.csv
+```
+
+Nel codice di sopra la terza colonna, la numero `3`, si fissa con `@i == 3`.
