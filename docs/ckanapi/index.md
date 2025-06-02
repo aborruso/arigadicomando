@@ -1,9 +1,10 @@
 ---
 hide:
-  - navigation
+#  - navigation
 #  - toc
 title: ckanapi cli
 ---
+
 # ckanapi cli
 
 È [un'*utility*](../utilities/index.md#ckanapi) per per utilizzare le API di [CKAN](https://ckan.org/).<br>
