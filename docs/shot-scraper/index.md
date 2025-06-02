@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Intro
 
 shot-scraper è ...
@@ -41,4 +46,42 @@ Questa deriva dal mettere insieme le due ricette precedenti.
 
 ```bash
 shot-scraper "https://gfmd.info/fundings/?reg%5B%5D=488&tf%5B%5D=12" -o gfmd.png --javascript "async () => { const delay = ms => new Promise(resolve => setTimeout(resolve, ms)); let lastHeight = 0; let newHeight = document.body.scrollHeight; while (newHeight > lastHeight) { lastHeight = newHeight; window.scrollTo(0, document.body.scrollHeight); await delay(2000); newHeight = document.body.scrollHeight; } return document.documentElement.outerHTML; }"
+```
+
+### Fare uno screenshot rimuovendo il popup di cookie
+
+```bash
+shot-scraper -h 2300 'https://www.corriere.it' -o po-pup_hide.png --javascript "document.querySelectorAll('.privacy-cp-wall').forEach(el => el.style.display = 'none')"
+```
+
+### Fare uno screenshot di una pagina di un account instagram
+
+```bash
+shot-scraper \
+  'https://www.instagram.com/aborruso' \
+  -o screenshot_i.png \
+  --javascript "(async () => {
+    // clicchiamo il bottone
+    Array.from(document.querySelectorAll('button'))
+      .find(b => b.textContent.includes('Allow all cookies'))
+      .click();
+
+    // attendiamo 2 secondi
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    // click sulle coordinate (10,10)
+    const elemento = document.elementFromPoint(10, 10);
+    if (elemento) {
+      elemento.dispatchEvent(
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window,
+          clientX: 10,
+          clientY: 10
+        })
+      );
+    }
+  })()" \
+  --wait 4000
 ```
