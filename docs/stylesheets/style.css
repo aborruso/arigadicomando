@@ -72,4 +72,11 @@ div.md-typeset__table td {
           mask-image: var(--md-admonition-icon--aiuto);
 }
 
+/* per applicare il wrap ai blocchi di codice */
+.wordwrap-code pre,
+.wordwrap-code code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
 
