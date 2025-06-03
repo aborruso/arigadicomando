@@ -18,6 +18,10 @@ In questa sezione una lista di altri strumenti a riga di comando che in modo dir
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) è uno strumento di scrittura codice sviluppato da Anthropic, progettato per integrarsi direttamente nel tuo terminale e semplificare il flusso di lavoro attraverso comandi in linguaggio naturale, con capacità di editing, gestione di bug e automazione delle operazioni Git.
 
+## Codex CLI
+
+<https://github.com/openai/codex>
+
 ## Crawl4AI
 
 <https://docs.crawl4ai.com/core/cli/>
