@@ -13,7 +13,6 @@ Immagina di avere una "**calcolatrice per le parole**": uno strumento che, anzic
 !!! tip
     Il riferimento alla "**calcolatrice per le parole**" viene da una delle letture più stimolanti e didattiche a tema: "*[Think of language models like ChatGPT as a “calculator for words”](https://simonwillison.net/2023/Apr/2/calculator-for-words/)*" dell'eccezionale Simon Willison.
 
-
 La *shell* è da sempre il regno della manipolazione del testo. **Ogni comando, ogni output, ogni pipeline è un flusso di stringhe**. Usare gli LLM da riga di comando non è solo possibile: **è naturale**. Quando interagiamo con un LLM in questo contesto, sfruttiamo al massimo la sua natura testuale e la potenza del terminale.
 
 Grazie agli LLM possiamo:
