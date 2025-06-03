@@ -2,11 +2,14 @@
 title: L'Intelligenza Artificiale a riga di comando
 hide:
   - toc
+search:
+  exclude: true
 ---
 
 # L'Intelligenza Artificiale a riga di comando
 
 Immagina di avere una "**calcolatrice per le parole**": uno strumento che, anziché fare operazioni matematiche, lavora direttamente sul linguaggio. Questo è ciò che rappresentano i modelli linguistici di grandi dimensioni (LLM) come ChatGPT. Sono sistemi progettati per manipolare, trasformare, riscrivere, sintetizzare e analizzare testi. E **cosa c'è di più testuale**, diretto e potente **della riga di comando**?
+
 
 !!! tip
     Il riferimento alla "**calcolatrice per le parole**" viene da una delle letture più stimolanti e didattiche a tema: "*[Think of language models like ChatGPT as a “calculator for words”](https://simonwillison.net/2023/Apr/2/calculator-for-words/)*" dell'eccezionale Simon Willison.
@@ -26,3 +29,7 @@ Queste operazioni si integrano perfettamente con l'uso di pipe (`|`), redirezion
 
 !!! note "Nota"
     Il termine "**AI**" è generico, inflazionato e spesso usato in modo fuorviante. Qui, per la scelta degli strumenti e della modalità d'uso, è forse più appropriato parlare di **LLM** (**_Large Language Models_**), un sottoinsieme specifico dell'**intelligenza artificiale** focalizzato sulla comprensione e generazione del linguaggio naturale. Questo sarà pertanto il termine più usato in questa sezione.
+
+## Cosa troverai in questa sezione
+
+Saranno presentati strumenti con cui è comodo utilizzare gli LLM e l'AI a riga di comando. Ne sono disponibili decine e decine, ma qui ne troverai un ristretto numero scelti a cura della redazione. Se vuoi contribuire, o proporre altri apri una issue o una pull request su [GitHub](https://github.com/aborruso/arigadicomando).
