@@ -2,6 +2,8 @@
 title: ttok
 ---
 
+--8<-- "includes/lavori_in_corso.md"
+
 # ttok
 
 **`ttok`** è un altro strumento creato da **Simon Willison**, per contare il numero di token di un testo e/o troncarlo in base a un numero desiderato di questi.
