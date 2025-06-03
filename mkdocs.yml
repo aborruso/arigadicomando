@@ -65,6 +65,8 @@ nav:
       - Template: ai/llm_cli/template.md
     - ttok:
       - ai/ttok/index.md
+    - Altri strumenti:
+      - ai/altri-tool/index.md
   - Dati:
     - Introduzione: dati/index.md
     - Esplora: dati/esplora.md
