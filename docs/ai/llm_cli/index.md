@@ -2,6 +2,8 @@
 title: LLM CLI
 ---
 
+--8<-- "includes/lavori_in_corso.md"
+
 # Introduzione
 
 **LLM** è un'*utility* a riga di comando e una libreria Python per interagire con modelli di linguaggio di grandi dimensioni (LLM) come quelli di OpenAI, Anthropic, Google, Meta e tanti altri, compresi quelli installati in locale.

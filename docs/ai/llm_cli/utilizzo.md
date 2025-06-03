@@ -1,3 +1,5 @@
+--8<-- "includes/lavori_in_corso.md"
+
 # Utilizzo
 
 Il modello di default è `gpt-4o-mini` e quindi per il primo utilizzo di `llm` è necessario impostare un'[API Key per OpenAI](https://llm.datasette.io/en/stable/setup.html#api-keys), con il comando:

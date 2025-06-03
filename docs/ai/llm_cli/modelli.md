@@ -1,3 +1,5 @@
+--8<-- "includes/lavori_in_corso.md"
+
 # I modelli
 
 Con `llm` cli puoi utilizzare la gran parte dei modelli oggi disponibili, sia quelli esposti tramite API su server remoti - quelli di OpenAI, Anthropic, Google, ecc. - sia quelli installati localmente.
