@@ -1,7 +1,10 @@
 ---
+title: L'Intelligenza Artificiale a riga di comando
 hide:
   - toc
 ---
+
+--8<-- "includes/lavori_in_corso.md"
 
 # L'Intelligenza Artificiale a riga di comando
 
