@@ -38,6 +38,10 @@ In questa sezione una lista di altri strumenti a riga di comando che in modo dir
 
 <https://github.com/microsoft/markitdown>
 
+## shot-scraper
+
+<https://github.com/simonw/shot-scraper>
+
 ## strip-tags
 
 <https://github.com/simonw/strip-tags>
