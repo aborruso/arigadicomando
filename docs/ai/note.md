@@ -7,7 +7,8 @@ search:
 
 ## note
 
-- [ ] scrivere in intro che gli LLM sono calcolatrici di testo, quindi la shell è un luogo naturale per usarli
+- [ ] scrivere dove salvare le variabili come le key dei vari provider/modelli
+- [x] scrivere in intro che gli LLM sono calcolatrici di testo, quindi la shell è un luogo naturale per usarli
 - [ ] ollama
   - installazione
   - via shell
@@ -21,5 +22,5 @@ search:
   - template
   - piccole cli
 - [ ] aider
-- [ ] ttok
+- [x] ttok
 - [ ] scaricare testi pagine web
