@@ -63,6 +63,8 @@ nav:
       - Plugin: ai/llm_cli/plugin.md
       - Estrazione dati via schema: ai/llm_cli/estrazione-schema.md
       - Template: ai/llm_cli/template.md
+    - Estrarre testo da pagine web:
+      - ai/estrarre-pagine-web/index.md
     - ttok:
       - ai/ttok/index.md
     - Altri strumenti:
