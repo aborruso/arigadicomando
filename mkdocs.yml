@@ -61,7 +61,7 @@ nav:
       - Utilizzo: ai/llm_cli/utilizzo.md
       - Modelli: ai/llm_cli/modelli.md
       - Plugin: ai/llm_cli/plugin.md
-      - Estrazione dati via schema: ai/llm_cli/estrazione-schema.md
+      - Schemi: ai/llm_cli/schema.md
       - Template: ai/llm_cli/template.md
     - Estrarre testo da pagine web:
       - ai/estrarre-pagine-web/index.md
