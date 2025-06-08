@@ -42,7 +42,7 @@ llm 'Crea 5 nomi per un ristorante italiano'
 
 E in output si otterrà qualcosa del genere (notare che il testo è in formato Markdown):
 
-```text {.wordwrap-code }}
+```text {.wordwrap-code}
 Ecco 5 nomi per un ristorante italiano, con un piccolo commento su ognuno:
 
 1.  **Trattoria della Nonna Emilia:** (Tradizione, familiarità, un nome di una nonna immaginaria evoca calore e autenticità). Perfetto per un ristorante con cucina tradizionale e casalinga.
