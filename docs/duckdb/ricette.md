@@ -32,3 +32,33 @@ Alla colonna con contenuti geometrici, bisogna applicare ST_GeomFromWKB. A quest
 ```
 duckdb -csv -c "load spatial;select ST_Area(ST_GeomFromWKB(geom)) from 'GrigliaPop2021_ITA_DatiProv.parquet' limit 10"
 ```
+
+# Confronto tra Tabelle
+
+`EXCEPT DISTINCT` è una funzione SQL che restituisce le righe presenti in una tabella ma non nell'altra, considerando solo righe uniche. È utile per confrontare due versioni di una tabella e individuare rapidamente le differenze o verificare se le tabelle sono identiche.
+
+Scenario:
+
+- Tabella 1: contiene i dati nuovi (es. aggiornamenti recenti).
+- Tabella 2: contiene i dati vecchi (es. lo stato precedente).
+
+```sql
+SELECT *
+FROM table_1
+EXCEPT DISTINCT
+SELECT *
+FROM table_2;
+```
+
+In output tutte le righe presenti in `table_1` (nuova) che non si trovano in `table_2` (vecchia).
+
+# Estrarre righe con errori
+
+```bash
+duckdb -c "copy (from read_csv('input.csv',store_rejects = true)) TO '/dev/null' WITH (FORMAT 'csv', HEADER);copy (FROM reject_errors) to 'reject_errors.csv'"
+```
+
+Note:
+
+- `store_rejects = true`, fa in modo che venga creata la tabella `reject_errors` con le righe che hanno errori (se presenti);
+- `TO '/dev/null' WITH (FORMAT 'csv', HEADER` fa in modo che le righe vengano lette tutte, ma non salvate. È necessario leggerle tutte, per avere in output tutte le righe con errori.

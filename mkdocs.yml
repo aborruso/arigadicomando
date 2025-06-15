@@ -36,6 +36,8 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - content.code.annotate
+    - content.code.copy
+    - content.code.select
     - content.action.edit
     - content.action.view
     - navigation.footer
@@ -52,6 +54,21 @@ extra_css:
 nav:
   - Home: index.md
   - La CLI: cli.md
+  - AI:
+    - Introduzione: ai.md
+    - LLM cli:
+      - ai/llm_cli/index.md
+      - Utilizzo: ai/llm_cli/utilizzo.md
+      - Modelli: ai/llm_cli/modelli.md
+      - Plugin: ai/llm_cli/plugin.md
+      - Schemi: ai/llm_cli/schema.md
+      - Template: ai/llm_cli/template.md
+    - Estrarre testo da pagine web:
+      - ai/estrarre-pagine-web/index.md
+    - ttok:
+      - ai/ttok/index.md
+    - Altri strumenti:
+      - ai/altri-tool/index.md
   - Dati:
     - Introduzione: dati/index.md
     - Esplora: dati/esplora.md
@@ -117,8 +134,7 @@ plugins:
       lang: it
 - mkdocstrings
 #- charts
-- tags:
-    tags_file: tags.md
+- tags
 - blog:
     authors_file: blog/.authors.yml
     blog_toc: true
