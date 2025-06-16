@@ -148,7 +148,7 @@ Per avere l'elenco degli schemi usati, il comando è:
 llm schemas
 ```
 
-Che in output restituisce l'elenco degli schemi usati, con un identificativo, una sintesi dello schema e la datai di ultimo utilizzo. Qualcosa come::
+Che in output restituisce l'elenco degli schemi usati, con un identificativo, una sintesi dello schema e la data di ultimo utilizzo. Qualcosa come:
 
 ```text
 - id: 6760e3fa82b5d30a4e15ce68da184882
