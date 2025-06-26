@@ -10,6 +10,19 @@ title: ckanapi cli
 È [un'*utility*](../utilities/index.md#ckanapi) per per utilizzare le API di [CKAN](https://ckan.org/).<br>
 `CKAN` è la piattaforma *open source* più usata per la realizzazione di portali open data: imparare a usare questo strumento è molto comodo, per interagire "a riga di comando" con tantissimi portali di questo tipo.
 
+## Installazione
+
+Si installa rapidamente con 
+
+```
+pip install ckanapi
+```
+oppure con
+
+```
+uv tool install ckanapi
+```
+
 ## Esempi di query
 
 Le ricerche sono basate su `solr`, e per diversi campi non è una ricerca per stringa esatta (vedi [nota](#note-sulle-ricerche-fatte-su-ckan)).
