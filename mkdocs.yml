@@ -116,6 +116,8 @@ nav:
     - Salvare una pagina web in unico file: ricette/salvare-paginaweb-completa-unicofile.md
     - Suddividere un file in parti: ricette/split-suddividere-file-parti.md
     - Unire colonne da file distinti: ricette/paste-unire-due-file-per-colonne.md
+  - uv:
+    - uv/index.md
   - Partecipa: partecipa.md
   - Utility: utilities/index.md
   - Letture: letture.md
