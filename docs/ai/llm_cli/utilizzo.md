@@ -159,6 +159,10 @@ L'output sarà in `yaml` e simile a questo (qui sotto soltano uno degli elementi
 !!! tip "Utility per il conteggio dei token"
     Simon Willison ha sviluppato anche **[`ttok`](../ttok/index.md)**, un'*utility* a riga di comando per contare i token di un testo o per troncare quel testo a un certo numero di token.
 
+### File allegati
+
+Alcuni modelli LLM sono multi-modali, cioè possono accettare in input non solo testo, ma anche file di altri tipi, come immagini, audio o video. Per questi modelli, puoi allegare file al prompt usando l'opzione `-a` seguita dal percorso del file.
+
 ## Leggere da `stdin`
 
 Questa è una delle funzionalità più interessanti di `llm` nell'utilizzo a riga di comando: puoi leggere da `stdin` e quindi passare il testo a `llm` da un file o da un comando. Ad esempio, se hai un file `input.txt` con del testo, puoi fare:
@@ -197,4 +201,3 @@ tar -xzf appunti.tar.gz
 
 !!! note "Nota"
     La gran parte dei modelli sarebbero stati in grado di rispondere a questa domanda, senza bisogno di leggere il manuale di `tar`, ma è un esempio interessante per mostrare come si può usare `llm` per leggere da `stdin` e ottenere risposte utili.
-
