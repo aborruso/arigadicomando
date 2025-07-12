@@ -40,7 +40,7 @@ In questa sezione una lista di altri strumenti a riga di comando che in modo dir
 
 ## MarkItDown
 
-<https://github.com/microsoft/markitdown>
+[Pagina dedicata](./markitdown.md)
 
 ## shot-scraper
 

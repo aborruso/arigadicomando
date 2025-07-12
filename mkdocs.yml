@@ -69,6 +69,7 @@ nav:
       - ai/ttok/index.md
     - Altri strumenti:
       - ai/altri-tool/index.md
+      - MarkItDown: ai/altri-tool/markitdown.md
   - Dati:
     - Introduzione: dati/index.md
     - Esplora: dati/esplora.md
