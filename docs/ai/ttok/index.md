@@ -6,7 +6,7 @@ title: ttok
 
 # ttok
 
-**`ttok`** è un altro strumento creato da **Simon Willison**, per contare il numero di token di un testo e/o troncarlo in base a un numero desiderato di questi.
+[**`ttok`** è un altro strumento](https://github.com/simonw/ttok) creato da **Simon Willison**, per contare il numero di token di un testo e/o troncarlo in base a un numero desiderato di questi.
 
 !!! note "Cosa sono i token?"
 
