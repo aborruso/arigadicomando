@@ -125,9 +125,11 @@ In output si avrà un JSON come questo:
 ...
 ```
 
-L'*output* oltre a essere visualizzato nel teminale, viene salvato nel [db `SQLite` di *log*](log.md) di `llm`.
+## Estrarra dati dal DB di LLM cli
 
-E per estrarre i dati dal log, basta lanciare il comando:
+L'*output* di un'estrazione dati tramite schema, oltre a essere visualizzato nel terminale, viene salvato nel [db `SQLite` di *log*](log.md) di `llm`.
+
+Per estrarre i dati dal log, dell'**ultima conversazione** basta lanciare il comando:
 
 ```bash {.wordwrap-code}
 llm logs -c --data
@@ -139,6 +141,50 @@ L'opzione `-c` serve a estrarre dalla conversazione più recente, e l'opzione `-
     ```json {.wordwrap-code}
     {"items": [{"nome": "Giulio Tantillo", "ruolo": "Presidente del Consiglio Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/giulio-tantillo-2/"}, {"nome": "Alessandro Anello", "ruolo": "Assessore e Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/alessandro-anello/"}, {"nome": "Fabrizio Ferrandelli", "ruolo": "Assessore e Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/fabrizio-ferrandelli/"}, {"nome": "Teresa Piccione", "ruolo": "Vice Presidente del Consiglio Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/teresa-piccione/"}, {"nome": "Giuseppe Mancuso", "ruolo": "Vice Presidente Vicario F.F. del Consiglio Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/giuseppe-mancuso/"}, {"nome": "Salvatore Alotta", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/salvatore-alotta-2/"}, {"nome": "Concetta Amella", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/concetta-amella/"}, {"nome": "Rosario Arcoleo", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/rosario-arcoleo/"}, {"nome": "Giulia Argiroffi", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/giulia-argiroffi/"}, {"nome": "Domenico Bonanno", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/domenico-bonanno/"}, {"nome": "Leonardo Canto", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/leonardo-canto/"}, {"nome": "Germana Canzoneri", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/germana-canzoneri/"}, {"nome": "Dario Chinnici", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/dario-chinnici/"}, {"nome": "Valentina Chinnici", "ruolo": "Consigliere Comunale dimissionaria in data 13/02/2023", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/valentina-chinnici/"}, {"nome": "Tiziana D'Alessandro", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/tiziana-dalessandro/"}, {"nome": "Mariangela Di Gangi", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/mariangela-di-gangi/"}, {"nome": "Salvatore Di Maggio", "ruolo": "Consigliere Comunale surroga del consigliere Caronia Anna Maria", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/salvatore-di-maggio/"}, {"nome": "Sabrina Figuccia", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/sabrina-figuccia/"}, {"nome": "Salvatore Forello", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/salvatore-forello/"}, {"nome": "Massimiliano Giaconia", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/massimiliano-giaconia/"}, {"nome": "Fabio Giambrone", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/fabio-giambrone/"}, {"nome": "Salvatore Imperiale", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/salvatore-imperiale/"}, {"nome": "Giovanni Inzerillo", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/giovanni-inzerillo/"}, {"nome": "Teresa Leto", "ruolo": "Consigliere Comunale surroga del consigliere Fabrizio Ferrara", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/teresa-leto/"}, {"nome": "Giuseppe Lupo", "ruolo": "Consigliere Comunale dimissionario in data 08/08/2024", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/giuseppe-lupo/"}, {"nome": "Alberto Mangano", "ruolo": "Consigliere Comunale surroga del consigliere Valentina Chinnici", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/alberto-mangano/"}, {"nome": "Caterina Meli", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/caterina-meli/"}, {"nome": "Carmelo Miceli", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/carmelo-miceli/"}, {"nome": "Francesco Miceli", "ruolo": "Consigliere di diritto", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/francesco-miceli/"}, {"nome": "Giuseppe Miceli", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/giuseppe-miceli/"}, {"nome": "Giuseppe Milazzo", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/giuseppe-milazzo/"}, {"nome": "Leopoldo Piampiano", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/leopoldo-piampiano/"}, {"nome": "Natale Puma", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/natale-puma/"}, {"nome": "Viviana Raja", "ruolo": "Consiglieri Comunali", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/viviana-raja/"}, {"nome": "Antonino Randazzo", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/antonino-randazzo/"}, {"nome": "Giovanna Rappa", "ruolo": "Consigliere Comunale", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/giovanna-rappa/"}, {"nome": "Antonio Rini", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/antonio-rini-3/"}, {"nome": "Francesco Paolo Scarpinato", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/francesco-paolo-scarpinato/"}, {"nome": "Fabio Teresi", "ruolo": "Consigliere Comunale surroga del consigliere Giuseppe Lupo", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/fabio-teresi-3/"}, {"nome": "Pasquale Terrani", "ruolo": "Consigliere Comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/pasquale-terrani/"}, {"nome": "Ottavio Zacco", "ruolo": "Consigliere comunale", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/ottavio-zacco/"}, {"nome": "Maria Anna Caronia", "ruolo": "Consigliere Comunale dimissionaria in data 29/03/2023", "sesso": "f", "url": "https://www.comune.palermo.it/persona_pubblica/maria-anna-caronia/"}, {"nome": "Fabrizio Ferrara", "ruolo": "Consigliere Comunale dimissionario in data 15/12/2022", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/fabrizio-ferrara/"}, {"nome": "Antonino Abbate", "ruolo": "Consigliere dal 02/08/2022", "sesso": "m", "url": "https://www.comune.palermo.it/persona_pubblica/antonino-abbate/"}]}
     ```
+
+Se invece si vuole l'_output_ in formato `jsonlines` - più comodo per essere elaborato da altri programmi - basta aggiungere l'opzione `--data-key items`:
+
+```bash {.wordwrap-code}
+llm logs -c --data-key items
+```
+
+Se si vogliono esportare gli _output_ di una conversazione specifica, bisogna recuperare il relativo `id`. Si può iniziare da leggere ad esempio le info sulle ultime 3 conversazioni con il comando `llm logs -s`, che restituisce in forma breve - `-s` è per _short_ - le ultime 3 conversazioni:
+
+```markdown {.wordwrap-code}
+- model: gemini/gemini-2.5-flash
+  datetime: '2025-10-05T16:26:19'
+  conversation: 01k6tk48zv56p9ss4ktfpmjt5c
+  prompt: " Massimo Chiari venerd\xEC 26 settembre 2025 I volti noti de... mmi solo\
+    \ quelli presenti sulla flotilla. L'output in JSON"
+  prompt_fragments: []
+  system_fragments: []
+- model: gemini/gemini-2.5-flash
+  datetime: '2025-10-05T19:08:49'
+  conversation: 01k6twpvpjst6tfbszzsp444pb
+  prompt: '<!DOCTYPE html> <html> <body> <div class="mks_accordion_c... o: chiuso;
+    Domenica: chiuso</div> </div> </body> </html> '
+  prompt_fragments: []
+  system_fragments: []
+- model: gemini/gemini-2.5-flash
+  datetime: '2025-10-05T19:24:08'
+  conversation: 01k6txdg8d4ekk6cafd6pdwyy2
+  prompt: '<!DOCTYPE html> <html> <body> <div class="mks_accordion_c... o: chiuso;
+    Domenica: chiuso</div> </div> </body> </html> '
+  prompt_fragments: []
+  system_fragments: []
+```
+
+Se si vogliono esportare gli _output_ della seconda conversazione, si copia il suo `id` - `01k6twpvpjst6tfbszzsp444pb` - e lo si passa al comando `llm logs` con l'opzione `--cid`:
+
+```bash {.wordwrap-code}
+llm logs --cid 01k6twpvpjst6tfbszzsp444pb --data-key items
+```
+
+Se si vogliono guardar le info su più di 3 conversazioni, si può usare l'opzione `-n` seguita dal numero di conversazioni che si vogliono vedere:
+
+```bash {.wordwrap-code}
+llm logs -n 10 -s
+```
 
 ## Schemi usati
 

@@ -5,7 +5,7 @@ search:
 
 --8<-- "includes/lavori_in_corso.md"
 
-# Loggin in SQLite
+# Database delle conversazioni
 
 `llm` archivia tutto ciò che elabora in un database `SQLite`. Il file è quello che si ottiene lanciando il comando:
 
