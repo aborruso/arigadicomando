@@ -106,6 +106,8 @@ nav:
     - xsv:
       - xsv/index.md
       - stats: xsv/stats.md
+    - qsv:
+      - qsv/index.md
     - Nushell:
       - nushell/index.md
       - Ricette Nushell: nushell/ricette.md
