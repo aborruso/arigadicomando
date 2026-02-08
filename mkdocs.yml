@@ -59,6 +59,7 @@ nav:
   - La CLI: cli.md
   - AI:
     - Introduzione: ai.md
+    - Claude Code: ai/claude-code.md
     - LLM cli:
       - ai/llm_cli/index.md
       - Utilizzo: ai/llm_cli/utilizzo.md

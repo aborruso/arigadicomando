@@ -14,10 +14,6 @@ In questa sezione una lista di altri strumenti a riga di comando che in modo dir
 
 [Aider](https://aider.chat/) è uno strumento di programmazione assistita che funziona all'interno del terminale, basato sui modelli di linguaggio di grandi dimensioni (LLM).
 
-## Claude Code
-
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) è uno strumento di scrittura codice sviluppato da Anthropic, progettato per integrarsi direttamente nel tuo terminale e semplificare il flusso di lavoro attraverso comandi in linguaggio naturale, con capacità di editing, gestione di bug e automazione delle operazioni Git.
-
 ## Codex CLI
 
 <https://github.com/openai/codex>
