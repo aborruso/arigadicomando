@@ -18,13 +18,13 @@ claude
 claude -c
 ```
 
-## Elenca le conversazioni recenti
+## Scegli una conversazione recente
 
 ```bash
 claude -r
 ```
 
-L'output mostra le sessioni recenti: puoi scegliere quella che ti interessa dalla lista.
+Mostra un picker con le sessioni recenti: puoi scegliere quella che ti interessa dalla lista.
 
 ```text
   [Request interrupted by user for tool use]
@@ -35,6 +35,12 @@ L'output mostra le sessioni recenti: puoi scegliere quella che ti interessa dall
 
   guarda gli aggiornamenti di oggi al codice, e aggiornara docs/evaluation-v1.2.13.md
   17 hours ago · main · 924.5 KB
+```
+
+Puoi anche riprendere direttamente una sessione per ID o nome:
+
+```bash
+claude -r "auth-refactor" "Completa questa PR"
 ```
 
 ## Esegui un prompt e esci
@@ -55,6 +61,46 @@ Per specificare un modello diverso:
 
 ```bash
 claude -p --model sonnet --output-format json "trova tutti i file CSV"
+```
+
+## Altri parametri utili
+
+```bash
+# Aggiungi directory di lavoro extra
+claude --add-dir ../apps ../lib
+
+# Aggiungi istruzioni al prompt di sistema
+claude --append-system-prompt "Usa sempre TypeScript"
+
+# Aggiungi istruzioni al prompt di sistema da file
+claude --append-system-prompt-file prompt.md
+
+# Sostituisci il prompt di sistema
+claude --system-prompt "Sei un esperto Python"
+
+# Sostituisci il prompt di sistema da file
+claude --system-prompt-file system.md
+
+# Limita gli strumenti disponibili
+claude --tools "Bash,Edit,Read"
+
+# Log verboso
+claude --verbose
+
+# Output streaming JSON
+claude -p --output-format stream-json "analizza questi log"
+
+# Output streaming JSON includendo i messaggi parziali
+claude -p --output-format stream-json --include-partial-messages "analizza questi log"
+
+# Usa un agente specifico
+claude --agent planner
+
+# Elenca gli agenti disponibili
+claude --agents
+
+# Aggiorna Claude Code
+claude update
 ```
 
 ## Processa input da pipe
