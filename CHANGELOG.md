@@ -4,6 +4,7 @@
 - aggiunta documentazione [skills.sh](https://arigadicomando.it/ai/altri-tool/skills-sh/) in AI > Altri strumenti
 - aggiornata la navigazione AI per includere Ollama e skills.sh
 - aggiunta regola operativa in `AGENTS.md` e `CLAUDE.md`: non eseguire `mkdocs build`/`mkdocs serve` salvo richiesta esplicita dell'utente
+- ottimizzata la SEO del repository GitHub: descrizione, topic e README aggiornati
 
 # 2026-02-11
 
