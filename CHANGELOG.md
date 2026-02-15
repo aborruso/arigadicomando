@@ -1,3 +1,19 @@
+# 2026-02-15
+
+- aggiunta sezione [Ollama](https://arigadicomando.it/ai/ollama/) con installazione Linux, uso base e avvio coding CLI con `ollama launch`
+- aggiunta documentazione [skills.sh](https://arigadicomando.it/ai/altri-tool/skills-sh/) in AI > Altri strumenti
+- aggiornata la navigazione AI per includere Ollama e skills.sh
+- aggiunta regola operativa in `AGENTS.md` e `CLAUDE.md`: non eseguire `mkdocs build`/`mkdocs serve` salvo richiesta esplicita dell'utente
+
+# 2026-02-11
+
+- aggiunto esempio CLI per server MCP globale in Claude Code
+
+# 2026-02-08
+
+- ristrutturata la documentazione di Claude Code
+- aggiunta sezione Codex CLI con configurazione
+
 # 2025-12-09
 
 - aggiunta sezione [qsv](https://arigadicomando.it/qsv/)

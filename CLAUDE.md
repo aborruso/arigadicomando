@@ -17,6 +17,10 @@ mkdocs gh-deploy --force  # Manual deploy to GitHub Pages
 pip3 install mkdocs-material markdown mkdocstrings mkdocs-rss-plugin mkdocs-click mkdocs-table-reader-plugin pillow cairosvg
 ```
 
+## Agent Operating Rule
+
+- Non eseguire build o serve locali del sito (`mkdocs build`, `mkdocs serve`) salvo richiesta esplicita dell'utente.
+
 ## Architecture
 
 - `mkdocs.yml` — Main config. The `nav:` section defines the full site navigation tree. Adding or moving pages requires editing this file.

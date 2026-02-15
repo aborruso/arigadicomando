@@ -65,6 +65,8 @@ nav:
     - Codex CLI:
       - ai/codex/index.md
       - Configurazione: ai/codex/configurazione.md
+    - Ollama:
+      - ai/ollama/index.md
     - LLM cli:
       - ai/llm_cli/index.md
       - Utilizzo: ai/llm_cli/utilizzo.md
@@ -79,6 +81,7 @@ nav:
     - Altri strumenti:
       - ai/altri-tool/index.md
       - MarkItDown: ai/altri-tool/markitdown.md
+      - skills.sh: ai/altri-tool/skills-sh.md
   - Dati:
     - Introduzione: dati/index.md
     - Esplora: dati/esplora.md

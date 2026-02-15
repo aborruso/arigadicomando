@@ -38,6 +38,12 @@ In questa sezione una lista di altri strumenti a riga di comando che in modo dir
 
 [Pagina dedicata](./markitdown.md)
 
+## skills.sh
+
+[skills.sh](https://skills.sh/) è una CLI per installare skill sui tool AI a riga di comando che usi.
+
+[Pagina dedicata](./skills-sh.md)
+
 ## shot-scraper
 
 <https://github.com/simonw/shot-scraper>

@@ -12,6 +12,10 @@
 - `mkdocs serve`: run the local dev server with live reload.
 - `mkdocs gh-deploy --force`: publish the site to GitHub Pages.
 - `pip3 install mkdocs-material markdown mkdocstrings mkdocs-rss-plugin mkdocs-click mkdocs-table-reader-plugin pillow cairosvg`: install required Python dependencies.
+- `mkdocs build`: build locale del sito.
+
+## Agent Operating Rule
+- Non eseguire build o serve locali del sito (`mkdocs build`, `mkdocs serve`) salvo richiesta esplicita dell'utente.
 
 ## Coding Style & Naming Conventions
 - Content is written in Italian; keep terminology consistent with existing pages.
@@ -21,7 +25,7 @@
 
 ## Testing Guidelines
 - No automated tests are defined in this repository.
-- Validate changes by running `mkdocs serve` and reviewing relevant pages, navigation, and assets.
+- Validare con build/serve locale solo se richiesto esplicitamente dall'utente.
 
 ## Commit & Pull Request Guidelines
 - Recent commits use short, descriptive Italian sentences; there is no strict conventional format. Use an imperative tone and be specific (avoid generic “update”).
