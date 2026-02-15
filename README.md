@@ -40,4 +40,6 @@ mkdocs gh-deploy --force
 
 ## Licenza
 
-Vedi file `LICENSE`.
+Tutti i contenuti del progetto sono rilasciati con licenza **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+Testo completo: `LICENSE` (e copia in `LICENSE.md`).

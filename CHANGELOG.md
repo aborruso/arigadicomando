@@ -5,6 +5,7 @@
 - aggiornata la navigazione AI per includere Ollama e skills.sh
 - aggiunta regola operativa in `AGENTS.md` e `CLAUDE.md`: non eseguire `mkdocs build`/`mkdocs serve` salvo richiesta esplicita dell'utente
 - ottimizzata la SEO del repository GitHub: descrizione, topic e README aggiornati
+- esplicitata la licenza dei contenuti come **CC BY 4.0** in `README.md` e aggiunto file `LICENSE`
 
 # 2026-02-11
 
