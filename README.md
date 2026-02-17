@@ -1,4 +1,4 @@
-[![deepwiki](https://deepwiki.com/badge.svg)](https://github.com/aborruso/arigadicomando)
+[![deepwiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/aborruso/arigadicomando)
 
 # a riga di comando
 
