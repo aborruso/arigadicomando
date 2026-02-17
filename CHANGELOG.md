@@ -1,3 +1,8 @@
+# 2026-02-17
+
+- aggiunta pagina [MCP consigliati](https://arigadicomando.it/ai/mcp-consigliati/) nella sezione AI con due voci curate: DeepWiki MCP (prima voce) ed Exa MCP
+- aggiornata la navigazione AI in `mkdocs.yml` con il link diretto a "MCP consigliati"
+
 # 2026-02-15
 
 - aggiunta sezione [Ollama](https://arigadicomando.it/ai/ollama/) con installazione Linux, uso base e avvio coding CLI con `ollama launch`

@@ -59,6 +59,7 @@ nav:
   - La CLI: cli.md
   - AI:
     - Introduzione: ai.md
+    - MCP consigliati: ai/mcp-consigliati.md
     - Claude Code:
       - ai/claude-code/index.md
       - Configurazione: ai/claude-code/configurazione.md
