@@ -1,3 +1,5 @@
+[![deepwiki](https://deepwiki.com/badge.svg)](https://github.com/aborruso/arigadicomando)
+
 # a riga di comando
 
 Documentazione in italiano su strumenti **CLI (command-line interface)** per lavorare con dati strutturati e AI: CSV, JSON, SQLite, DuckDB, Miller, Frictionless, GDAL/OGR, Nushell e tool LLM.
