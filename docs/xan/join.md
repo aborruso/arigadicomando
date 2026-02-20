@@ -27,7 +27,7 @@ Per eseguire i comandi così come sono scritti sotto, posizionati nella cartella
 cd docs/xan/risorse/join
 ```
 
-## 1) Join standard (`xan join`)
+## Join standard (`xan join`)
 
 Sintassi base:
 
@@ -193,7 +193,7 @@ B,1
 B,2
 ```
 
-## 2) Fuzzy join (substring)
+## Fuzzy join (substring)
 
 Esempio classico: hai una lista di parole/etichette e vuoi agganciare i testi dove compaiono.
 
@@ -268,7 +268,7 @@ id,testo,tema,needle
 3,Nuovo parco urbano con 300 alberi nel quartiere nord.,verde,parco
 ```
 
-## 3) Regex join
+## Regex join
 
 Sintassi usata:
 
@@ -319,7 +319,7 @@ Quando usarlo:
 - hai una tabella di pattern (keyword o regex);
 - vuoi etichettare automaticamente testi con tema/categoria.
 
-## 4) URL join
+## URL join
 
 Sintassi usata:
 

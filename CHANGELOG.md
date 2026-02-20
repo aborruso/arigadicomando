@@ -30,6 +30,8 @@
 - estesa la spiegazione parametri anche a regex join e URL join (`-r`, `-u`, `-S`, colonne e file)
 - rimossi dalla guida join i riferimenti "nel tuo ambiente" per mantenere la pagina valida in modo generale
 - chiarito nella guida join che lato testi `fuzzy-join` accetta selezione multi-colonna (es. `titolo,testo`)
+- rimossi i numeri dai titoli delle sezioni nella guida join per migliorarne la manutenibilità
+- rimossi i numeri anche dai titoli della pagina `docs/xan/dalle-frasi-agli-insight.md`
 
 # 2026-02-17
 

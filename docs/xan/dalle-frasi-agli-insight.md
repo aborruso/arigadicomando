@@ -23,7 +23,7 @@ id,titolo,testo
 3,Mobilità casa-scuola,"Pedibus e zone 30 riducono traffico e rumore davanti alle scuole."
 ```
 
-## Step 1: Tokenizzazione (`tokenize`)
+## Tokenizzazione (`tokenize`)
 
 Nel comando seguente, `words testo` significa:
 
@@ -53,7 +53,7 @@ Cosa sta succedendo:
 - `id` e `titolo` restano attaccati al token, quindi non perdi il contesto;
 - con `--lower --drop punct` normalizzi il testo ed elimini la punteggiatura.
 
-## Step 2: Fotografia del corpus (`vocab corpus`)
+## Fotografia del corpus (`vocab corpus`)
 
 Input: il file tokenizzato `/tmp/token.csv`.
 
@@ -82,7 +82,7 @@ Cosa leggere:
 - `distinct_token_count`: varietà lessicale;
 - `average_doc_len`: lunghezza media (in token) dei documenti.
 
-## Step 3: Parole chiave del corpus (`vocab token`)
+## Parole chiave del corpus (`vocab token`)
 
 Input: sempre `/tmp/token.csv`.
 
@@ -110,7 +110,7 @@ Cosa leggere:
 - `df`: in quanti documenti compare;
 - `idf`: quanto la parola è discriminante (più alto = più distintiva).
 
-## Step 4: Relazione documento-parola (`vocab doc-token`)
+## Relazione documento-parola (`vocab doc-token`)
 
 Input: sempre `/tmp/token.csv`.
 
