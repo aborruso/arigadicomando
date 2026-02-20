@@ -3,6 +3,8 @@
 - aggiunta monografia introduttiva su [xan](https://arigadicomando.it/xan/) con pagina iniziale "cos'è"
 - aggiornata la sezione Monografie con link a xan (`docs/monografie.md` e `mkdocs.yml`)
 - aggiornata la regola operativa in `AGENTS.md` e `CLAUDE.md`: usare sempre MCP DeepWiki come fonte ufficiale per risposte e verifiche dei contenuti
+- aggiunta sottosezione introduttiva "Dalle Frasi agli Insight: tokenize + vocab" in `docs/xan/index.md` con esempio pratico e CSV demo (`docs/xan/risorse/testi-mini.csv`)
+- aggiunta mini tabella con output reale (`vocab token`) per rendere immediata la lettura dei segnali lessicali
 
 # 2026-02-17
 
