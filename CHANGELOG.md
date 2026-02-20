@@ -9,6 +9,10 @@
 - "Dalle Frasi agli Insight: tokenize + vocab" trasformata in subpagina di xan (`docs/xan/dalle-frasi-agli-insight.md`) e collegata in navigazione
 - aggiunti nella subpagina xan i link al CSV demo (pagina repository + download diretto raw)
 - riscritta la subpagina xan in formato step-by-step: per 4 comandi mostrati input, porzioni di output reale e guida di lettura
+- chiarito nello Step 1 di xan che `words testo` tokenizza per parole solo la colonna `testo`
+- aggiunte spiegazioni dei parametri chiave anche negli altri step (`-T`, `--doc`, `--token`, `--implode`)
+- corretta la definizione di `doc_count` nella guida xan: numero di documenti unici identificati da `--doc`
+- aggiunta nello Step 4 la spiegazione delle colonne output: `id`, `token`, `tf`, `expected_tf`, `tfidf`, `bm25`, `chi2`
 
 # 2026-02-17
 

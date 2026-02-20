@@ -25,6 +25,12 @@ id,titolo,testo
 
 ## Step 1: Tokenizzazione (`tokenize`)
 
+Nel comando seguente, `words testo` significa:
+
+- `words`: modalità di tokenizzazione per parole;
+- `testo`: nome della colonna da tokenizzare (solo quel campo viene analizzato).
+- `-T tipo`: aggiunge la colonna `tipo` (es. `word`, `punct`) e produce una riga per token.
+
 ```bash
 xan tokenize words testo -T tipo --lower --drop punct docs/xan/risorse/testi-mini.csv > /tmp/token.csv
 ```
@@ -51,6 +57,12 @@ Cosa sta succedendo:
 
 Input: il file tokenizzato `/tmp/token.csv`.
 
+Parametri chiave:
+
+- `--doc id`: usa la colonna `id` come identificatore del documento;
+- `--token token`: usa la colonna `token` come colonna dei token;
+- `--implode`: indica che l'input ha già un token per riga (come l'output di `tokenize words` con `-T`).
+
 ```bash
 xan vocab corpus --doc id --token token --implode /tmp/token.csv
 ```
@@ -65,6 +77,7 @@ doc_count,token_count,distinct_token_count,average_doc_len
 Cosa leggere:
 
 - `doc_count`: quanti documenti analizzi;
+- `doc_count`: numero di documenti unici nel corpus (identificati da `--doc`, qui `id`);
 - `token_count`: volume totale del lessico;
 - `distinct_token_count`: varietà lessicale;
 - `average_doc_len`: lunghezza media (in token) dei documenti.
@@ -72,6 +85,12 @@ Cosa leggere:
 ## Step 3: Parole chiave del corpus (`vocab token`)
 
 Input: sempre `/tmp/token.csv`.
+
+Parametri chiave:
+
+- `--doc id`: raggruppa i token per documento;
+- `--token token`: legge i token dalla colonna `token`;
+- `--implode`: necessario perché il file è già in formato “un token per riga”.
 
 ```bash
 xan vocab token --doc id --token token --implode /tmp/token.csv
@@ -95,6 +114,12 @@ Cosa leggere:
 
 Input: sempre `/tmp/token.csv`.
 
+Parametri chiave:
+
+- `--doc id`: calcola le metriche per coppia documento-termine;
+- `--token token`: definisce il termine da analizzare;
+- `--implode`: usa correttamente l'input già esploso in token.
+
 ```bash
 xan vocab doc-token --doc id --token token --implode /tmp/token.csv
 ```
@@ -107,6 +132,16 @@ id,token,tf,expected_tf,tfidf,bm25,chi2
 3,e,2,1.0784313725490196,0.44628710262841953,0.30020031723566354,1.1132312252964427
 1,collega,1,0.21568627450980393,1.6094379124341003,1.5594035731874445,3.7090909090909085
 ```
+
+Significato colonne:
+
+- `id`: identificatore del documento (nel nostro caso il valore della colonna `id`).
+- `token`: termine analizzato.
+- `tf`: frequenza del termine nel documento.
+- `expected_tf`: frequenza attesa del termine nel documento, data la distribuzione nel corpus e la lunghezza del documento.
+- `tfidf`: peso del termine nel documento rispetto all'intero corpus (più alto = più caratteristico).
+- `bm25`: punteggio di rilevanza del termine con normalizzazione sulla lunghezza del documento.
+- `chi2`: significatività statistica dell'associazione termine-documento.
 
 Cosa leggere:
 
