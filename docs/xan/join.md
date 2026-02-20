@@ -21,6 +21,50 @@ Questa guida è scritta per il comportamento di `xan 0.56.0` o superiore:
 
 ## 1) Join standard (`xan join`)
 
+Sintassi base:
+
+```bash
+xan join [opzioni] <campi_sx> <file_sx.csv> <campi_dx> <file_dx.csv>
+```
+
+Parametri chiave:
+
+- `<campi_sx>`: una o più colonne chiave del file di sinistra (es. `id` oppure `anno,comune`);
+- `<file_sx.csv>`: CSV di sinistra;
+- `<campi_dx>`: una o più colonne chiave del file di destra, nello stesso ordine di `<campi_sx>`;
+- `<file_dx.csv>`: CSV di destra.
+
+Regola pratica:
+
+- puoi fare join su **un campo** (`id`);
+- puoi fare join su **più campi** (`anno,comune`), ma il numero dei campi deve coincidere a sinistra e a destra.
+
+Esempio multi-colonna:
+
+```bash
+xan join anno,comune dati_a.csv anno,comune dati_b.csv
+```
+
+Input usati negli esempi:
+
+`persone.csv`
+
+```csv
+id,nome,citta
+1,Ada,Roma
+2,Luca,Milano
+3,Sara,Torino
+```
+
+`ordini.csv`
+
+```csv
+id,ordine,valore
+1,Penna,5
+2,Taccuino,8
+4,Zaino,35
+```
+
 ### Inner join (default)
 
 ```bash
@@ -83,6 +127,24 @@ id,nome,citta,ordine,valore
 
 ### Cross join
 
+Input usati:
+
+`lettere.csv`
+
+```csv
+lettera
+A
+B
+```
+
+`numeri.csv`
+
+```csv
+numero
+1
+2
+```
+
 ```bash
 xan join --cross lettere.csv numeri.csv
 ```
@@ -100,6 +162,26 @@ B,2
 ## 2) Fuzzy join (substring)
 
 Esempio classico: hai una lista di parole/etichette e vuoi agganciare i testi dove compaiono.
+
+Input usati:
+
+`testi.csv`
+
+```csv
+id,testo
+1,"Il Comune di Roma annuncia nuovi cantieri sulla mobilità urbana."
+2,"Bando scuola digitale per laboratori e formazione docenti a Milano."
+3,"Nuovo parco urbano con 300 alberi nel quartiere nord."
+```
+
+`pattern_fuzzy.csv`
+
+```csv
+tema,needle
+scuola,scuola
+mobilita,mobilita
+verde,parco
+```
 
 ```bash
 xan fuzzy-join -i testo testi.csv needle pattern_fuzzy.csv
@@ -130,6 +212,17 @@ id,testo,tema,needle
 
 ## 3) Regex join (nel tuo ambiente)
 
+Input aggiuntivo usato:
+
+`pattern.csv`
+
+```csv
+tema,pattern
+scuola,scuola
+mobilita,mobilit[aà]
+verde,parco|alberi
+```
+
 ```bash
 xan fuzzy-join -r -i testo testi.csv pattern pattern.csv
 ```
@@ -149,6 +242,25 @@ Quando usarlo:
 - vuoi etichettare automaticamente testi con tema/categoria.
 
 ## 4) URL join (nel tuo ambiente)
+
+Input usati:
+
+`link.csv`
+
+```csv
+link
+https://www.comune.roma.it/notizie/mobilita
+https://dati.regione.lombardia.it/dataset/trasporti
+https://example.org/post/1
+```
+
+`sorgenti_url.csv`
+
+```csv
+fonte,url
+comune-roma,comune.roma.it
+regione-lombardia,dati.regione.lombardia.it
+```
 
 ```bash
 xan fuzzy-join -u -S link link.csv url sorgenti_url.csv

@@ -21,6 +21,9 @@
 - aggiunti CSV demo dedicati ai join in `docs/xan/risorse/join/` con link di download `raw`
 - testati in locale i join con `xan` prima della pubblicazione (versione locale: `fuzzy-join` come equivalente di `regex-join`/`url-join`)
 - allineata la pagina join al comportamento locale dell'utente: regex e URL documentati direttamente con `xan fuzzy-join`
+- aggiunti in pagina gli estratti dei CSV `persone.csv` e `ordini.csv` usati nei join standard
+- aggiunta spiegazione esplicita dei parametri di `xan join` (join su uno o più campi, ordine e sintassi)
+- aggiunte anteprime dei CSV mancanti nella guida join (`lettere`, `numeri`, `testi`, `pattern_fuzzy`, `pattern`, `link`, `sorgenti_url`) senza duplicare quelle già presenti
 
 # 2026-02-17
 
