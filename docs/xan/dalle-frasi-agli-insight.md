@@ -7,42 +7,109 @@ Se parti da testo libero, questa coppia è il motivo per cui `xan` sorprende:
 
 Con pochi comandi passi da frasi grezze a segnali quantitativi come frequenze, importanza dei termini (TF-IDF) e relazione documento-termine.
 
-## Provalo Subito
+## Dataset di partenza
 
 Usa il file di esempio: `docs/xan/risorse/testi-mini.csv`
 
 - CSV nel repository: [docs/xan/risorse/testi-mini.csv](https://github.com/aborruso/arigadicomando/blob/master/docs/xan/risorse/testi-mini.csv)
 - Download diretto CSV: [raw.githubusercontent.com/.../testi-mini.csv](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/testi-mini.csv)
 
+Estratto input:
+
+```csv
+id,titolo,testo
+1,Bici urbana,"La ciclabile collega il centro alla stazione. Più bici, meno auto."
+2,Verde pubblico,"Nuovi alberi nel quartiere: aria più pulita e strade più vivibili."
+3,Mobilità casa-scuola,"Pedibus e zone 30 riducono traffico e rumore davanti alle scuole."
+```
+
+## Step 1: Tokenizzazione (`tokenize`)
+
 ```bash
-# 1) tokenizzazione (un token per riga)
-xan tokenize words testo -T tipo docs/xan/risorse/testi-mini.csv > /tmp/token.csv
+xan tokenize words testo -T tipo --lower --drop punct docs/xan/risorse/testi-mini.csv > /tmp/token.csv
+```
 
-# 2) fotografia del corpus
+Porzione output (`/tmp/token.csv`):
+
+```csv
+id,titolo,token,tipo
+1,Bici urbana,la,word
+1,Bici urbana,ciclabile,word
+1,Bici urbana,collega,word
+1,Bici urbana,più,word
+2,Verde pubblico,nuovi,word
+2,Verde pubblico,alberi,word
+```
+
+Cosa sta succedendo:
+
+- ogni parola diventa una riga;
+- `id` e `titolo` restano attaccati al token, quindi non perdi il contesto;
+- con `--lower --drop punct` normalizzi il testo ed elimini la punteggiatura.
+
+## Step 2: Fotografia del corpus (`vocab corpus`)
+
+Input: il file tokenizzato `/tmp/token.csv`.
+
+```bash
 xan vocab corpus --doc id --token token --implode /tmp/token.csv
+```
 
-# 3) parole più informative del corpus
+Porzione output:
+
+```csv
+doc_count,token_count,distinct_token_count,average_doc_len
+5,51,44,10.2
+```
+
+Cosa leggere:
+
+- `doc_count`: quanti documenti analizzi;
+- `token_count`: volume totale del lessico;
+- `distinct_token_count`: varietà lessicale;
+- `average_doc_len`: lunghezza media (in token) dei documenti.
+
+## Step 3: Parole chiave del corpus (`vocab token`)
+
+Input: sempre `/tmp/token.csv`.
+
+```bash
 xan vocab token --doc id --token token --implode /tmp/token.csv
+```
 
-# 4) relazione documento-parola (tf, tfidf, bm25, ...)
+Porzione output:
+
+```csv
+token,gf,df,df_ratio,idf,gfidf,pigeon
+più,4,3,0.6,0.5108256237659907,6.666666666666667,0.9839999999999999
+e,5,4,0.8,0.22314355131420976,6.25,0.8403999999999999
+```
+
+Cosa leggere:
+
+- `gf`: quante volte una parola compare nel corpus;
+- `df`: in quanti documenti compare;
+- `idf`: quanto la parola è discriminante (più alto = più distintiva).
+
+## Step 4: Relazione documento-parola (`vocab doc-token`)
+
+Input: sempre `/tmp/token.csv`.
+
+```bash
 xan vocab doc-token --doc id --token token --implode /tmp/token.csv
 ```
 
-Output atteso (in sintesi):
+Porzione output:
 
-- `vocab corpus`: quanti documenti hai, quanti token totali e distinti;
-- `vocab token`: quali parole pesano davvero nel corpus;
-- `vocab doc-token`: in quale documento ogni parola è più caratteristica.
+```csv
+id,token,tf,expected_tf,tfidf,bm25,chi2
+2,più,2,0.8627450980392157,1.0216512475319814,0.6872258391671962,2.0740328820116054
+3,e,2,1.0784313725490196,0.44628710262841953,0.30020031723566354,1.1132312252964427
+1,collega,1,0.21568627450980393,1.6094379124341003,1.5594035731874445,3.7090909090909085
+```
 
-Mini esempio reale (dal CSV demo, con tokenizzazione `--lower --drop punct`):
+Cosa leggere:
 
-| token | gf | df | idf |
-|---|---:|---:|---:|
-| `più` | 4 | 3 | 0.5108 |
-| `e` | 5 | 4 | 0.2231 |
-
-In un colpo d'occhio:
-
-- `gf` mostra quante volte appare una parola nel corpus;
-- `df` in quanti documenti compare;
-- `idf` aiuta a distinguere i termini più discriminanti da quelli molto comuni.
+- qui non vedi solo parole globali: vedi **parola dentro documento**;
+- `tfidf` e `bm25` aiutano a capire quali termini caratterizzano un documento specifico;
+- è il passaggio che trasforma la tokenizzazione in insight azionabili (ranking, confronto documenti, ricerca semantica di base).

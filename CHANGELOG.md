@@ -8,6 +8,7 @@
 - sezione `xsv` e relative sottopagine spostate in bozza: rimosse dalla navigazione e escluse dalla build (`exclude_docs`) senza cancellare i file
 - "Dalle Frasi agli Insight: tokenize + vocab" trasformata in subpagina di xan (`docs/xan/dalle-frasi-agli-insight.md`) e collegata in navigazione
 - aggiunti nella subpagina xan i link al CSV demo (pagina repository + download diretto raw)
+- riscritta la subpagina xan in formato step-by-step: per 4 comandi mostrati input, porzioni di output reale e guida di lettura
 
 # 2026-02-17
 
