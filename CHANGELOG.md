@@ -24,6 +24,8 @@
 - aggiunti in pagina gli estratti dei CSV `persone.csv` e `ordini.csv` usati nei join standard
 - aggiunta spiegazione esplicita dei parametri di `xan join` (join su uno o più campi, ordine e sintassi)
 - aggiunte anteprime dei CSV mancanti nella guida join (`lettere`, `numeri`, `testi`, `pattern_fuzzy`, `pattern`, `link`, `sorgenti_url`) senza duplicare quelle già presenti
+- migliorata la leggibilità dei link raw nella guida join: URL nascosti dietro hyperlink con nome file
+- resa coerente la guida join su tutti gli esempi: aggiunti `dati_a.csv`/`dati_b.csv` per il caso multi-colonna e nota sulla cartella da cui eseguire i comandi
 
 # 2026-02-17
 

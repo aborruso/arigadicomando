@@ -9,15 +9,23 @@ Questa guida è scritta per il comportamento di `xan 0.56.0` o superiore:
 
 ## File di esempio (download raw)
 
-- `persone.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/persone.csv>
-- `ordini.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/ordini.csv>
-- `lettere.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/lettere.csv>
-- `numeri.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/numeri.csv>
-- `testi.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/testi.csv>
-- `pattern.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/pattern.csv>
-- `pattern_fuzzy.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/pattern_fuzzy.csv>
-- `link.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/link.csv>
-- `sorgenti_url.csv`: <https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/sorgenti_url.csv>
+- [`dati_a.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/dati_a.csv)
+- [`dati_b.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/dati_b.csv)
+- [`persone.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/persone.csv)
+- [`ordini.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/ordini.csv)
+- [`lettere.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/lettere.csv)
+- [`numeri.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/numeri.csv)
+- [`testi.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/testi.csv)
+- [`pattern.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/pattern.csv)
+- [`pattern_fuzzy.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/pattern_fuzzy.csv)
+- [`link.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/link.csv)
+- [`sorgenti_url.csv`](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/join/sorgenti_url.csv)
+
+Per eseguire i comandi così come sono scritti sotto, posizionati nella cartella:
+
+```bash
+cd docs/xan/risorse/join
+```
 
 ## 1) Join standard (`xan join`)
 
@@ -29,7 +37,7 @@ xan join [opzioni] <campi_sx> <file_sx.csv> <campi_dx> <file_dx.csv>
 
 Parametri chiave:
 
-- `<campi_sx>`: una o più colonne chiave del file di sinistra (es. `id` oppure `anno,comune`);
+- `<campi_sx>`: una o più colonne chiave del file di sinistra (es. `id` oppure più campi separati da virgola `anno,comune`);
 - `<file_sx.csv>`: CSV di sinistra;
 - `<campi_dx>`: una o più colonne chiave del file di destra, nello stesso ordine di `<campi_sx>`;
 - `<file_dx.csv>`: CSV di destra.
@@ -41,8 +49,34 @@ Regola pratica:
 
 Esempio multi-colonna:
 
+`dati_a.csv`
+
+```csv
+anno,comune,valore_a
+2024,Roma,10
+2024,Milano,20
+2025,Roma,30
+```
+
+`dati_b.csv`
+
+```csv
+anno,comune,valore_b
+2024,Roma,100
+2025,Roma,300
+2025,Torino,400
+```
+
 ```bash
 xan join anno,comune dati_a.csv anno,comune dati_b.csv
+```
+
+Output (estratto):
+
+```csv
+anno,comune,valore_a,valore_b
+2024,Roma,10,100
+2025,Roma,30,300
 ```
 
 Input usati negli esempi:
