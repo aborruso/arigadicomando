@@ -1,4 +1,4 @@
-# Dalle Frasi agli Insight: `tokenize` + `vocab`
+# Dalle frasi agli insight: `tokenize` + `vocab`
 
 Se parti da testo libero, questa coppia è il motivo per cui `xan` sorprende:
 
@@ -148,3 +148,14 @@ Cosa leggere:
 - qui non vedi solo parole globali: vedi **parola dentro documento**;
 - `tfidf` e `bm25` aiutano a capire quali termini caratterizzano un documento specifico;
 - è il passaggio che trasforma la tokenizzazione in insight azionabili (ranking, confronto documenti, ricerca semantica di base).
+
+## Perché ti potrebbe essere utile
+
+I casi sotto sono volutamente descritti ad alto livello: servono a dare il senso di analisi più complesse da costruire. In questi percorsi `xan` è un ottimo strumento di accompagnamento, perché aiuta a passare rapidamente dall'intuizione ai primi segnali misurabili.
+
+1. Inchiesta su delibere, bandi o atti pubblici.
+   In pochi minuti individui parole e temi che distinguono un ente, un periodo o un assessore, e scopri dove cambiano priorità e linguaggio.
+2. Analisi di campagne elettorali e discorsi politici.
+   Metti a confronto programmi e interventi: `tfidf` e `bm25` evidenziano i termini davvero identitari di ogni candidato, non solo quelli più frequenti.
+3. Monitoraggio media e comunicati stampa.
+   Su centinaia di testi trovi subito i frame narrativi dominanti e i termini emergenti, utile per titolare, contestualizzare e costruire grafici comparativi.

@@ -3,16 +3,20 @@
 - aggiunta monografia introduttiva su [xan](https://arigadicomando.it/xan/) con pagina iniziale "cos'è"
 - aggiornata la sezione Monografie con link a xan (`docs/monografie.md` e `mkdocs.yml`)
 - aggiornata la regola operativa in `AGENTS.md` e `CLAUDE.md`: usare sempre MCP DeepWiki come fonte ufficiale per risposte e verifiche dei contenuti
-- aggiunta sottosezione introduttiva "Dalle Frasi agli Insight: tokenize + vocab" in `docs/xan/index.md` con esempio pratico e CSV demo (`docs/xan/risorse/testi-mini.csv`)
+- aggiunta sottosezione introduttiva "Dalle frasi agli insight: tokenize + vocab" in `docs/xan/index.md` con esempio pratico e CSV demo (`docs/xan/risorse/testi-mini.csv`)
 - aggiunta mini tabella con output reale (`vocab token`) per rendere immediata la lettura dei segnali lessicali
 - sezione `xsv` e relative sottopagine spostate in bozza: rimosse dalla navigazione e escluse dalla build (`exclude_docs`) senza cancellare i file
-- "Dalle Frasi agli Insight: tokenize + vocab" trasformata in subpagina di xan (`docs/xan/dalle-frasi-agli-insight.md`) e collegata in navigazione
+- "Dalle frasi agli insight: tokenize + vocab" trasformata in subpagina di xan (`docs/xan/dalle-frasi-agli-insight.md`) e collegata in navigazione
+- normalizzato in stile italiano (sentence case) il titolo della pagina e la voce di navigazione xan
 - aggiunti nella subpagina xan i link al CSV demo (pagina repository + download diretto raw)
 - riscritta la subpagina xan in formato step-by-step: per 4 comandi mostrati input, porzioni di output reale e guida di lettura
 - chiarito nello Step 1 di xan che `words testo` tokenizza per parole solo la colonna `testo`
 - aggiunte spiegazioni dei parametri chiave anche negli altri step (`-T`, `--doc`, `--token`, `--implode`)
 - corretta la definizione di `doc_count` nella guida xan: numero di documenti unici identificati da `--doc`
 - aggiunta nello Step 4 la spiegazione delle colonne output: `id`, `token`, `tf`, `expected_tf`, `tfidf`, `bm25`, `chi2`
+- aggiunta in fondo alla pagina xan la sezione "Perché ti potrebbe essere utile" con 3 casi d'uso sintetici
+- resi più concreti e orientati a data journalism/analisi i 3 casi d'uso finali della pagina xan
+- aggiunta premessa alla sezione finale xan: esempi ad alto livello per orientare analisi più complesse, con xan come tool di accompagnamento
 
 # 2026-02-17
 
