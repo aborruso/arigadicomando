@@ -26,6 +26,8 @@
 - aggiunte anteprime dei CSV mancanti nella guida join (`lettere`, `numeri`, `testi`, `pattern_fuzzy`, `pattern`, `link`, `sorgenti_url`) senza duplicare quelle già presenti
 - migliorata la leggibilità dei link raw nella guida join: URL nascosti dietro hyperlink con nome file
 - resa coerente la guida join su tutti gli esempi: aggiunti `dati_a.csv`/`dati_b.csv` per il caso multi-colonna e nota sulla cartella da cui eseguire i comandi
+- aggiunta nella sezione fuzzy-join la spiegazione esplicita dei parametri (`-i`, `--left`, colonne e file)
+- estesa la spiegazione parametri anche a regex join e URL join (`-r`, `-u`, `-S`, colonne e file)
 
 # 2026-02-17
 

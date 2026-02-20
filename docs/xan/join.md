@@ -197,6 +197,21 @@ B,2
 
 Esempio classico: hai una lista di parole/etichette e vuoi agganciare i testi dove compaiono.
 
+Sintassi usata:
+
+```bash
+xan fuzzy-join [opzioni] <colonna_testo> <file_testi.csv> <colonna_pattern> <file_pattern.csv>
+```
+
+Parametri chiave:
+
+- `-i`: confronto case-insensitive (ignora maiuscole/minuscole);
+- `--left`: mantiene tutte le righe del file testi anche quando non c'è match;
+- `<colonna_testo>`: colonna in cui cercare (qui `testo`);
+- `<file_testi.csv>`: file dove cercare (qui `testi.csv`);
+- `<colonna_pattern>`: colonna con le stringhe/pattern da cercare (qui `needle`);
+- `<file_pattern.csv>`: file che contiene i pattern (qui `pattern_fuzzy.csv`).
+
 Input usati:
 
 `testi.csv`
@@ -221,6 +236,11 @@ verde,parco
 xan fuzzy-join -i testo testi.csv needle pattern_fuzzy.csv
 ```
 
+Lettura rapida del comando:
+
+- cerca in `testo` (dentro `testi.csv`) i valori di `needle` (dentro `pattern_fuzzy.csv`);
+- con `-i` trova match anche se cambia il maiuscolo/minuscolo.
+
 Output (estratto):
 
 ```csv
@@ -235,6 +255,10 @@ Versione left (mantiene tutte le righe dei testi):
 xan fuzzy-join -i --left testo testi.csv needle pattern_fuzzy.csv
 ```
 
+Differenza rispetto al comando precedente:
+
+- con `--left` ottieni anche le righe senza match, con colonne pattern vuote.
+
 Output (estratto):
 
 ```csv
@@ -245,6 +269,21 @@ id,testo,tema,needle
 ```
 
 ## 3) Regex join (nel tuo ambiente)
+
+Sintassi usata:
+
+```bash
+xan fuzzy-join -r [opzioni] <colonna_testo> <file_testi.csv> <colonna_regex> <file_regex.csv>
+```
+
+Parametri chiave:
+
+- `-r`: attiva il matching via espressioni regolari;
+- `-i`: rende il matching case-insensitive;
+- `<colonna_testo>`: colonna in cui cercare (qui `testo`);
+- `<file_testi.csv>`: file da analizzare (qui `testi.csv`);
+- `<colonna_regex>`: colonna con i pattern regex (qui `pattern`);
+- `<file_regex.csv>`: file che contiene i regex pattern (qui `pattern.csv`).
 
 Input aggiuntivo usato:
 
@@ -261,6 +300,11 @@ verde,parco|alberi
 xan fuzzy-join -r -i testo testi.csv pattern pattern.csv
 ```
 
+Lettura rapida del comando:
+
+- cerca in `testo` i pattern regex definiti nella colonna `pattern`;
+- con `-r` interpreta i pattern come regex, non come semplice sottostringa.
+
 Output (estratto):
 
 ```csv
@@ -276,6 +320,21 @@ Quando usarlo:
 - vuoi etichettare automaticamente testi con tema/categoria.
 
 ## 4) URL join (nel tuo ambiente)
+
+Sintassi usata:
+
+```bash
+xan fuzzy-join -u [opzioni] <colonna_url> <file_link.csv> <colonna_prefisso> <file_sorgenti.csv>
+```
+
+Parametri chiave:
+
+- `-u`: attiva il matching per prefisso URL;
+- `-S`: semplifica gli URL prima del confronto (schema, `www`, ecc.);
+- `<colonna_url>`: colonna con gli URL da classificare (qui `link`);
+- `<file_link.csv>`: file con gli URL completi (qui `link.csv`);
+- `<colonna_prefisso>`: colonna con i prefissi/domini da usare come riferimento (qui `url`);
+- `<file_sorgenti.csv>`: file con la mappatura sorgenti (qui `sorgenti_url.csv`).
 
 Input usati:
 
@@ -299,6 +358,11 @@ regione-lombardia,dati.regione.lombardia.it
 ```bash
 xan fuzzy-join -u -S link link.csv url sorgenti_url.csv
 ```
+
+Lettura rapida del comando:
+
+- confronta ogni valore di `link` con i prefissi presenti in `url`;
+- con `-S` aumenta i match utili anche se gli URL hanno forme diverse.
 
 Output (estratto):
 
