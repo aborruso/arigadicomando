@@ -7,6 +7,7 @@
 - aggiunta mini tabella con output reale (`vocab token`) per rendere immediata la lettura dei segnali lessicali
 - sezione `xsv` e relative sottopagine spostate in bozza: rimosse dalla navigazione e escluse dalla build (`exclude_docs`) senza cancellare i file
 - "Dalle Frasi agli Insight: tokenize + vocab" trasformata in subpagina di xan (`docs/xan/dalle-frasi-agli-insight.md`) e collegata in navigazione
+- aggiunti nella subpagina xan i link al CSV demo (pagina repository + download diretto raw)
 
 # 2026-02-17
 

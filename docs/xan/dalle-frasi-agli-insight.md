@@ -11,6 +11,9 @@ Con pochi comandi passi da frasi grezze a segnali quantitativi come frequenze, i
 
 Usa il file di esempio: `docs/xan/risorse/testi-mini.csv`
 
+- CSV nel repository: [docs/xan/risorse/testi-mini.csv](https://github.com/aborruso/arigadicomando/blob/master/docs/xan/risorse/testi-mini.csv)
+- Download diretto CSV: [raw.githubusercontent.com/.../testi-mini.csv](https://raw.githubusercontent.com/aborruso/arigadicomando/master/docs/xan/risorse/testi-mini.csv)
+
 ```bash
 # 1) tokenizzazione (un token per riga)
 xan tokenize words testo -T tipo docs/xan/risorse/testi-mini.csv > /tmp/token.csv
