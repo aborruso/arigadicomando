@@ -17,6 +17,9 @@
 - aggiunta in fondo alla pagina xan la sezione "Perché ti potrebbe essere utile" con 3 casi d'uso sintetici
 - resi più concreti e orientati a data journalism/analisi i 3 casi d'uso finali della pagina xan
 - aggiunta premessa alla sezione finale xan: esempi ad alto livello per orientare analisi più complesse, con xan come tool di accompagnamento
+- aggiunto nuovo capitolo xan sui join (`docs/xan/join.md`) con esempi piccoli per `join` (inner/left/right/full/cross), fuzzy join, regex join e URL join
+- aggiunti CSV demo dedicati ai join in `docs/xan/risorse/join/` con link di download `raw`
+- testati in locale i join con `xan` prima della pubblicazione (versione locale: `fuzzy-join` come equivalente di `regex-join`/`url-join`)
 
 # 2026-02-17
 

@@ -20,7 +20,8 @@ title: xan
 
 ## Prossimo passo consigliato
 
-- [Dalle Frasi agli Insight: tokenize + vocab](dalle-frasi-agli-insight.md)
+- [Dalle frasi agli insight: tokenize + vocab](dalle-frasi-agli-insight.md)
+- [Join con xan: casi base, fuzzy, regex e URL](join.md)
 
 ---
 

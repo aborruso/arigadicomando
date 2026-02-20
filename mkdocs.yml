@@ -121,7 +121,8 @@ nav:
       - qsv/index.md
     - xan:
       - xan/index.md
-      - Dalle Frasi agli Insight: xan/dalle-frasi-agli-insight.md
+      - Dalle frasi agli insight: xan/dalle-frasi-agli-insight.md
+      - Join con xan: xan/join.md
     - Nushell:
       - nushell/index.md
       - Ricette Nushell: nushell/ricette.md
