@@ -21,6 +21,7 @@ pip3 install mkdocs-material markdown mkdocstrings mkdocs-rss-plugin mkdocs-clic
 
 - Non eseguire build o serve locali del sito (`mkdocs build`, `mkdocs serve`) salvo richiesta esplicita dell'utente.
 - Aggiornare `CHANGELOG.md` in modo breve e user-oriented ogni volta che ci sono cambiamenti significativi.
+- Usare sempre MCP DeepWiki per consultare la documentazione ufficiale dei prodotti, sia per rispondere alle domande dell'utente sia per verificare la correttezza di quanto scritto.
 
 ## Architecture
 

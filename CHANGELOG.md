@@ -1,3 +1,9 @@
+# 2026-02-20
+
+- aggiunta monografia introduttiva su [xan](https://arigadicomando.it/xan/) con pagina iniziale "cos'è"
+- aggiornata la sezione Monografie con link a xan (`docs/monografie.md` e `mkdocs.yml`)
+- aggiornata la regola operativa in `AGENTS.md` e `CLAUDE.md`: usare sempre MCP DeepWiki come fonte ufficiale per risposte e verifiche dei contenuti
+
 # 2026-02-17
 
 - aggiunta pagina [MCP consigliati](https://arigadicomando.it/ai/mcp-consigliati/) nella sezione AI con due voci curate: DeepWiki MCP (prima voce) ed Exa MCP

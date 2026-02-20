@@ -121,6 +121,8 @@ nav:
       - stats: xsv/stats.md
     - qsv:
       - qsv/index.md
+    - xan:
+      - xan/index.md
     - Nushell:
       - nushell/index.md
       - Ricette Nushell: nushell/ricette.md
