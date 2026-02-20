@@ -20,6 +20,7 @@
 - aggiunto nuovo capitolo xan sui join (`docs/xan/join.md`) con esempi piccoli per `join` (inner/left/right/full/cross), fuzzy join, regex join e URL join
 - aggiunti CSV demo dedicati ai join in `docs/xan/risorse/join/` con link di download `raw`
 - testati in locale i join con `xan` prima della pubblicazione (versione locale: `fuzzy-join` come equivalente di `regex-join`/`url-join`)
+- allineata la pagina join al comportamento locale dell'utente: regex e URL documentati direttamente con `xan fuzzy-join`
 
 # 2026-02-17
 

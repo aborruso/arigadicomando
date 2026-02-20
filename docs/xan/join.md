@@ -2,12 +2,10 @@
 
 Questa pagina mostra i casi principali di join con esempi minimi.
 
-Nota compatibilità:
+Questa guida è scritta per il comportamento di `xan 0.56.0` o superiore:
 
-- documentazione ufficiale recente: `xan join`, `xan regex-join`, `xan url-join`;
-- test locale eseguito qui con `xan 0.56.0`, dove gli equivalenti sono:
-  - `xan fuzzy-join -r` (equivalente a `regex-join`);
-  - `xan fuzzy-join -u` (equivalente a `url-join`).
+- join classici con `xan join`;
+- join fuzzy/regex/url con `xan fuzzy-join` (`-r` per regex, `-u` per URL prefix).
 
 ## File di esempio (download raw)
 
@@ -130,15 +128,7 @@ id,testo,tema,needle
 3,Nuovo parco urbano con 300 alberi nel quartiere nord.,verde,parco
 ```
 
-## 3) Regex join
-
-Comando ufficiale (documentazione recente):
-
-```bash
-xan regex-join -i testo testi.csv pattern pattern.csv
-```
-
-Equivalente testato localmente (`xan 0.56.0`):
+## 3) Regex join (nel tuo ambiente)
 
 ```bash
 xan fuzzy-join -r -i testo testi.csv pattern pattern.csv
@@ -158,15 +148,7 @@ Quando usarlo:
 - hai una tabella di pattern (keyword o regex);
 - vuoi etichettare automaticamente testi con tema/categoria.
 
-## 4) URL join
-
-Comando ufficiale (documentazione recente):
-
-```bash
-xan url-join -S link link.csv url sorgenti_url.csv
-```
-
-Equivalente testato localmente (`xan 0.56.0`):
+## 4) URL join (nel tuo ambiente)
 
 ```bash
 xan fuzzy-join -u -S link link.csv url sorgenti_url.csv
