@@ -200,14 +200,14 @@ Esempio classico: hai una lista di parole/etichette e vuoi agganciare i testi do
 Sintassi usata:
 
 ```bash
-xan fuzzy-join [opzioni] <colonna_testo> <file_testi.csv> <colonna_pattern> <file_pattern.csv>
+xan fuzzy-join [opzioni] <colonne_testo> <file_testi.csv> <colonna_pattern> <file_pattern.csv>
 ```
 
 Parametri chiave:
 
 - `-i`: confronto case-insensitive (ignora maiuscole/minuscole);
 - `--left`: mantiene tutte le righe del file testi anche quando non c'è match;
-- `<colonna_testo>`: colonna in cui cercare (qui `testo`);
+- `<colonne_testo>`: una o più colonne in cui cercare (qui `testo`, ma puoi usare anche `titolo,testo`);
 - `<file_testi.csv>`: file dove cercare (qui `testi.csv`);
 - `<colonna_pattern>`: colonna con le stringhe/pattern da cercare (qui `needle`);
 - `<file_pattern.csv>`: file che contiene i pattern (qui `pattern_fuzzy.csv`).
@@ -268,19 +268,19 @@ id,testo,tema,needle
 3,Nuovo parco urbano con 300 alberi nel quartiere nord.,verde,parco
 ```
 
-## 3) Regex join (nel tuo ambiente)
+## 3) Regex join
 
 Sintassi usata:
 
 ```bash
-xan fuzzy-join -r [opzioni] <colonna_testo> <file_testi.csv> <colonna_regex> <file_regex.csv>
+xan fuzzy-join -r [opzioni] <colonne_testo> <file_testi.csv> <colonna_regex> <file_regex.csv>
 ```
 
 Parametri chiave:
 
 - `-r`: attiva il matching via espressioni regolari;
 - `-i`: rende il matching case-insensitive;
-- `<colonna_testo>`: colonna in cui cercare (qui `testo`);
+- `<colonne_testo>`: una o più colonne in cui cercare (qui `testo`, ma puoi usare anche `titolo,testo`);
 - `<file_testi.csv>`: file da analizzare (qui `testi.csv`);
 - `<colonna_regex>`: colonna con i pattern regex (qui `pattern`);
 - `<file_regex.csv>`: file che contiene i regex pattern (qui `pattern.csv`).
@@ -319,19 +319,19 @@ Quando usarlo:
 - hai una tabella di pattern (keyword o regex);
 - vuoi etichettare automaticamente testi con tema/categoria.
 
-## 4) URL join (nel tuo ambiente)
+## 4) URL join
 
 Sintassi usata:
 
 ```bash
-xan fuzzy-join -u [opzioni] <colonna_url> <file_link.csv> <colonna_prefisso> <file_sorgenti.csv>
+xan fuzzy-join -u [opzioni] <colonne_url> <file_link.csv> <colonna_prefisso> <file_sorgenti.csv>
 ```
 
 Parametri chiave:
 
 - `-u`: attiva il matching per prefisso URL;
 - `-S`: semplifica gli URL prima del confronto (schema, `www`, ecc.);
-- `<colonna_url>`: colonna con gli URL da classificare (qui `link`);
+- `<colonne_url>`: una o più colonne URL da classificare (qui `link`, ma puoi indicare più colonne se servono);
 - `<file_link.csv>`: file con gli URL completi (qui `link.csv`);
 - `<colonna_prefisso>`: colonna con i prefissi/domini da usare come riferimento (qui `url`);
 - `<file_sorgenti.csv>`: file con la mappatura sorgenti (qui `sorgenti_url.csv`).

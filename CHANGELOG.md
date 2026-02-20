@@ -28,6 +28,8 @@
 - resa coerente la guida join su tutti gli esempi: aggiunti `dati_a.csv`/`dati_b.csv` per il caso multi-colonna e nota sulla cartella da cui eseguire i comandi
 - aggiunta nella sezione fuzzy-join la spiegazione esplicita dei parametri (`-i`, `--left`, colonne e file)
 - estesa la spiegazione parametri anche a regex join e URL join (`-r`, `-u`, `-S`, colonne e file)
+- rimossi dalla guida join i riferimenti "nel tuo ambiente" per mantenere la pagina valida in modo generale
+- chiarito nella guida join che lato testi `fuzzy-join` accetta selezione multi-colonna (es. `titolo,testo`)
 
 # 2026-02-17
 
