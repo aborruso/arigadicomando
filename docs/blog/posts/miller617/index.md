@@ -42,18 +42,6 @@ Input (`input.yaml`):
   score: 20
 ```
 
-```bash
-# conversione con tool esterno + mlr
-```
-
-Output:
-
-```csv
-city,id,score
-Roma,1,10
-Milano,2,20
-```
-
 **Dopo**
 
 ```bash
