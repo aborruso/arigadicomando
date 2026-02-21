@@ -124,6 +124,7 @@ nav:
       - Dalle frasi agli insight: xan/dalle-frasi-agli-insight.md
       - Join con xan: xan/join.md
       - Importare dati con from: xan/from.md
+      - Fare controlli sui dati: xan/qualita-dati.md
       - Ispezionare i record con flatten: xan/flatten.md
       - Ricerca rapida su CSV ordinati: xan/bisect.md
       - Trovare nomi simili per suono: xan/funzioni-fonetiche.md
