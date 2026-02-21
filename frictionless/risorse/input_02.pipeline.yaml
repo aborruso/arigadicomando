@@ -1,0 +1,20 @@
+tasks:
+  - type: resource
+    source: input_02.csv
+    steps:
+      - code: cell-replace
+        fieldName: neighbor_id
+        pattern: '22'
+        replace: '2'
+      - code: cell-replace
+        fieldName: population
+        pattern: 'n/a'
+        replace: '67'
+      - code: row-filter
+        formula: population
+      - code: field-update
+        name: neighbor_id
+        type: integer
+      - code: table-normalize
+      - code: table-write
+        path: input_02_transformed.csv
