@@ -18,11 +18,6 @@ title: xan
 
 - Repository: [github.com/medialab/xan](https://github.com/medialab/xan)
 
-## Prossimo passo consigliato
-
-- [Dalle frasi agli insight: tokenize + vocab](dalle-frasi-agli-insight.md)
-- [Join con xan: casi base, fuzzy, regex e URL](join.md)
-
 ---
 
 Questa è una pagina introduttiva della monografia: nelle prossime pagine verranno aggiunti installazione, comandi base e ricette operative.
