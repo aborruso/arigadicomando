@@ -1,3 +1,26 @@
+# 2026-02-21
+
+- aggiunto nuovo post blog in bozza su Miller 6.17.0 con taglio divulgativo e struttura narrativa, inclusi esempi "Prima/Dopo" per le novità principali (`docs/blog/posts/miller617/index.md`)
+- aggiunto nel post Miller 6.17.0 un esempio YAML minimo con creazione di campo derivato (`full_name`) tramite `mlr put`
+- aggiornato l'esempio YAML del post Miller 6.17.0 usando `mlr --yaml` e output reale verificato
+- estesi tutti gli esempi del post Miller 6.17.0 con blocchi espliciti di input e output
+- aggiunta nota personale festosa nel blocco YAML del post, con link all'issue originale `#614` aperta da `aborruso`
+- chiarita la sezione DCF del post Miller 6.17.0 spiegando cos'è il formato oltre alla struttura
+- rimossa la numerazione dai sottocapitoli del post Miller 6.17.0
+- corretti e verificati i comandi/output del post Miller 6.17.0 (flag CSV espliciti, output YAML e `nest/split` allineati al comportamento reale)
+- allineato l'input dell'esempio `reorder -r` nel post Miller 6.17.0 per ottenere l'ordine output atteso (`YYY_*` prima di `XXX_*`)
+- aggiunta una premessa narrativa nel post Miller 6.17.0 per spiegare come leggere i comandi e migliorato l'esempio `nest -r` con differenza concreta rispetto a `-f`
+- aggiunta nota personale festosa anche nella sezione `nest -r` del post Miller 6.17.0, con link all'issue originale `#381`
+- resa più esplicita la chiusura della sezione `nest -r` con una frase concreta sul vantaggio operativo delle regex
+- aggiunte in ogni sezione del post Miller 6.17.0 le righe "Verbi correlati" con link alla guida ufficiale Miller
+- chiarita la sezione `split --folder` del post Miller 6.17.0: novità spiegata come miglioramento di semantica/chiarezza del comando, non dell'output
+- generata immagine Open Graph del post Miller 6.17.0 con Nanobanana (Gemini 3), copiata in `docs/blog/posts/miller617/images/` come `miller617-og.jpg` e inserita nel post
+- aggiunta nel front matter del post Miller 6.17.0 la configurazione `social.cards_layout_options.background_image` per usare l'immagine nel social card (Open Graph/Twitter)
+- aggiunta `description` nel front matter del post Miller 6.17.0 per migliorare snippet e anteprima social
+- post Miller 6.17.0 impostato pubblicabile (`draft: false`)
+- rese in grassetto le due frasi "Nota personale" nel post Miller 6.17.0
+- aggiornato il post Miller 6.17.0 con link diretto alla release in apertura e nota finale su bugfix/altre modifiche incluse nella release
+
 # 2026-02-20
 
 - aggiunta monografia introduttiva su [xan](https://arigadicomando.it/xan/) con pagina iniziale "cos'è"
