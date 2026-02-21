@@ -20,6 +20,7 @@
 - post Miller 6.17.0 impostato pubblicabile (`draft: false`)
 - rese in grassetto le due frasi "Nota personale" nel post Miller 6.17.0
 - aggiornato il post Miller 6.17.0 con link diretto alla release in apertura e nota finale su bugfix/altre modifiche incluse nella release
+- aggiornato il titolo del post Miller 6.17.0 in "YAML finalmente supportato (e non solo)"
 
 # 2026-02-20
 

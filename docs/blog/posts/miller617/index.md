@@ -17,7 +17,7 @@ social:
     background_color: transparent
 ---
 
-# Miller 6.17.0: meno workaround, più flusso
+# Miller 6.17.0: YAML finalmente supportato (e non solo)
 
 Ci sono release che aggiungono funzioni "belle da leggere", e release che ti fanno risparmiare tempo da subito.
 La [release **Miller 6.17.0**](https://github.com/johnkerl/miller/releases/tag/v6.17.0) (pubblicata il **21 febbraio 2026**) è del secondo tipo: prende problemi reali emersi nelle issue e li trasforma in comandi più diretti.
