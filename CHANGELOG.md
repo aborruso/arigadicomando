@@ -21,6 +21,8 @@
 - rese in grassetto le due frasi "Nota personale" nel post Miller 6.17.0
 - aggiornato il post Miller 6.17.0 con link diretto alla release in apertura e nota finale su bugfix/altre modifiche incluse nella release
 - aggiornato il titolo del post Miller 6.17.0 in "YAML finalmente supportato (e non solo)"
+- rimosso dal front matter del post Miller 6.17.0 il blocco `social.cards_layout_options` per ripristinare la generazione corretta di Open Graph/Twitter card
+- aggiornato il titolo del post Miller 6.17.0 in "YAML finalmente supportato"
 
 # 2026-02-20
 
