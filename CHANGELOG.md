@@ -1,3 +1,7 @@
+# 2026-02-22
+
+- aggiunta `xan` nella pagina [Utility](https://arigadicomando.it/utilities/) in ordine alfabetico, con link alla pagina dedicata e alla documentazione ufficiale
+
 # 2026-02-21
 
 - aggiunto nuovo post blog in bozza su Miller 6.17.0 con taglio divulgativo e struttura narrativa, inclusi esempi "Prima/Dopo" per le novità principali (`docs/blog/posts/miller617/index.md`)

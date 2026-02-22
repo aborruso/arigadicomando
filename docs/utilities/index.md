@@ -161,6 +161,13 @@ Per modifcare, interrogare e trasformare file XML.
 
 :information_source: <http://xmlstar.sourceforge.net/>
 
+## xan
+
+Toolkit a riga di comando per esplorare, trasformare e analizzare file `CSV`.
+
+:arrow_right: [pagina dedicata](../xan/index.md)<br>
+:information_source: <https://github.com/medialab/xan>
+
 ## xsv
 
 Uno straordinario toolkit per leggere, filtrare, analizzare un CSV.

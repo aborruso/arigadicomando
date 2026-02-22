@@ -42,6 +42,9 @@
 - nome: wc
   URL: https://man7.org/linux/man-pages/man1/wc.1.html
   cosaFa: "Restituisce numero di linee, caratteri, parole e di *byte* di un file."
+- nome: xan
+  URL: https://github.com/medialab/xan
+  cosaFa: "Toolkit a riga di comando per esplorare, trasformare e analizzare file `CSV`."
 - nome: xsv
   URL: https://github.com/BurntSushi/xsv
   cosaFa: "Uno straordinario toolkit per leggere, filtrare, analizzare un CSV."
