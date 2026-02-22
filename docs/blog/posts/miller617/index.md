@@ -27,9 +27,9 @@ Il risultato è semplice: meno passaggi intermedi, meno script collaterali, pipe
 ## YAML I/O nativo
 
 Chi lavora con configurazioni, metadati, OpenAPI o cataloghi dati si trova spesso file YAML da esplorare al volo.
-Prima, in tanti casi, c'era un passaggio esterno di conversione.
+Prima, lo YAML non era un formato supportato da Miller: bisognava convertirlo in JSON (o CSV) con uno strumento esterno prima di poterlo elaborare.
 
-**Prima**
+**Prima** (YAML non era un formato di input/output di Miller)
 
 Input (`input.yaml`):
 
@@ -42,7 +42,20 @@ Input (`input.yaml`):
   score: 20
 ```
 
-**Dopo**
+```bash
+# Serviva una conversione esterna, ad esempio con yq
+yq -o=json input.yaml | mlr --ijson --ocsv cat
+```
+
+Output:
+
+```csv
+city,id,score
+Roma,1,10
+Milano,2,20
+```
+
+**Dopo** (YAML è ora un formato nativo di Miller)
 
 ```bash
 mlr --iyaml --ocsv cat input.yaml
@@ -181,8 +194,12 @@ Verbi correlati: [`reorder`](https://miller.readthedocs.io/en/6.17.0/reference-v
 
 ## `nest -r`: selezione regex dei campi target
 
-Nei dati reali capita di avere famiglie di colonne (`tags_1`, `tags_2`, `tags_3`, ...).
-Con `-f` devi indicare i campi a mano; con `-r` prendi tutta la famiglia in un colpo solo, anche quando compare un nuovo campo.
+`nest` serve a esplodere o implodere campi con valori multipli delimitati: ad esempio trasforma un campo `tags=a;b;c` in tre campi separati (`tags_1`, `tags_2`, `tags_3`), oppure fa l'operazione inversa.
+È utile ogni volta che dati strutturati sono compressi in un singolo campo con un separatore interno.
+
+Nei dati reali capita di avere famiglie di colonne con nomi molto simili tra loro (`tags_1`, `tags_2`, `tags_3`, ...).
+Prima, quando volevi usare nest, eri costretto a elencare hardcoded ogni campo per nome, uno per uno con `-f`.
+Ora puoi selezionarli tutti in una sola chiamata usando una regex con `-r`: se domani compare `tags_5`, non devi toccare il comando.
 
 **Prima**
 
@@ -221,7 +238,6 @@ id,tags_1_1,tags_1_2,tags_2_1,tags_3_1,tags_4_1,tags_4_2,other
 ```
 
 Meno manutenzione quando aumentano o cambiano i campi della stessa famiglia.
-In pratica non sei costretto a scrivere tutti i nomi dei campi: basta un'espressione regolare che li mappa.
 
 🎉 **Nota personale:** anche questa mi rende felice: la richiesta iniziale era mia, nell'issue [#381](https://github.com/johnkerl/miller/issues/381).
 
