@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   aria-hidden="true"
+   focusable="false"
+   data-prefix="fas"
+   data-icon="terminal"
+   class="svg-inline--fa fa-terminal fa-w-20"
+   role="img"
+   viewBox="0 0 640 512"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="grafica.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.9414062"
+     inkscape:cx="-883.251"
+     inkscape:cy="53.205843"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="currentColor"
+     d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"
+     id="path2" />
+  <rect
+     style="fill:#000000;stroke-width:0.505532"
+     id="rect847"
+     width="48"
+     height="48"
+     x="-1062.077"
+     y="12.239044"
+     inkscape:export-filename="C:\Users\aborr\Documents\GitHub\arigadicomando\docs\images\favicon.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     fill="currentColor"
+     d="m -1041.9534,37.122948 -12.1465,12.146519 c -0.5859,0.585816 -1.5356,0.585816 -2.1213,0 l -1.4168,-1.416697 c -0.5848,-0.584818 -0.586,-1.532635 0,-2.118828 l 9.6265,-9.671686 -9.6264,-9.671629 c -0.5834,-0.586189 -0.5822,-1.534009 0,-2.118822 l 1.4168,-1.416698 c 0.5858,-0.585819 1.5355,-0.585819 2.1213,0 l 12.1465,12.146514 c 0.5858,0.585754 0.5858,1.535513 0,2.121327 z m 23.8764,11.43939 v -2.000013 c 0,-0.828444 -0.6715,-1.500012 -1.5001,-1.500012 h -19.0001 c -0.8285,0 -1.5,0.671568 -1.5,1.500012 v 2.000013 c 0,0.828439 0.6715,1.500007 1.5,1.500007 h 19.0001 c 0.8286,0 1.5001,-0.671568 1.5001,-1.500007 z"
+     id="path1027"
+     style="fill:#ffffff;stroke-width:0.0625005"
+     inkscape:export-filename="C:\Users\aborr\Documents\GitHub\arigadicomando\docs\images\favicon.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+</svg>
