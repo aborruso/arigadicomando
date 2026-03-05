@@ -114,3 +114,17 @@ Esempio minimale:
 ```bash
 cat logs.txt | claude -p "explain"
 ```
+
+## Tips & tricks
+
+### Farsi fare domande da Claude
+
+Claude Code ha uno strumento interno chiamato `AskUserQuestion`: è il meccanismo con cui si ferma e ti chiede input durante l'esecuzione di un task, invece di procedere autonomamente.
+
+Puoi richiamarlo esplicitamente nel tuo prompt in linguaggio naturale:
+
+```text
+Usa AskUserQuestion per aiutarmi a definire i requisiti prima di iniziare.
+```
+
+È utile quando vuoi che Claude raccolga informazioni prima di iniziare un task complesso, riducendo il rischio di lavoro inutile o di andare nella direzione sbagliata.
