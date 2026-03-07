@@ -1,5 +1,9 @@
 # LOG
 
+## 2026-03-07
+
+- Aggiunta subpage `ai/claude-code/docker-mcp-wsl2.md`: guida per usare Docker MCP Toolkit da WSL2 con Claude Code, con intro sul valore di Docker come hub centralizzato per i server MCP
+
 ## 2026-02-21
 
 - Aggiunta pagina tematica `xan/qualita-dati.md`: verificare la qualità di un CSV (stats, celle vuote, valori fuori range, tipo errato, regex, duplicati)

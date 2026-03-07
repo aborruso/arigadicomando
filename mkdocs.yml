@@ -64,6 +64,7 @@ nav:
     - Claude Code:
       - ai/claude-code/index.md
       - Configurazione: ai/claude-code/configurazione.md
+      - Docker MCP da WSL2: ai/claude-code/docker-mcp-wsl2.md
     - Codex CLI:
       - ai/codex/index.md
       - Configurazione: ai/codex/configurazione.md
