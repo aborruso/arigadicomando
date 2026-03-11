@@ -71,6 +71,23 @@ cargo build --release --locked -F all_features
 
 La compilazione può richiedere un po' di tempo, ma con questa configurazione funziona anche su macchine con RAM limitata.
 
+#### Modalità ottimizzata con mold e clang
+
+Per ridurre ulteriormente i tempi di linking, si può usare [mold](https://github.com/rui314/mold), un linker moderno molto più veloce, abbinato a `clang` come compilatore. Prima installa le dipendenze:
+
+```bash
+sudo apt install mold clang
+```
+
+Poi compila con:
+
+```bash
+CARGO_BUILD_RUSTFLAGS='-C target-cpu=native -C linker=clang -C link-arg=--ld-path=mold' CARGO_BUILD_JOBS=1 \
+cargo build --release --locked -F all_features
+```
+
+Rispetto alla modalità base, questa configurazione accelera la fase di linking grazie a `mold`, che è significativamente più rapido del linker di default (`lld` o `gold`) su Linux.
+
 ### 4. Trovare il binario compilato
 
 A fine compilazione, il binario si trova qui:
