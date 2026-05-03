@@ -63,6 +63,7 @@ nav:
     - MCP consigliati: ai/mcp-consigliati.md
     - Claude Code:
       - ai/claude-code/index.md
+      - File di base: ai/claude-code/file-di-base.md
       - Configurazione: ai/claude-code/configurazione.md
       - Docker MCP da WSL2: ai/claude-code/docker-mcp-wsl2.md
     - Codex CLI:

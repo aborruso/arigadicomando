@@ -1,5 +1,9 @@
 # LOG
 
+## 2026-05-03
+
+- Aggiunta pagina `ai/claude-code/file-di-base.md`: panoramica dei file di configurazione di Claude Code (CLAUDE.md, CLAUDE.local.md, mcp.json, settings.json, rules/, commands, skills, hooks)
+
 ## 2026-03-07
 
 - Aggiunta subpage `ai/claude-code/docker-mcp-wsl2.md`: guida per usare Docker MCP Toolkit da WSL2 con Claude Code, con intro sul valore di Docker come hub centralizzato per i server MCP
