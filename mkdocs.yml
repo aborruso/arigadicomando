@@ -73,6 +73,7 @@ nav:
       - ai/ollama/index.md
     - Pi:
       - ai/pi/index.md
+      - Personalizzazione: ai/pi/personalizzazione.md
     - LLM cli:
       - ai/llm_cli/index.md
       - Utilizzo: ai/llm_cli/utilizzo.md

@@ -185,32 +185,4 @@ Se usi già Claude Code con un `claude.md` nel progetto o in home, Pi lo cariche
 
 ## Personalizzazione
 
-Pi si personalizza senza toccare il codice sorgente, tramite tre meccanismi:
-
-**Prompt template** — slash command personalizzati. Salvati in `~/.pi/agent/prompts/` (globali) o `.pi/prompts/` (per progetto). Puoi chiedere a Pi di crearne uno:
-
-```text
-crea un prompt template per code review dettagliata
-```
-
-Dopo ogni modifica alla configurazione, ricarica con `/reload`.
-
-**Estensioni** — file TypeScript in `~/.pi/agent/extensions/`. Pi può scrivere e aggiornare le sue estensioni da solo. Esempi pratici dal video:
-
-- messaggio di benvenuto con citazioni casuali all'avvio
-- guardia sui comandi pericolosi: chiede conferma prima di eseguire `rm -rf` o `git push --force`
-
-```text
-crea un'estensione che chieda conferma prima di eseguire
-comandi con rm -rf o git push --force
-```
-
-**Pacchetti** — bundle di estensioni, skill e prompt template distribuiti via npm o git. Tra quelli disponibili: sub-agent, MCP adapter, accesso web. Vedi [pi.dev](https://pi.dev/) per la lista.
-
-```bash
-pi install <nome-pacchetto>
-pi install <nome-pacchetto> -l   # solo per il progetto corrente
-```
-
-!!! warning "Attenzione ai pacchetti di terze parti"
-    I pacchetti possono contenere script che Pi esegue. Verifica sempre il codice prima di installarli.
+Pi si estende tramite **prompt template**, **skill** ed **estensioni**, componibili in pacchetti. Vedi la pagina [Personalizzazione](personalizzazione.md) per esempi pratici su come crearli e usarli.
