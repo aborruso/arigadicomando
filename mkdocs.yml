@@ -71,6 +71,8 @@ nav:
       - Configurazione: ai/codex/configurazione.md
     - Ollama:
       - ai/ollama/index.md
+    - Pi:
+      - ai/pi/index.md
     - LLM cli:
       - ai/llm_cli/index.md
       - Utilizzo: ai/llm_cli/utilizzo.md
