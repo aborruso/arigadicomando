@@ -38,6 +38,10 @@ In questa sezione una lista di altri strumenti a riga di comando che in modo dir
 
 [Pagina dedicata](./markitdown.md)
 
+## repomix
+
+[Repomix](https://github.com/yamadashy/repomix) è uno strumento da riga di comando che impacchetta i file di un repository in un unico file, ottimizzato per fornire contesto a modelli LLM o AI coding assistant. Il formato predefinito è XML, ma con `--style` si può ottenere anche Markdown, JSON o testo semplice.
+
 ## skills.sh
 
 [skills.sh](https://skills.sh/) è una CLI per installare skill sui tool AI a riga di comando che usi.
