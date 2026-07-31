@@ -1,3 +1,7 @@
+# 2026-07-31
+
+- aggiunto `repomix` nella pagina [Altri strumenti](https://arigadicomando.it/ai/altri-tool/) della sezione AI, con nota sui formati di output disponibili (XML di default, più Markdown, JSON e testo semplice)
+
 # 2026-02-22
 
 - aggiunta `xan` nella pagina [Utility](https://arigadicomando.it/utilities/) in ordine alfabetico, con link alla pagina dedicata e alla documentazione ufficiale
