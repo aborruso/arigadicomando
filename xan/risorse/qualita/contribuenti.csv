@@ -1,0 +1,14 @@
+id,cognome,nome,codice_fiscale,eta,reddito,email,comune
+1,Rossi,Mario,RSSMRA80A01H501Z,44,28500,mario.rossi@comune.it,Roma
+2,Bianchi,Anna,BNCNNA92B42F205X,32,41200,anna.bianchi@email.com,Milano
+3,Ferrari,Luca,,28,19800,,Torino
+4,Conti,Sara,CNTSAR75C55G224W,-5,15300,sara.conti@pec.it,Firenze
+5,Esposito,Carlo,SPSCRLO88D01F839Y,36,250000000,carlo@esposito,Napoli
+6,Russo,Elena,RSSLNE95E41H501B,29,33100,elena.russo@gmail.com,Roma
+7,De Luca,Marco,DLCMRC70F01L219P,54,,marco.deluca@libero.it,
+8,Marino,Giulia,MRNGLA85G55A662K,39,27600,giulia.marino@comune.it,Bari
+9,Greco,Paolo,GRCPLA60H01A662F,64,52000,paolo.greco@,Bari
+10,Bruno,Laura,BRNLRA88L44H501Q,37,31400,laura.bruno@email.com,Roma
+11,Rossi,Mario,RSSMRA80A01H501Z,44,28500,mario.rossi@comune.it,Roma
+12,Fontana,Pietro,,150,18900,pietro.fontana@gmail.com,Milano
+13,Lombardi,Chiara,LMBCHR92H55A662Z,31,abc,chiara.lombardi@email.com,Bari
