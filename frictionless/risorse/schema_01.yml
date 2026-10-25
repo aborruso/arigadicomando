@@ -1,0 +1,42 @@
+path: input_01.csv
+name: input_01
+profile: tabular-data-resource
+scheme: file
+format: csv
+hashing: md5
+encoding: utf-8
+schema:
+  missingValues:
+    - "NA"
+    - "NaN"
+    - "null"
+    - ""
+  fields:
+  - name: text
+    type: string
+    title: "label text"
+    constraints:
+      required: true
+  - name: number
+    type: number
+    title: "label number"
+  - name: date
+    type: date
+    title: "label date"
+    description: "La data di accesso dell'utente nel sistema"
+    example: '2020-05-15'
+    constraints:
+      maximum: '2022-05-15'
+  - name: code
+    type: string
+    title: "label code"
+    constraints:
+      pattern: ^[0-9]{6}$
+  - name: type
+    type: string
+    title: "label type"
+    constraints:
+      enum:
+        - A
+        - B
+
