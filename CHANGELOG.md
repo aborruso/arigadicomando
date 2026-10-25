@@ -1,3 +1,7 @@
+# 2026-10-25
+
+- aggiunta nella pagina [Modelli](https://arigadicomando.it/ai/llm_cli/modelli/) della CLI `llm` una sezione sui modelli decisionali (Jev e affini): plugin `llm-typesafe` e `llm-openai-decisions`, l'API decisions di OpenRouter via `curl` e il plugin VisiData `vd-jev`
+
 # 2026-07-31
 
 - aggiunto `repomix` nella pagina [Altri strumenti](https://arigadicomando.it/ai/altri-tool/) della sezione AI, con nota sui formati di output disponibili (XML di default, più Markdown, JSON e testo semplice)
