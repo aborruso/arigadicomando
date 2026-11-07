@@ -1,0 +1,7 @@
+[
+  {"id": 1, "nome": "Alice Rossi", "reparto": "Anagrafe", "comune": "Firenze", "anno_assunzione": 2018},
+  {"id": 2, "nome": "Bruno Ferrari", "reparto": "Urbanistica", "comune": "Prato", "anno_assunzione": 2015},
+  {"id": 3, "nome": "Carla Bianchi", "reparto": "Anagrafe", "comune": "Siena", "anno_assunzione": 2020},
+  {"id": 4, "nome": "Diego Conti", "reparto": "Tributi", "comune": "Firenze", "anno_assunzione": 2012},
+  {"id": 5, "nome": "Elena De Luca", "reparto": "Urbanistica", "comune": "Grosseto", "anno_assunzione": 2022}
+]

@@ -1,0 +1,6 @@
+id,nome,comune,provincia,indirizzo,telefono,email,sito_web,orario_lun_ven,orario_sab,orario_dom,posti_lettura,sale_studio,wifi,accesso_disabili,note
+1,Biblioteca Nazionale Centrale,Firenze,FI,Piazza dei Cavalleggeri 1,055 249191,bncf@beniculturali.it,https://www.bncf.firenze.sbn.it,08:15-19:15,08:15-13:30,,400,6,sì,sì,Deposito legale
+2,Biblioteca Medicea Laurenziana,Firenze,FI,Piazza San Lorenzo 9,055 210760,bml@beniculturali.it,https://bml.firenze.sbn.it,08:00-13:30,,,30,,sì,sì,Solo consultazione
+3,Biblioteca Comunale,Prato,PO,Via Garibaldi 8,0574 1837801,biblioteca@comune.prato.it,,09:00-19:00,09:00-13:00,,120,3,sì,sì,
+4,Biblioteca Ragazzi,Siena,SI,Via della Sapienza 3,0577 292612,,,09:30-12:30,,,40,,no,sì,Solo under 14
+5,Biblioteca di Scienze Sociali,Firenze,FI,Lungarno Cristoforo Colombo 52,055 2757801,bss@unifi.it,https://www.bss.unifi.it,08:30-19:30,08:30-13:00,,250,4,sì,no,Accesso su prenotazione
