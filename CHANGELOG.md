@@ -1,3 +1,9 @@
+# 2026-11-07
+
+- aggiunta nella guida a [Pi](https://arigadicomando.it/ai/pi/) una sezione per cambiare il [modello predefinito](https://arigadicomando.it/ai/pi/modelli/), globalmente o per progetto, e scegliere un modello per una sola esecuzione
+- divisa la guida a [Pi](https://arigadicomando.it/ai/pi/) in sottopagine e aggiornata alla versione 1.5.0: nuove pagine [Riga di comando](https://arigadicomando.it/ai/pi/riga-di-comando/), [Modelli](https://arigadicomando.it/ai/pi/modelli/), [Modalità interattiva](https://arigadicomando.it/ai/pi/interattiva/) e [MCP](https://arigadicomando.it/ai/pi/mcp/), con supporto MCP integrato, codemode e novità delle ultime release
+- corretti nella guida a Pi i comandi non più validi (`--provider` senza `--model`, `/skill`, `pi install` senza prefisso) e le indicazioni su `CLAUDE.md`, `AGENTS.md` e skill di Claude Code
+
 # 2026-10-25
 
 - aggiunta nella pagina [Modelli](https://arigadicomando.it/ai/llm_cli/modelli/) della CLI `llm` una sezione sui modelli decisionali (Jev e affini): plugin `llm-typesafe` e `llm-openai-decisions`, l'API decisions di OpenRouter via `curl` e il plugin VisiData `vd-jev`

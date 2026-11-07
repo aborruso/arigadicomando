@@ -1,5 +1,11 @@
 # LOG
 
+## 2026-11-07
+
+- Aggiunta in `docs/ai/pi/index.md` la sezione sul modello predefinito: `/model`, impostazioni globali e di progetto, override CLI e ripristino delle sessioni.
+- Allineata la guida Pi alla 1.5.0, verificando su repo, help e prove dirette: MCP integrato dalla 0.99.0, `--provider` richiede `--model`, nomi dei file di contesto in maiuscolo, `~/.claude/` non letta in automatico.
+- Divisa `docs/ai/pi/index.md` in sottopagine: `riga-di-comando`, `modelli`, `interattiva`, `mcp`. File di contesto spostati in `personalizzazione`. Non documentato `pi auth login`: nel changelog è ancora in Unreleased.
+
 ## 2026-05-03
 
 - Aggiunta pagina `ai/claude-code/file-di-base.md`: panoramica dei file di configurazione di Claude Code (CLAUDE.md, CLAUDE.local.md, mcp.json, settings.json, rules/, commands, skills, hooks)

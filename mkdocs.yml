@@ -73,6 +73,10 @@ nav:
       - ai/ollama/index.md
     - Pi:
       - ai/pi/index.md
+      - Riga di comando: ai/pi/riga-di-comando.md
+      - Modelli: ai/pi/modelli.md
+      - Modalità interattiva: ai/pi/interattiva.md
+      - MCP: ai/pi/mcp.md
       - Personalizzazione: ai/pi/personalizzazione.md
     - LLM cli:
       - ai/llm_cli/index.md

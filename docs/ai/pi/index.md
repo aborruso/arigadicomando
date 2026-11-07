@@ -6,7 +6,15 @@ title: Pi
 
 [Pi](https://pi.dev/) è un agente di codifica da terminale, volutamente minimalista. Parte con soli quattro strumenti (`read`, `write`, `edit`, `bash`) e cresce con te: aggiungi solo quello che ti serve, senza ereditare funzionalità che non vuoi.
 
-Non include MCP, sub-agent, plan mode o pop-up di conferma per impostazione predefinita. Puoi aggiungere tutto questo tramite estensioni, pacchetti della community, o semplicemente chiedendo a Pi di costruirseli da solo.
+Non include sub-agent, plan mode o pop-up di conferma per impostazione predefinita. Puoi aggiungere tutto questo tramite estensioni, pacchetti della community, o semplicemente chiedendo a Pi di costruirseli da solo. Il supporto [MCP](mcp.md) invece è integrato dalla versione 0.99.0.
+
+Questa guida è allineata alla versione 1.5.0 ed è divisa in più pagine:
+
+- [Riga di comando](riga-di-comando.md): esecuzioni non interattive, pipeline, JSON, strumenti e sessioni
+- [Modelli](modelli.md): scegliere provider e modello, impostare il predefinito, livello di ragionamento
+- [Modalità interattiva](interattiva.md): editor, comandi, cronologia della sessione, esportazione
+- [MCP](mcp.md): collegare server MCP e usare codemode
+- [Personalizzazione](personalizzazione.md): file di contesto, prompt template, skill, estensioni e pacchetti
 
 ## Installazione
 
@@ -14,10 +22,26 @@ Non include MCP, sub-agent, plan mode o pop-up di conferma per impostazione pred
 curl -fsSL https://pi.dev/install.sh | sh
 ```
 
-Oppure via npm:
+Oppure via npm (richiede Node.js 22.19 o superiore):
 
 ```bash
-npm install -g @earendil-works/pi-coding-agent
+npm install -g --ignore-scripts @earendil-works/pi-coding-agent
+```
+
+Sono disponibili anche un installer per Windows e un flake Nix:
+
+```powershell
+powershell -c "irm https://pi.dev/install.ps1 | iex"
+```
+
+```bash
+nix profile add github:earendil-works/pi/stable
+```
+
+Per aggiornare Pi (con Nix si usa invece `nix profile upgrade pi`):
+
+```bash
+pi update
 ```
 
 ## Autenticazione
@@ -38,151 +62,43 @@ pi
 
 Supporta anche API key di OpenAI, DeepSeek, Google Gemini, HuggingFace, OpenRouter e molti altri. Vedi [docs/providers.md](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md) per la lista completa.
 
-## Modalità non interattiva (`-p`)
-
-La modalità più utile per pipeline e script: esegue il prompt e restituisce la risposta su stdout.
+Per controllare da uno script se un provider è pronto, senza avviare una sessione:
 
 ```bash
-pi -p "spiega questo errore: segmentation fault"
+pi auth check --provider anthropic
 ```
 
-Legge da stdin e unisce l'input al prompt:
+Stampa `ready`, `not_ready` o `invalid`, con exit code `0`, `1` o `2`.
+
+## Primi passi
+
+Avvia Pi nella cartella su cui vuoi lavorare:
 
 ```bash
-cat errori.log | pi -p "analizza questi errori e suggerisci le cause"
+cd /percorso/del/progetto
+pi
 ```
+
+Per una singola richiesta, senza interfaccia, usa `-p`:
 
 ```bash
 git diff | pi -p "scrivi un messaggio di commit per queste modifiche"
 ```
 
-```bash
-cat dati.csv | pi -p "descrivi la struttura di questo CSV"
-```
+## Sicurezza
 
-## Output JSON
+Pi non chiede conferma prima di ogni chiamata a uno strumento e agisce con i permessi dell'utente che lo ha avviato. Per lavori non presidiati o su materiale non fidato, la documentazione consiglia un container o un'altra sandbox.
 
-Utile per automazioni: restituisce tutti gli eventi come JSON lines.
+Quando una cartella contiene risorse di progetto, come impostazioni ed estensioni in `.pi/`, Pi può chiederti se ti fidi prima di caricarle. Con `/trust` salvi la decisione, con `-a` (`--approve`) e `-na` (`--no-approve`) la imposti per una sola esecuzione. Questa fiducia regola solo cosa viene caricato all'avvio, non limita quello che gli strumenti possono fare. Vedi la [documentazione sulla sicurezza](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/security.md).
 
-```bash
-pi --mode json -p "analizza questo file" < report.txt
-```
+## Novità delle ultime versioni
 
-## Scegliere modello e provider
+- **1.5.0** (2 novembre 2026): aggiornamento di Pi tramite comando personalizzato con `PI_SELF_UPDATE_COMMAND` o `selfUpdateCommand`, modello GPT-6.1 Terra
+- **1.3.0** (15 ottobre 2026): con `sessionShareDestination` scegli dove `/share` carica la sessione
+- **1.2.0** (12 ottobre 2026): con `$schema` in `settings.json` l'editor valida e completa la configurazione
+- **1.1.0** (7 ottobre 2026): `--tools` accetta voci `+nome` e `-nome` che modificano la selezione predefinita
+- **1.0.4** (5 ottobre 2026): pattern con `*` in `--tools` e `--exclude-tools`, nuovo flag `--no-mcp`
+- **1.0.0** (1 ottobre 2026): interfaccia a schermo intero come impostazione predefinita
+- **0.99.0** (29 settembre 2026): supporto MCP e codemode integrati, colori presi dalla palette del terminale, accesso con l'account ChatGPT tramite `/login openai`
 
-```bash
-pi -p "riassumi" --provider anthropic --model claude-sonnet-4-5
-pi -p "riassumi" --provider openai --model gpt-4o
-pi -p "riassumi" --provider deepseek
-```
-
-Oppure passando direttamente la chiave API:
-
-```bash
-pi -p "riassumi" --api-key sk-... --provider anthropic
-```
-
-Per elencare i modelli disponibili:
-
-```bash
-pi --list-models
-pi --list-models gemini
-```
-
-## Limitare gli strumenti
-
-Per esecuzioni solo-lettura o controllate:
-
-```bash
-# Solo lettura
-pi -p "analizza il codice" --tools read,grep,find
-
-# Senza strumenti
-pi -p "rispondi a questa domanda" --no-tools
-```
-
-## Sessioni
-
-Riprendi l'ultima sessione:
-
-```bash
-pi -c
-```
-
-Avvia in modalità effimera (senza salvare):
-
-```bash
-pi --no-session
-```
-
-## Modalità interattiva
-
-```bash
-pi
-```
-
-Avvia la TUI con editor, footer con costo e token, selezione modello e navigazione della cronologia.
-
-### Comandi bash nell'editor
-
-Dall'editor interattivo puoi eseguire comandi shell direttamente:
-
-```text
-!ls -la
-```
-
-Il risultato entra nella conversazione: il modello lo vede e può usarlo come contesto.
-
-```text
-!!ls -la
-```
-
-Con il doppio `!!` il comando viene eseguito ma **non** entra nella conversazione. Utile per operazioni di servizio che non vuoi intasare il contesto.
-
-### Cambiare modello al volo
-
-- `/model` — apre il selettore di tutti i modelli disponibili
-- `/scoped-models` — imposta i modelli preferiti
-- `Ctrl+P` — cicla rapidamente tra i preferiti
-- `Shift+Tab` — cambia il livello di ragionamento (`off`, `minimal`, `low`, `medium`, `high`, `xhigh`)
-
-### Navigare la cronologia della sessione
-
-`/tree` mostra tutti i messaggi della sessione e permette di tornare a un punto precedente e ripartire da lì — utile quando una risposta ha preso la direzione sbagliata.
-
-```text
-/fork    # duplica la sessione da un messaggio precedente
-/clone   # duplica il ramo corrente in una nuova sessione
-```
-
-Le sessioni vengono salvate in formato JSONL in `~/.pi/agent/sessions/`, organizzate per directory di lavoro.
-
-### Esportare una sessione
-
-```text
-/export
-```
-
-Genera un file HTML con interfaccia navigabile per leggere la sessione, filtrare per tipo di messaggio (tool, user, assistant) e scaricare il JSON grezzo.
-
-### Gestire il contesto
-
-```text
-/compact
-/compact "concentrati sulle API di autenticazione"
-```
-
-Compatta la conversazione quando si avvicina al limite del contesto. Si possono aggiungere istruzioni personalizzate per guidare la compattazione.
-
-## Compatibilità con `claude.md` e `agents.md`
-
-Pi legge automaticamente i file di contesto dalla directory corrente e da home:
-
-- `agents.md` — standard condiviso tra agenti
-- `claude.md` — letto da Pi esattamente come da Claude Code
-
-Se usi già Claude Code con un `claude.md` nel progetto o in home, Pi lo caricherà automaticamente. Vale la pena tenerne conto quando si aggiungono istruzioni globali in `~/.claude/claude.md`.
-
-## Personalizzazione
-
-Pi si estende tramite **prompt template**, **skill** ed **estensioni**, componibili in pacchetti. Vedi la pagina [Personalizzazione](personalizzazione.md) per esempi pratici su come crearli e usarli.
+L'elenco completo è nelle [release su GitHub](https://github.com/earendil-works/pi/releases). Dall'editor interattivo lo vedi con `/changelog`.
